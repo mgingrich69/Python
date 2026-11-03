@@ -25,13 +25,13 @@ Browser → data/results.json every 60 s (+ Refresh button)
 
 ## One-time setup (do this before 7 PM MT)
 
-1. **Make Pages possible.** This repo is private. GitHub Pages on a private repo needs GitHub Pro/Team. Either make the repo **public** (it contains no secrets) or upgrade.
+1. **Make Pages possible.** The repo must be public (done 2026-11-03) or on a paid plan.
 2. **Settings → Pages → Build and deployment → Source: _GitHub Actions_.**
 3. **Settings → Actions → General → Workflow permissions:** "Read and write permissions" (the poller pushes the `data` branch and triggers `deploy`).
 4. Run **Actions → deploy → Run workflow** once. The site URL appears in the run summary (normally `https://mgingrich69.github.io/Python/`).
-5. Optional: **Actions → poll → Run workflow → mode `loop`** to start polling now. Otherwise the scheduled loop starts at 22:00 UTC (3 PM MT) on Nov 3.
+5. Optional: **Actions → poll → Run workflow → mode `loop`** restarts polling immediately if no poll run is in progress.
 
-Actions minutes: the loop window is Nov 3 22:00 UTC to Nov 4 23:59 UTC, followed by one poll every 3 h through Nov 30. That's about 1,500–2,000 minutes including deploys, close to the private-repo free limit (2,000/month). On a public repo, minutes are free and you can widen the windows in `.github/workflows/poll.yml`.
+Polling schedule: a 5-minute loop runs continuously Nov 3–6 (UTC), then one poll per hour through Nov 30. The repo is public, so Actions minutes are free.
 
 ## Environment variables / configuration
 
