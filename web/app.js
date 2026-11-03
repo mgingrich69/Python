@@ -18,6 +18,8 @@ const GEO_LABEL = { nc: "North Carolina", mn: "Minnesota", co: "Colorado", ga: "
 const SOURCE_TABS = { wikipedia: ["national"], ncsbe: ["national"], mnsos: ["national"], ga_sos: ["national"], co_sos: ["colorado"], boulder: ["boulder", "colorado"] };
 // Not shown anywhere (per user preference): judicial retention, state legislature, RTD director.
 const EXCLUDE_RE = /\b(retain|justice|judge|court|regents?)\b|^state (senate|house)\b|\bstate senator\b|\bstate representative\b|^rtd\b|regional transportation district director/i;
+// Regional measures on 80301 ballots that are kept on the Boulder tab despite not naming Boulder.
+const REGIONAL_RE = /front range passenger rail|^ballot issue 7a$/i;
 // Single-candidate (uncontested) races are hidden; write-in lines don't count as opponents.
 const uncontested = r => !r.is_ballot_measure && r.candidates.filter(c => !/^write-?in/i.test(c.name)).length <= 1;
 const KEY_RE = /^(U\.S\. Senate|Governor)\b/;
@@ -149,7 +151,12 @@ function summaryFor(r) {
     summaryFor.src = b;
     summaryFor.map = new Map([...(b.boulder || []).map(c => [c.race_id, c.summary]), ...(b.colorado || []).filter(c => c.boulder_race_id).map(c => [c.boulder_race_id, c.summary])]);
   }
-  return summaryFor.map.get(r.race_id) || null;
+  const hit = summaryFor.map.get(r.race_id);
+  if (hit) return hit;
+  const code = r.race_id.match(/ballot-(issue|question)-[0-9a-z]+$/)?.[0];
+  if (!code) return null;
+  const cands = [...summaryFor.map.entries()].filter(([k]) => k.endsWith(code) && k.startsWith(r.race_id.split(":")[0]));
+  return cands.length === 1 ? cands[0][1] : null;
 }
 function allRaces() {
   const out = [];
@@ -193,7 +200,7 @@ function renderTab(tab) {
   groups = groups.filter(g => !EXCLUDE_RE.test(g.r.race_name) && !uncontested(g.r));
   // Statewide and federal contests live on the Colorado tab only; Boulder shows City of Boulder
   // and Boulder County contests (not other towns or districts).
-  if (tab === "boulder") groups = groups.filter(g => (g.r.level === "county" || g.r.level === "local") && /\bBoulder\b/.test(g.r.race_name));
+  if (tab === "boulder") groups = groups.filter(g => (g.r.level === "county" || g.r.level === "local") && (/\bBoulder\b/.test(g.r.race_name) || REGIONAL_RE.test(g.r.race_name)));
   const q = state.filter[tab].trim().toLowerCase();
   const match = g => !q || g.r.race_name.toLowerCase().includes(q) || shortName(g.r).toLowerCase().includes(q);
   const visible = groups.filter(match);
@@ -275,7 +282,7 @@ function sectionize(tab, groups) {
     const used = new Set();
     for (const [title, f] of bb) { const gs = groups.filter(g => !used.has(g) && f(g)); gs.forEach(g => used.add(g)); if (gs.length) out.push([title, gs]); }
     const other = groups.filter(g => !used.has(g));
-    if (other.length) out.push(["Other Boulder contests", other]);
+    if (other.length) out.push([other.every(g => g.r.is_ballot_measure) ? "Regional ballot measures" : "Other Boulder contests", other]);
     return out;
   }
   const buckets = [
