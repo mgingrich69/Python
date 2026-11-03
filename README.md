@@ -24,6 +24,10 @@ Browser → data/results.json every 60 s (+ Refresh button)
 
 **Ballot lineups.** Before results post, the Colorado and Boulder tabs show every contest and candidate. The data is in `data/static/ballot_2026.json`, built by `scripts/build_ballot.py` from the Secretary of State's official certified candidate list and Boulder County's compiled sample ballot. Boulder results replace the lineups as soon as the county posts them. Colorado statewide contests keep the official lineup and add Boulder County's votes once available, labeled as one county.
 
+**Balance of power (Wikipedia).** National seat totals (seats before/after and seat change per party, Senate and House) come from the infoboxes of the Wikipedia articles on the 2026 Senate and House elections, read through the official MediaWiki API: one request per poll, identifying User-Agent, `maxlag`, no retry on HTTP 429. Editors update these as AP and other outlets call races. The content is community-edited (CC BY-SA 4.0), so the UI labels it and links the exact revision shown. Every change is kept in `extras.history` to draw the trend chart.
+
+**Not shown by design:** judicial retention questions, state legislature, and RTD director contests. Statewide and federal contests appear only on the Colorado tab; the Boulder tab shows county and local contests.
+
 **Senate watch list.** `config.json → watch.senate` lists 15 Senate races rated other than Solid/Safe before the election. Live numbers appear only for NC and MN; the other tiles link to the state's official results.
 
 **U.S. House** is shown as a summary graphic (leaning D / leaning R / close under 5 points / awaiting) for the states with feeds, plus a list of close races. "Leaning" means the current leader, not a projection.

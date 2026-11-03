@@ -14,3 +14,4 @@ used **only** by the test suite. None of it is shipped to the dashboard.
 | `mn/*_ussenate.txt`, `*_ushouse.txt`, `*_Governor.txt` | https://electionresultsfiles.sos.mn.gov/<date>/ (2022/2024 final, 2026 pre-results) | 2026-11-03 |
 | `ballot/co_sos_2026G_candidates.html` | https://www.sos.state.co.us/pubs/elections/vote/generalCandidates.html | 2026-11-03 |
 | `ballot/boulder_2026G_sample_ballot.pdftotext-raw.txt` | `pdftotext -raw` output of https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf | 2026-11-03 |
+| `wikipedia/api_senate_house_2026-11-03.json` | MediaWiki API revisions query for the 2026 Senate and House election articles (CC BY-SA 4.0) | 2026-11-03 |

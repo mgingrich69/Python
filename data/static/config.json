@@ -46,7 +46,11 @@
         "include": "(?i)^(US Senate|United States Senat|Governor|US House|U\\.S\\. House|U\\.S\\. Senate)",
         "url": "https://sos.ga.gov/elections"
       }
-    ]
+    ],
+    "wikipedia": {
+      "enabled": true,
+      "name": "Wikipedia (community-edited; reflects media race calls)"
+    }
   },
   "links": [
     {

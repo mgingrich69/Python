@@ -28,6 +28,7 @@ def config(election_date="2024-11-05"):
     cfg["sources"]["co_sos"]["enabled"] = False
     cfg["sources"]["clarity_states"] = []
     cfg["sources"]["mnsos"]["enabled"] = False
+    cfg["sources"]["wikipedia"]["enabled"] = False
     return cfg
 
 
@@ -199,3 +200,32 @@ def test_pre_results_lineup_published_with_message(tmp_path):
     nc = pub.sources["ncsbe"]
     assert nc.status.status == "ok" and "No votes reported yet" in nc.status.message
     assert len(nc.races) == 15 and all(r.votes == 0 for r in nc.races)
+
+
+def test_wikipedia_seats_and_history(tmp_path):
+    cfg = config()
+    cfg["sources"]["wikipedia"]["enabled"] = True
+    payload = (FX / "wikipedia/api_senate_house_2026-11-03.json").read_text()
+    state = {"n": 0}
+
+    def handler(request):
+        if "wikipedia.org/w/api.php" in str(request.url):
+            state["n"] += 1
+            if state["n"] == 2:
+                return httpx.Response(429, headers={"retry-after": "12"}, request=request)
+            return httpx.Response(200, text=payload, headers={"content-type": "application/json"}, request=request)
+        return Server()(request)
+
+    http = Http(httpx.Client(transport=httpx.MockTransport(handler)))
+    first = run.poll_once(tmp_path, http, cfg)
+    wb = first.sources["wikipedia"]
+    assert wb.status.status == "ok"
+    sen = wb.extras["chambers"]["senate"]
+    assert {p["party"]: p["seats_before"] for p in sen["parties"]} == {"Republican": 53, "Democratic": 45, "Independent": 2}
+    assert len(wb.extras["history"]) == 1
+    second = run.poll_once(tmp_path, http, cfg)  # 429: keep last good, don't hammer
+    assert second.sources["wikipedia"].status.status == "stale"
+    assert "429" in second.sources["wikipedia"].status.last_error
+    assert len(second.sources["wikipedia"].extras["history"]) == 1
+    third = run.poll_once(tmp_path, http, cfg)  # unchanged values: no duplicate point
+    assert len(third.sources["wikipedia"].extras["history"]) == 1

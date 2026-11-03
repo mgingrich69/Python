@@ -15,9 +15,11 @@ const CLOSINGS = [
 ];
 const CO_CLOSE = "2026-11-04T02:00:00Z";
 const GEO_LABEL = { nc: "North Carolina", mn: "Minnesota", co: "Colorado", ga: "Georgia", "boulder-county": "Boulder County" };
-const SOURCE_TABS = { ncsbe: ["national"], mnsos: ["national"], ga_sos: ["national"], co_sos: ["colorado", "boulder"], boulder: ["boulder", "colorado"] };
+const SOURCE_TABS = { wikipedia: ["national"], ncsbe: ["national"], mnsos: ["national"], ga_sos: ["national"], co_sos: ["colorado"], boulder: ["boulder", "colorado"] };
+// Not shown anywhere (per user preference): judicial retention, state legislature, RTD director.
+const EXCLUDE_RE = /\b(retain|justice|judge|court)\b|^state (senate|house)\b|\bstate senator\b|\bstate representative\b|^rtd\b|regional transportation district director/i;
 const KEY_RE = /^(U\.S\. Senate|Governor)\b/;
-const isKey = (g, tab) => !g.r.is_ballot_measure && (KEY_RE.test(shortName(g.r)) || (tab === "boulder" && shortName(g.r) === "U.S. House · District 2"));
+const isKey = (g, tab) => !g.r.is_ballot_measure && (KEY_RE.test(shortName(g.r)) || (tab === "boulder" && /mayor|county commissioner/i.test(g.r.race_name)));
 
 let data = null;
 const state = {
@@ -149,7 +151,7 @@ function groupByRace(races) {
 }
 function racesForTab(tab) {
   const races = allRaces();
-  if (tab === "national") return races.filter(r => !["co", "boulder-county"].includes(r.geography) && (r.level === "national" || /governor/i.test(r.race_name)));
+  if (tab === "national") return []; // national view = balance of power + watch list (no single-state detail)
   if (tab === "colorado") return races.filter(r => r.geography === "co");
   return races.filter(r => r.geography === "boulder-county");
 }
@@ -176,11 +178,14 @@ function renderTab(tab) {
   let groups = groupByRace(racesForTab(tab));
   if (tab === "colorado") groups = coloradoGroups(groups);
   if (tab === "boulder" && !groups.some(g => g.r.source === "boulder")) groups = groups.concat(ballotGroups("boulder"));
+  groups = groups.filter(g => !EXCLUDE_RE.test(g.r.race_name));
+  // Statewide and federal contests live on the Colorado tab only; Boulder shows county & local.
+  if (tab === "boulder") groups = groups.filter(g => g.r.level === "county" || g.r.level === "local");
   const q = state.filter[tab].trim().toLowerCase();
   const match = g => !q || g.r.race_name.toLowerCase().includes(q) || shortName(g.r).toLowerCase().includes(q);
   const visible = groups.filter(match);
 
-  if (tab === "national") nodes.push(closingStrip(), ...senateBoard());
+  if (tab === "national") nodes.push(...balanceOfPower(), ...senateBoard());
   if (tab === "colorado") nodes.push(coloradoStrip());
   if (tab === "boulder") nodes.push(...zipSection(), boulderStrip());
 
@@ -197,8 +202,7 @@ function renderTab(tab) {
   }
 
   const rest = visible.filter(g => !state.pins.has(g.id) && !keys.includes(g));
-  if (tab === "national") nodes.push(...houseSummary(rest).flat(Infinity).filter(Boolean));
-  else for (const [title, gs] of sectionize(tab, rest)) {
+  for (const [title, gs] of sectionize(tab, rest)) {
     if (gs.length > 10 && !q) {
       const key = `sec:${tab}:${title}`;
       nodes.push(h("details", { class: "bigsec", open: state.open.has(key) || null, ontoggle: e => toggleOpen(key, e) },
@@ -324,6 +328,82 @@ function coloradoGroups(liveCo) {
   });
 }
 
+// ---------- Balance of power (Wikipedia infobox) + trend
+const PCLASS = p => /^dem/i.test(p) ? "dem" : /^rep/i.test(p) ? "rep" : "oth";
+function balanceOfPower() {
+  const w = data?.sources?.wikipedia;
+  const ch = w?.extras?.chambers;
+  if (!ch) {
+    return [sectionHead("Balance of power", null), strip(h("p", {}, h("strong", {}, "Seat totals unavailable. "),
+      w?.status?.last_error ? `Latest check failed: ${w.status.last_error}` : "Waiting for the first check."), true)];
+  }
+  const stale = w.status.status === "stale";
+  const cards = ["senate", "house"].map(c => chamberCard(ch[c], w.extras.history || [], stale)).filter(Boolean);
+  return [
+    sectionHead("Balance of power", null),
+    h("div", { class: "bop" }, cards),
+    h("p", { class: "note" }, "Seat counts as recorded on Wikipedia, which editors update as AP and other outlets call races. Community-edited: may lag, change, or contain errors. ",
+      ...["senate", "house"].map((c, i) => [i ? " · " : "", h("a", { href: ch[c].revision_url }, `${c === "senate" ? "Senate" : "House"} revision ${fmtTime(ch[c].revision_time)}`)]),
+      " · CC BY-SA 4.0"),
+  ];
+}
+function chamberCard(c, history, stale) {
+  if (!c) return null;
+  const name = c.chamber === "senate" ? "Senate" : "House";
+  const order = [...c.parties].sort((a, b) => (PCLASS(a.party) === "dem" ? -1 : PCLASS(b.party) === "dem" ? 1 : PCLASS(a.party) === "rep" ? 1 : -1));
+  const reported = c.results_reported;
+  const val = p => reported ? p.seats_after : p.seats_before;
+  const filled = order.reduce((n, p) => n + (val(p) || 0), 0);
+  const open = Math.max(0, c.total_seats - filled);
+  const dem = order.filter(p => PCLASS(p.party) === "dem"), rep = order.filter(p => PCLASS(p.party) === "rep"), oth = order.filter(p => PCLASS(p.party) === "oth");
+  const segs = [...dem, ...oth, { party: "open", n: open }, ...rep];
+  const bar = h("div", { class: "seatbar", role: "img", "aria-label": `${name}: ` + order.map(p => `${p.party} ${val(p) ?? "unknown"}`).join(", ") + (open ? `, ${open} not yet decided or vacant` : "") },
+    segs.map(p => {
+      const n = p.party === "open" ? p.n : (val(p) || 0);
+      if (!n) return null;
+      return h("span", { class: `sb ${p.party === "open" ? "open" : PCLASS(p.party)}`, style: `flex:${n}` }, n >= c.total_seats * 0.06 ? String(n) : "");
+    }),
+    h("span", { class: "maj", style: `left:${(100 * c.majority / c.total_seats).toFixed(2)}%`, "aria-hidden": "true" }));
+  const chips = order.map(p => {
+    const ch = p.seat_change;
+    const n = val(p);
+    const txt = !reported ? "before election" : ch == null ? "change not recorded" : ch === 0 ? "no change" : `${ch > 0 ? "gained" : "lost"} ${Math.abs(ch)}`;
+    return h("li", { class: `chip-p ${PCLASS(p.party)}${ch > 0 ? " up" : ch < 0 ? " down" : ""}` }, h("b", {}, p.party),
+      h("span", {}, n == null ? "—" : String(n), h("small", {}, n === 1 ? " seat" : " seats")), h("em", {}, txt));
+  });
+  return h("article", { class: `bopcard${stale ? " is-stale" : ""}` },
+    h("div", { class: "bop-head" }, h("h3", {}, name), h("span", { class: "bop-sub" }, `${c.majority} for majority`),
+      stale ? h("span", { class: "badge stale" }, "Stale") : null),
+    h("p", { class: "bop-state" }, reported ? "Seats after the election, as recorded so far" : "No results recorded yet · showing seats before the election"),
+    bar,
+    h("ul", { class: "chips-p" }, chips),
+    trendChart(c.chamber, history));
+}
+function trendChart(chamber, history) {
+  const pts = history.map(p => ({ t: Date.parse(p.t), v: p[chamber] || {} }))
+    .filter(p => Object.values(p.v).some(x => x != null));
+  if (pts.length < 2) return h("p", { class: "trend-empty" }, "Trend line appears once seat counts start changing tonight.");
+  const parties = [...new Set(pts.flatMap(p => Object.keys(p.v)))].filter(k => PCLASS(k) !== "oth");
+  const W = 320, H = 110, P = 26;
+  const t0 = pts[0].t, t1 = pts.at(-1).t || t0 + 1;
+  const vals = pts.flatMap(p => parties.map(k => p.v[k]).filter(x => x != null));
+  const lo = Math.min(...vals) - 1, hi = Math.max(...vals) + 1;
+  const x = t => P + (W - P - 6) * (t - t0) / Math.max(1, t1 - t0);
+  const y = v => 6 + (H - 22) * (1 - (v - lo) / Math.max(1, hi - lo));
+  const svgNS = "http://www.w3.org/2000/svg";
+  const el = (n, a) => { const e = document.createElementNS(svgNS, n); for (const [k, v] of Object.entries(a)) e.setAttribute(k, v); return e; };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, class: "trend", role: "img", "aria-label": `Seat count trend for ${chamber}` });
+  for (const v of [lo + 1, hi - 1]) { svg.append(el("line", { x1: P, x2: W - 6, y1: y(v), y2: y(v), class: "grid" })); const tx = el("text", { x: 2, y: y(v) + 4, class: "ax" }); tx.textContent = Math.round(v); svg.append(tx); }
+  for (const k of parties) {
+    const d = pts.filter(p => p.v[k] != null).map((p, i) => `${i ? "L" : "M"}${x(p.t).toFixed(1)},${y(p.v[k]).toFixed(1)}`).join(" ");
+    svg.append(el("path", { d, class: `ln ${PCLASS(k)}` }));
+  }
+  const tl = el("text", { x: P, y: H - 4, class: "ax" }); tl.textContent = fmtTime(new Date(t0).toISOString(), false);
+  const tr = el("text", { x: W - 6, y: H - 4, class: "ax", "text-anchor": "end" }); tr.textContent = fmtTime(new Date(t1).toISOString(), false);
+  svg.append(tl, tr);
+  return h("div", { class: "trendwrap" }, h("p", { class: "trend-title" }, "Seats recorded over the night"), svg);
+}
+
 // ---------- Senate watch board
 const lastName = n => n.split(" / ")[0].replace(/,? (Jr\.|Sr\.|III|II)$/, "").split(" ").pop();
 function senateBoard() {
@@ -338,13 +418,12 @@ function senateBoard() {
       const tied = b && a.votes === b.votes;
       cls = tied ? "" : partyKey(a, false);
       line1 = tied ? "Tied" : `${lastName(a.name)} leads ${(a.percent ?? 0).toFixed(1)}%`;
-      line2 = reportingText(r) || "Live official count";
-    } else if (r) { line1 = "Awaiting results"; line2 = "Live official feed"; }
-    else { line1 = "No public feed"; line2 = "Official results ↗"; }
-    const link = r ? { href: `#kt-${cssId(x.race_id)}` } : { href: x.official_url, target: "_blank", rel: "noopener" };
-    return h("li", { class: `stile ${cls}${r ? " live" : ""}` },
+      line2 = (reportingText(r) || "Official count") + " ↗";
+    } else { line1 = "Official results"; line2 = "Open state site ↗"; }
+    const link = { href: x.official_url, target: "_blank", rel: "noopener" };
+    return h("li", { class: `stile ${cls}` },
       h("a", link,
-        h("span", { class: "sst" }, x.st, x.special ? h("span", { class: "spec" }, "Special") : null, r ? h("span", { class: "livetag" }, "Live") : null),
+        h("span", { class: "sst" }, x.st, x.special ? h("span", { class: "spec" }, "Special") : null),
         h("span", { class: "sname" }, x.state),
         h("b", {}, line1), h("small", {}, line2)));
   });

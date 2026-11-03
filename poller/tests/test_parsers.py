@@ -172,3 +172,32 @@ def test_mn_2026_pre_results_lineup():
 def test_mn_html_error_page_rejected():
     with pytest.raises(ValueError):
         mnsos.parse("<html><body>Not found</body></html>", election_date="20261103", fetched_at=NOW)
+
+
+# ------------------------------------------------------------------ Wikipedia infobox
+
+from poller.sources import wikipedia  # noqa: E402
+
+
+def test_wikipedia_infobox_parse_senate_and_house():
+    import json
+    out = wikipedia.parse_api_response(json.loads(read("wikipedia/api_senate_house_2026-11-03.json")))
+    sen = out["senate"]
+    assert sen["majority"] == 51 and sen["total_seats"] == 100
+    assert sum(p["seats_before"] for p in sen["parties"]) == 100
+    assert out["house"]["majority"] == 218
+    assert out["house"]["revision_url"].startswith("https://en.wikipedia.org/w/index.php?oldid=")
+
+
+def test_wikipedia_clean_markup_and_change_markers():
+    assert wikipedia._int("{{increase}} 4") == 4
+    assert wikipedia._int("{{decrease}} 2") == -2
+    assert wikipedia._int("45{{efn|name=Independents|Both independent {{nowrap|senators}}}}") == 45
+    assert wikipedia._int("") is None
+
+
+def test_wikipedia_seats_after_when_reported():
+    text = "{{Infobox election\n| party1 = Republican Party (United States)\n| seats_before1 = 53\n| seats_after1 = 51\n| seat_change1 = {{decrease}} 2\n| party2 = Democratic Party (United States)\n| seats_before2 = 45\n| seats_after2 = 47\n| seat_change2 = {{increase}} 2\n}}"
+    c = wikipedia.parse_chamber(text, "senate")
+    assert c["results_reported"] is True
+    assert [(p["party"], p["seats_after"], p["seat_change"]) for p in c["parties"]] == [("Republican", 51, -2), ("Democratic", 47, 2)]

@@ -27,7 +27,7 @@ from pathlib import Path
 from typing import Callable, Optional
 
 from .schema import Published, Race, SourceBlock, SourceStatus
-from .sources import boulder, clarity, mnsos, ncsbe
+from .sources import boulder, clarity, mnsos, ncsbe, wikipedia
 from .util import Http, utcnow
 
 log = logging.getLogger("poller")
@@ -148,6 +148,38 @@ def fetch_mnsos(http: Http, cfg: dict, election_date: str):
     return races, {}, max([u for u in upds if u], default=None), msg
 
 
+def fetch_wikipedia(http: Http, cfg: dict, election_date: str):
+    # One request for both pages; no retry loop (Wikimedia asks clients to back off on 429).
+    r = http.client.get(wikipedia.API, params={
+        "action": "query", "prop": "revisions", "rvprop": "content|timestamp|ids", "rvslots": "main",
+        "titles": "|".join(wikipedia.PAGES.values()), "format": "json", "formatversion": "2", "maxlag": "5",
+    })
+    if r.status_code == 429:
+        raise ValueError(f"Wikipedia rate limit (HTTP 429, retry after {r.headers.get('retry-after', '?')}s); will try next poll")
+    r.raise_for_status()
+    payload = r.json()
+    if "error" in payload:
+        raise ValueError(f"Wikipedia API error: {payload['error'].get('code')}")
+    chambers = wikipedia.parse_api_response(payload)
+    upd = max(datetime.fromisoformat(c["revision_time"].replace("Z", "+00:00")) for c in chambers.values())
+    return [], {"chambers": chambers}, upd, None
+
+
+HISTORY_MAX = 600
+
+
+def _with_history(block: SourceBlock, prev: Optional[SourceBlock]) -> SourceBlock:
+    """Append a seat-count snapshot when it changes, so the UI can chart the trend."""
+    hist = list((prev.extras or {}).get("history", [])) if prev else []
+    if block.status.status == "ok" and block.extras.get("chambers"):
+        point = wikipedia.snapshot(block.extras["chambers"], block.status.last_success_at)
+        if not hist or {k: v for k, v in hist[-1].items() if k != "t"} != {k: v for k, v in point.items() if k != "t"}:
+            hist.append(point)
+    extras = dict(block.extras or {})
+    extras["history"] = hist[-HISTORY_MAX:]
+    return block.model_copy(update={"extras": extras})
+
+
 # ---------------------------------------------------------------- core
 
 def poll_source(key: str, name: str, url: str, fetcher, http: Http, cfg: dict, election_date: str,
@@ -185,7 +217,7 @@ def _describe(e: Exception) -> str:
 
 def _stale(prev: Optional[SourceBlock], base: dict, err: str) -> SourceBlock:
     fails = (prev.status.consecutive_failures if prev else 0) + 1
-    if prev and prev.races:
+    if prev and (prev.races or (prev.extras or {}).get("chambers")):
         races = [r.model_copy(update={"stale": True}) for r in prev.races]
         st = SourceStatus(**{**base, "status": "stale", "last_error": err, "consecutive_failures": fails,
                              "message": "Showing last good data; latest fetch failed."})
@@ -275,6 +307,11 @@ def poll_once(out_dir: Path, http: Optional[Http] = None, config: Optional[dict]
     if srcs.get("mnsos", {}).get("enabled"):
         blocks["mnsos"] = poll_source("mnsos", srcs["mnsos"]["name"], "https://electionresults.sos.mn.gov/",
                                       fetch_mnsos, http, srcs["mnsos"], ed, prev.get("mnsos"))
+    if srcs.get("wikipedia", {}).get("enabled"):
+        w = srcs["wikipedia"]
+        blk = poll_source("wikipedia", w["name"], wikipedia.page_url(wikipedia.PAGES["senate"]),
+                          fetch_wikipedia, http, w, ed, prev.get("wikipedia"))
+        blocks["wikipedia"] = _with_history(blk, prev.get("wikipedia"))
     for c in srcs.get("clarity_states", []):
         if c.get("enabled"):
             blocks[c["key"]] = poll_source(c["key"], c["name"], c["url"], make_clarity_fetcher(c["key"], c),
