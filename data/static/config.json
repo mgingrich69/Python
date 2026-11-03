@@ -24,7 +24,8 @@
     "clarity_states": [
       {
         "key": "ga_sos",
-        "enabled": true,
+        "enabled": false,
+        "_note": "Disabled: Clarity blocks automated clients with a bot challenge (verified from GitHub runners 2026-11-03).",
         "name": "Georgia Secretary of State (Clarity ENR)",
         "state": "GA",
         "election_id": null,

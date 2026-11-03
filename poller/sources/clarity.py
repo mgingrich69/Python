@@ -28,12 +28,21 @@ BASE = "https://results.enr.clarityelections.com"
 _TZ = {"EST": -5, "EDT": -4, "CST": -6, "CDT": -5, "MST": -7, "MDT": -6, "PST": -8, "PDT": -7}
 
 
+class BlockedByBotProtection(Exception):
+    pass
+
+
 def web_url(state: str, election_id: str) -> str:
     return f"{BASE}/{state}/{election_id}/web.345435/#/summary"
 
 
 def fetch_detail_xml(http: Http, state: str, election_id: str) -> tuple[bytes, str]:
-    ver = http.get(f"{BASE}/{state}/{election_id}/current_ver.txt").text.strip()
+    r = http.get(f"{BASE}/{state}/{election_id}/current_ver.txt")
+    if r.status_code == 202 or "x-amzn-waf-action" in r.headers:
+        raise BlockedByBotProtection(
+            f"Clarity returned HTTP {r.status_code} (bot challenge); automated access is blocked. "
+            "Not bypassed by design; use the official results page link.")
+    ver = r.text.strip()
     if not re.fullmatch(r"\d+", ver):
         raise ValueError(f"unexpected current_ver.txt content: {ver[:40]!r}")
     z = http.get(f"{BASE}/{state}/{election_id}/{ver}/reports/detailxml.zip").content

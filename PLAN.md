@@ -138,3 +138,14 @@ data/static/       # precincts_80301.json (committed), races config
 .github/workflows/ # test.yml, poll.yml, probe.yml
 PLAN.md README.md
 ```
+
+---
+
+## 9. Decisions after review (2026-11-03 ~02:45 UTC) and what changed during the build
+
+- **Approved answers:** national = Senate/House/governors/key measures; no AP key (use reputable news where it helps); host on GitHub; 80301 shows precinct turnout until precinct results exist; no contacting the SOS; show all local races with **pinning**; poll every 5 min with a manual update request; news-site visual style; personal use.
+- **News sites are linked, not scraped.** Their terms forbid scraping, and their numbers and calls are licensed from AP/DDHQ. Personal use doesn't change those terms, so this is a hard rule.
+- **Clarity (CO SOS) is blocked** for automated clients: HTTP 202 bot challenge, verified from a GitHub Actions runner on 2026-11-03 (R1 happened). We don't get around it. The Colorado tab shows Boulder County's votes on statewide races (labeled) plus links. The adapter stays in place and turns on by itself if access opens.
+- **Added NC State Board of Elections** (`er.ncsbe.gov` JSON, official and free) for the National tab: NC US Senate (open seat) and all NC House races.
+- **Hosting:** GitHub Pages via Actions deploy, so the 10 builds/hour branch-build limit doesn't apply. Results state lives on a force-pushed `data` branch. Manual update = `poll` workflow in `once` mode.
+- **Repo is private:** Pages needs it public (or a paid plan). The schedule is trimmed to fit the free 2,000 Actions minutes/month.

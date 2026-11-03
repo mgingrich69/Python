@@ -147,3 +147,22 @@ def test_clarity_without_election_id_is_not_configured(tmp_path):
     srv.mode = "pre"  # Boulder page has no Clarity link yet
     pub = run.poll_once(tmp_path, http_for(srv), cfg)
     assert pub.sources["co_sos"].status.status == "not_configured"
+
+
+def test_clarity_bot_challenge_reported_honestly(tmp_path, monkeypatch):
+    """Clarity answered GitHub runners with HTTP 202 + empty body (bot challenge).
+    We must report that, not retry around it or spoof a browser."""
+    monkeypatch.setenv("CO_SOS_ELECTION_ID", "999999")
+    cfg = config()
+    cfg["sources"]["co_sos"]["enabled"] = True
+    srv = Server()
+
+    def handler(request):
+        if "clarityelections.com" in str(request.url):
+            return httpx.Response(202, text="", headers={"content-type": "text/html"}, request=request)
+        return srv(request)
+
+    pub = run.poll_once(tmp_path, Http(httpx.Client(transport=httpx.MockTransport(handler))), cfg)
+    co = pub.sources["co_sos"]
+    assert co.status.status == "error"
+    assert "bot challenge" in co.status.last_error
