@@ -1,0 +1,2982 @@
+
+<!DOCTYPE html>
+<!-- 6/6/2025 11:50:51 AM TT -->
+<html lang="en">
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Election Results: Precinct Turnout</title>
+	<link href="../Content/css_v%3dYKlRPI2jCKf-3AOR26hX5_rcmyIiriXf62FRroxHu3A1.css?v=YKlRPI2jCKf-3AOR26hX5_rcmyIiriXf62FRroxHu3A1" rel="stylesheet"/>
+
+	<link href="../Content/kendo/2021.3.1207/css_v%3dphZmHXh8BR98sZj7nS-JI_N1Q5qrtVwrfWCb0F2M_P81.css?v=phZmHXh8BR98sZj7nS-JI_N1Q5qrtVwrfWCb0F2M_P81" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+	<script src="../bundles/modernizr_v%3dinCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1.html?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+	<script src="../bundles/jquery_v%3d235DeCRyc2KKtm5-u-WowaGmWHU3ft44y448NxHpMf41.html?v=235DeCRyc2KKtm5-u-WowaGmWHU3ft44y448NxHpMf41"></script>
+
+	<script src="../bundles/kendo_v%3dQZgEvUZx8Pqa92NHu9dyyuV5SkmB2PN08PaNhvqcEg81.html?v=QZgEvUZx8Pqa92NHu9dyyuV5SkmB2PN08PaNhvqcEg81"></script>
+
+	<script type="text/javascript" src="../Scripts/menumaker.js"></script>
+
+	<script async src="https://siteimproveanalytics.com/js/siteanalyze_1302416.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88181509-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-88181509-2');
+	</script>
+	<script type="text/javascript">
+		window.twttr = (function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+
+			t._e = [];
+			t.ready = function (f) {
+				t._e.push(f);
+			};
+
+			return t;
+		}(document, "script", "twitter-wjs"));
+
+	</script>
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Boulder County 2024 General Election Unofficial Results" />
+	<meta property="og:description" content="Unofficial Results for Boulder County's 2024 General Election." />
+	<meta property="og:url" content="https://electionresults.bouldercounty.gov/" />
+	<meta property="og:site_name" content="Boulder County 2024 General Election Unofficial Results" />
+	<meta property="og:image" content="https://electionresults.bouldercounty.gov/Images/fb_screenshot.png" />
+	<meta property="og:image:secure_url" content="https://electionresults.bouldercounty.gov/Images/fb_screenshot.png" />
+
+	
+	<link href="../Content/Site.css" rel="stylesheet" type="text/css" />
+	<script src="../Scripts/kendo/2021.3.1207/jszip.min.js"></script>
+	
+</head>
+<body>
+	<br />
+	<div style="width: 100%; align-content: center;">
+		<div id="fullpage">
+			
+
+<style>
+	.PrecinctTurnoutDisclaimer {
+		width: 500px;
+		margin-bottom: 25px;
+		margin-top: 25px;
+		padding: 10px;
+		font-size: 16px;
+		line-height: 1.2;
+		text-align: left;
+		background-color: #d1d1d1;
+		color: black;
+	}
+
+	.PrecinctTurnoutTitleHeader {
+		border: 1px solid none;
+		border-top-left-radius: 8px;
+		/*border-top-right-radius: 8px;*/
+		text-align: left;
+		padding: inherit;
+		line-height: 1.3;
+	}
+
+	.PrecinctTurnoutExport {
+		border-top-right-radius: 8px;
+		text-align: right;
+		color: white;
+		padding: inherit;
+	}
+
+	.PrecintTurnoutExportButton {
+		font-size: 15px;
+		font-weight: normal;
+		font-variant: small-caps;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$('form').submit(function () {
+			var url = window.location.href;
+			var subStr = '.html'
+
+			if (url.indexOf(subStr) !== -1) {
+				// If this is the static HTTrack site, download the static .csv file
+				window.location.href = '../Home/VoterTurnoutByPrecinct' + '.' + 'csv';
+				return false
+			}
+		});
+
+	});
+</script>
+
+<center>
+	<header>
+		
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		//$(".k-link").css("font-size", "14px");
+
+	});
+</script>
+
+	<table border="0" cellpadding="10" cellspacing="0" style="width:95%; padding:5px 10px 5px 10px;">
+		<tr>
+			<td align="left" valign="top">
+				<img src="../images/Electionslogo2.jpg" alt="Boulder County Elections logo" />
+			</td>
+			<td align="left" valign="middle">
+				<h1><span class="EnrHeaderTitle">2024 General Election</span></h1>
+				<span class="EnrHeaderDate">November 5, 2024</span>
+			</td>
+						<td valign="middle" style="background-color:#eeeeee; width: 175px;">
+							<span class="EnrHeaderSubtitle">Official Results</span><br />
+							<span class="EnrHeaderLastUpdated">Last Updated:<br /><span class="EnrHeaderLastUpdatedDateTime">12/5/2024 3:05 PM</span></span>
+						</td>
+
+		</tr>
+	</table>
+
+			<div id="cssmenu">
+				<ul>
+					<li>
+						<a class="AspNet-Menu-Link" href="../index.html">View Results</a>
+						<ul>
+							<li>
+								<a href="../index.html">Complete Results - All Contests</a>
+							</li>
+							<li>
+								<a href="#">View Results By Category</a>
+								<ul>
+										<li>
+											<a class="AspNet-Menu-Link" href="IndexCategory/46.html">Candidates</a>
+										</li>
+										<li>
+											<a class="AspNet-Menu-Link" href="IndexCategory/47.html">State Measures</a>
+										</li>
+										<li>
+											<a class="AspNet-Menu-Link" href="IndexCategory/48.html">Local Measures</a>
+										</li>
+								</ul>
+							</li>
+							<li>
+								<a class="AspNet-Menu-Link" href="SelectContest.html">Lookup Results By Individual Contest</a>
+							</li>
+						</ul>
+					</li>
+						<li>
+							<a class="AspNet-Menu-Link" href="PrecinctTurnout.html">Voter Turnout By Precinct</a>
+						</li>
+
+					<li>
+						<a href="https://results.enr.clarityelections.com/CO/122598/web.345435/#/summary" target="_blank">Statewide Contests and Other Counties</a>
+					</li>
+					<li class="Share">
+						<span class="shareTextNav">Share </span>
+						<span class="smShareItemNav">
+							<a class="fb-xfbml-parse-ignore" target="_blank" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Felectionresults.bouldercounty.gov&amp;text=Boulder+County+2024+General+Election+Unofficial+Results&amp;src=sdkpreparse&amp;quote=Boulder+County+2024+General+Election+Unofficial+Results"><i class="fa fa-facebook-square"></i></a>
+							<a target="_blank" title="Tweet" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Felectionresults.bouldercounty.gov&amp;text=Boulder+County+2024+General+Election+Unofficial+Results%3A&amp;hashtags=election"><i class="fa fa-twitter-square"></i></a>
+							<a title="Email" href="mailto:?Subject=Boulder%20County%202024%20General%20Election%20Unofficial%20Results&body=Check%20out%20the%20Boulder%20County%202024%20General%20Election%20Unofficial%20Results%3A%0A%0Ahttps%3A%2F%2Felectionresults.bouldercounty.gov%0A"><i class="fa fa-envelope-square"></i></a>
+						</span>
+					</li>
+				</ul>
+			</div>
+		<br />
+		<table cellpadding="0">
+			<tr>
+				<td align="center" valign="top" style="width:100%">
+					<div class="EnrHeaderSummary">
+
+						<table border="0" cellpadding="2" cellspacing="0" class="EnrHeaderSummaryTable">
+							<tbody>
+										<tr class="EnrHeaderSummaryRowStyle0">
+											<td colspan="4" class="Column1">Election Summary</td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle2">
+											<td class="Column1">* Total Registration (Active + Inactive voters)</td>
+											<td class="Column2">262,877</td>
+											<td class="Column3">Mail Ballots:</td>
+											<td class="Column4">184,569</td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle2">
+											<td class="Column1">* Active Registered Voters</td>
+											<td class="Column2">235,603</td>
+											<td class="Column3">In-Person Ballots:</td>
+											<td class="Column4">14,317</td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle2">
+											<td class="Column1">* Property Owner Only Ballots Distributed</td>
+											<td class="Column2">488</td>
+											<td class="Column3">Property Owner Ballots:</td>
+											<td class="Column4">433</td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle3">
+											<td class="Column1"></td>
+											<td class="Column2"></td>
+											<td class="Column3">Total Ballots Counted:</td>
+											<td class="Column4">199,319</td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle4">
+											<td colspan="4" class="Column1">* Voter Registration Figures as of 7 p.m. Nov. 5</td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle0">
+											<td colspan="4" class="Column1">12/5 Update: The recounts for State Representative – District 19 (required recount), Town of Superior Trustee (required recount), and Town of Erie Council District 1 (paid recount) – have been completed and the results certified. </td>
+										</tr>
+										<tr class="EnrHeaderSummaryRowStyle0">
+											<td colspan="4" class="Column1">The vote totals below show updated official results and are final.</td>
+										</tr>
+								
+
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			
+		</table>
+
+
+<script type="text/javascript">
+	$("#cssmenu").menumaker({
+		title: "Menu",
+		format: "dropdown",
+		breakpoint: 850
+	});
+</script>
+
+
+		
+	</header>
+	<main>
+		<div class="EnrResultsBody">
+
+			<div class="PrecinctTurnoutDisclaimer">
+				<b>Note:</b> For voter anonymity purposes, precincts with fewer than 10 registered voters have been suppressed from this turnout page.
+			</div>
+
+			<table cellpadding="2" cellspacing="0" class="EnrTurnoutTable">
+				<tr class="EnrHeaderRow">
+					<td class="PrecinctTurnoutTitleHeader" colspan="2">
+						Voter Turnout By Precinct
+					</td>
+					<td class="PrecinctTurnoutExport" colspan="2">
+						<form action="https://election.dev.boco.solutions/ElectionResults2024G/Home/PrecinctTurnout_ExportCsv" method="get">
+							<button type="submit" class="PrecinctTurnoutExportButton">
+								Download .csv &nbsp;<i class="fa fa-file-o"></i>
+							</button>
+						</form>					
+
+					</td>
+				</tr>
+				<tr class="EnrSubHeaderRow">
+					<td class="EnrSubHeaderLeft">Precinct</td>
+					<td class="EnrSubHeaderRight">Ballots<br />Processed</td>
+					<td class="EnrSubHeaderRight">*Active<br />Registered<br />Voters</td>
+					<td class="EnrSubHeaderRight">Percent<br />Turnout</td>
+				</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							100
+						</td>
+						<td class="EnrCellRight">
+							1325
+						</td>
+						<td class="EnrCellRight">
+							1569
+						</td>
+						<td class="EnrCellRight">
+							84.45%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							101
+						</td>
+						<td class="EnrCellRight">
+							1193
+						</td>
+						<td class="EnrCellRight">
+							1378
+						</td>
+						<td class="EnrCellRight">
+							86.57%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							102
+						</td>
+						<td class="EnrCellRight">
+							965
+						</td>
+						<td class="EnrCellRight">
+							1235
+						</td>
+						<td class="EnrCellRight">
+							78.14%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							103
+						</td>
+						<td class="EnrCellRight">
+							1034
+						</td>
+						<td class="EnrCellRight">
+							1209
+						</td>
+						<td class="EnrCellRight">
+							85.53%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							104
+						</td>
+						<td class="EnrCellRight">
+							999
+						</td>
+						<td class="EnrCellRight">
+							1130
+						</td>
+						<td class="EnrCellRight">
+							88.41%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							105
+						</td>
+						<td class="EnrCellRight">
+							1449
+						</td>
+						<td class="EnrCellRight">
+							1640
+						</td>
+						<td class="EnrCellRight">
+							88.35%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							106
+						</td>
+						<td class="EnrCellRight">
+							1290
+						</td>
+						<td class="EnrCellRight">
+							1467
+						</td>
+						<td class="EnrCellRight">
+							87.93%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							200
+						</td>
+						<td class="EnrCellRight">
+							1062
+						</td>
+						<td class="EnrCellRight">
+							1179
+						</td>
+						<td class="EnrCellRight">
+							90.08%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							201
+						</td>
+						<td class="EnrCellRight">
+							947
+						</td>
+						<td class="EnrCellRight">
+							1107
+						</td>
+						<td class="EnrCellRight">
+							85.55%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							202
+						</td>
+						<td class="EnrCellRight">
+							714
+						</td>
+						<td class="EnrCellRight">
+							778
+						</td>
+						<td class="EnrCellRight">
+							91.77%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							203
+						</td>
+						<td class="EnrCellRight">
+							846
+						</td>
+						<td class="EnrCellRight">
+							957
+						</td>
+						<td class="EnrCellRight">
+							88.40%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							204
+						</td>
+						<td class="EnrCellRight">
+							1407
+						</td>
+						<td class="EnrCellRight">
+							1562
+						</td>
+						<td class="EnrCellRight">
+							90.08%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							205
+						</td>
+						<td class="EnrCellRight">
+							945
+						</td>
+						<td class="EnrCellRight">
+							1049
+						</td>
+						<td class="EnrCellRight">
+							90.09%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							206
+						</td>
+						<td class="EnrCellRight">
+							992
+						</td>
+						<td class="EnrCellRight">
+							1105
+						</td>
+						<td class="EnrCellRight">
+							89.77%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							207
+						</td>
+						<td class="EnrCellRight">
+							1441
+						</td>
+						<td class="EnrCellRight">
+							1578
+						</td>
+						<td class="EnrCellRight">
+							91.32%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							208
+						</td>
+						<td class="EnrCellRight">
+							939
+						</td>
+						<td class="EnrCellRight">
+							1097
+						</td>
+						<td class="EnrCellRight">
+							85.60%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							209
+						</td>
+						<td class="EnrCellRight">
+							1247
+						</td>
+						<td class="EnrCellRight">
+							1462
+						</td>
+						<td class="EnrCellRight">
+							85.29%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							210
+						</td>
+						<td class="EnrCellRight">
+							1273
+						</td>
+						<td class="EnrCellRight">
+							1402
+						</td>
+						<td class="EnrCellRight">
+							90.80%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							211
+						</td>
+						<td class="EnrCellRight">
+							750
+						</td>
+						<td class="EnrCellRight">
+							854
+						</td>
+						<td class="EnrCellRight">
+							87.82%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							212
+						</td>
+						<td class="EnrCellRight">
+							1097
+						</td>
+						<td class="EnrCellRight">
+							1261
+						</td>
+						<td class="EnrCellRight">
+							86.99%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							300
+						</td>
+						<td class="EnrCellRight">
+							1622
+						</td>
+						<td class="EnrCellRight">
+							2026
+						</td>
+						<td class="EnrCellRight">
+							80.06%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							301
+						</td>
+						<td class="EnrCellRight">
+							1528
+						</td>
+						<td class="EnrCellRight">
+							1943
+						</td>
+						<td class="EnrCellRight">
+							78.64%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							302
+						</td>
+						<td class="EnrCellRight">
+							1702
+						</td>
+						<td class="EnrCellRight">
+							1976
+						</td>
+						<td class="EnrCellRight">
+							86.13%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							303
+						</td>
+						<td class="EnrCellRight">
+							813
+						</td>
+						<td class="EnrCellRight">
+							963
+						</td>
+						<td class="EnrCellRight">
+							84.42%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							304
+						</td>
+						<td class="EnrCellRight">
+							943
+						</td>
+						<td class="EnrCellRight">
+							1056
+						</td>
+						<td class="EnrCellRight">
+							89.30%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							305
+						</td>
+						<td class="EnrCellRight">
+							978
+						</td>
+						<td class="EnrCellRight">
+							1163
+						</td>
+						<td class="EnrCellRight">
+							84.09%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							306
+						</td>
+						<td class="EnrCellRight">
+							1107
+						</td>
+						<td class="EnrCellRight">
+							1279
+						</td>
+						<td class="EnrCellRight">
+							86.55%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							307
+						</td>
+						<td class="EnrCellRight">
+							1079
+						</td>
+						<td class="EnrCellRight">
+							1532
+						</td>
+						<td class="EnrCellRight">
+							70.43%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							308
+						</td>
+						<td class="EnrCellRight">
+							941
+						</td>
+						<td class="EnrCellRight">
+							1131
+						</td>
+						<td class="EnrCellRight">
+							83.20%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							309
+						</td>
+						<td class="EnrCellRight">
+							1056
+						</td>
+						<td class="EnrCellRight">
+							1204
+						</td>
+						<td class="EnrCellRight">
+							87.71%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							310
+						</td>
+						<td class="EnrCellRight">
+							1363
+						</td>
+						<td class="EnrCellRight">
+							1585
+						</td>
+						<td class="EnrCellRight">
+							85.99%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							311
+						</td>
+						<td class="EnrCellRight">
+							733
+						</td>
+						<td class="EnrCellRight">
+							870
+						</td>
+						<td class="EnrCellRight">
+							84.25%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							312
+						</td>
+						<td class="EnrCellRight">
+							1028
+						</td>
+						<td class="EnrCellRight">
+							1171
+						</td>
+						<td class="EnrCellRight">
+							87.79%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							313
+						</td>
+						<td class="EnrCellRight">
+							1221
+						</td>
+						<td class="EnrCellRight">
+							1336
+						</td>
+						<td class="EnrCellRight">
+							91.39%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							314
+						</td>
+						<td class="EnrCellRight">
+							1388
+						</td>
+						<td class="EnrCellRight">
+							1558
+						</td>
+						<td class="EnrCellRight">
+							89.09%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							315
+						</td>
+						<td class="EnrCellRight">
+							768
+						</td>
+						<td class="EnrCellRight">
+							859
+						</td>
+						<td class="EnrCellRight">
+							89.41%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							316
+						</td>
+						<td class="EnrCellRight">
+							1212
+						</td>
+						<td class="EnrCellRight">
+							1348
+						</td>
+						<td class="EnrCellRight">
+							89.91%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							400
+						</td>
+						<td class="EnrCellRight">
+							2199
+						</td>
+						<td class="EnrCellRight">
+							2490
+						</td>
+						<td class="EnrCellRight">
+							88.31%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							401
+						</td>
+						<td class="EnrCellRight">
+							1456
+						</td>
+						<td class="EnrCellRight">
+							1685
+						</td>
+						<td class="EnrCellRight">
+							86.41%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							402
+						</td>
+						<td class="EnrCellRight">
+							1374
+						</td>
+						<td class="EnrCellRight">
+							1509
+						</td>
+						<td class="EnrCellRight">
+							91.05%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							403
+						</td>
+						<td class="EnrCellRight">
+							1319
+						</td>
+						<td class="EnrCellRight">
+							1529
+						</td>
+						<td class="EnrCellRight">
+							86.27%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							404
+						</td>
+						<td class="EnrCellRight">
+							1652
+						</td>
+						<td class="EnrCellRight">
+							1895
+						</td>
+						<td class="EnrCellRight">
+							87.18%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							405
+						</td>
+						<td class="EnrCellRight">
+							1114
+						</td>
+						<td class="EnrCellRight">
+							1249
+						</td>
+						<td class="EnrCellRight">
+							89.19%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							406
+						</td>
+						<td class="EnrCellRight">
+							1528
+						</td>
+						<td class="EnrCellRight">
+							1739
+						</td>
+						<td class="EnrCellRight">
+							87.87%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							407
+						</td>
+						<td class="EnrCellRight">
+							406
+						</td>
+						<td class="EnrCellRight">
+							480
+						</td>
+						<td class="EnrCellRight">
+							84.58%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							408
+						</td>
+						<td class="EnrCellRight">
+							552
+						</td>
+						<td class="EnrCellRight">
+							623
+						</td>
+						<td class="EnrCellRight">
+							88.60%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							500
+						</td>
+						<td class="EnrCellRight">
+							1117
+						</td>
+						<td class="EnrCellRight">
+							1242
+						</td>
+						<td class="EnrCellRight">
+							89.94%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							501
+						</td>
+						<td class="EnrCellRight">
+							828
+						</td>
+						<td class="EnrCellRight">
+							960
+						</td>
+						<td class="EnrCellRight">
+							86.25%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							502
+						</td>
+						<td class="EnrCellRight">
+							1286
+						</td>
+						<td class="EnrCellRight">
+							1470
+						</td>
+						<td class="EnrCellRight">
+							87.48%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							503
+						</td>
+						<td class="EnrCellRight">
+							466
+						</td>
+						<td class="EnrCellRight">
+							617
+						</td>
+						<td class="EnrCellRight">
+							75.53%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							504
+						</td>
+						<td class="EnrCellRight">
+							2133
+						</td>
+						<td class="EnrCellRight">
+							2438
+						</td>
+						<td class="EnrCellRight">
+							87.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							505
+						</td>
+						<td class="EnrCellRight">
+							845
+						</td>
+						<td class="EnrCellRight">
+							932
+						</td>
+						<td class="EnrCellRight">
+							90.67%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							506
+						</td>
+						<td class="EnrCellRight">
+							1332
+						</td>
+						<td class="EnrCellRight">
+							1466
+						</td>
+						<td class="EnrCellRight">
+							90.86%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							507
+						</td>
+						<td class="EnrCellRight">
+							1766
+						</td>
+						<td class="EnrCellRight">
+							2039
+						</td>
+						<td class="EnrCellRight">
+							86.61%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							508
+						</td>
+						<td class="EnrCellRight">
+							1431
+						</td>
+						<td class="EnrCellRight">
+							1600
+						</td>
+						<td class="EnrCellRight">
+							89.44%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							509
+						</td>
+						<td class="EnrCellRight">
+							1441
+						</td>
+						<td class="EnrCellRight">
+							1611
+						</td>
+						<td class="EnrCellRight">
+							89.45%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							510
+						</td>
+						<td class="EnrCellRight">
+							1091
+						</td>
+						<td class="EnrCellRight">
+							1255
+						</td>
+						<td class="EnrCellRight">
+							86.93%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							600
+						</td>
+						<td class="EnrCellRight">
+							1603
+						</td>
+						<td class="EnrCellRight">
+							2057
+						</td>
+						<td class="EnrCellRight">
+							77.93%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							601
+						</td>
+						<td class="EnrCellRight">
+							908
+						</td>
+						<td class="EnrCellRight">
+							1292
+						</td>
+						<td class="EnrCellRight">
+							70.28%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							602
+						</td>
+						<td class="EnrCellRight">
+							713
+						</td>
+						<td class="EnrCellRight">
+							916
+						</td>
+						<td class="EnrCellRight">
+							77.84%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							603
+						</td>
+						<td class="EnrCellRight">
+							1353
+						</td>
+						<td class="EnrCellRight">
+							1520
+						</td>
+						<td class="EnrCellRight">
+							89.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							604
+						</td>
+						<td class="EnrCellRight">
+							949
+						</td>
+						<td class="EnrCellRight">
+							1085
+						</td>
+						<td class="EnrCellRight">
+							87.47%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							605
+						</td>
+						<td class="EnrCellRight">
+							1037
+						</td>
+						<td class="EnrCellRight">
+							1201
+						</td>
+						<td class="EnrCellRight">
+							86.34%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							606
+						</td>
+						<td class="EnrCellRight">
+							1462
+						</td>
+						<td class="EnrCellRight">
+							1659
+						</td>
+						<td class="EnrCellRight">
+							88.13%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							607
+						</td>
+						<td class="EnrCellRight">
+							1608
+						</td>
+						<td class="EnrCellRight">
+							1939
+						</td>
+						<td class="EnrCellRight">
+							82.93%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							608
+						</td>
+						<td class="EnrCellRight">
+							1370
+						</td>
+						<td class="EnrCellRight">
+							1569
+						</td>
+						<td class="EnrCellRight">
+							87.32%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							609
+						</td>
+						<td class="EnrCellRight">
+							1499
+						</td>
+						<td class="EnrCellRight">
+							2019
+						</td>
+						<td class="EnrCellRight">
+							74.24%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							610
+						</td>
+						<td class="EnrCellRight">
+							1698
+						</td>
+						<td class="EnrCellRight">
+							2024
+						</td>
+						<td class="EnrCellRight">
+							83.89%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							611
+						</td>
+						<td class="EnrCellRight">
+							986
+						</td>
+						<td class="EnrCellRight">
+							1190
+						</td>
+						<td class="EnrCellRight">
+							82.86%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							612
+						</td>
+						<td class="EnrCellRight">
+							1015
+						</td>
+						<td class="EnrCellRight">
+							1244
+						</td>
+						<td class="EnrCellRight">
+							81.59%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							613
+						</td>
+						<td class="EnrCellRight">
+							921
+						</td>
+						<td class="EnrCellRight">
+							1204
+						</td>
+						<td class="EnrCellRight">
+							76.50%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							614
+						</td>
+						<td class="EnrCellRight">
+							598
+						</td>
+						<td class="EnrCellRight">
+							808
+						</td>
+						<td class="EnrCellRight">
+							74.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							615
+						</td>
+						<td class="EnrCellRight">
+							1660
+						</td>
+						<td class="EnrCellRight">
+							1858
+						</td>
+						<td class="EnrCellRight">
+							89.34%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							616
+						</td>
+						<td class="EnrCellRight">
+							1305
+						</td>
+						<td class="EnrCellRight">
+							1622
+						</td>
+						<td class="EnrCellRight">
+							80.46%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							617
+						</td>
+						<td class="EnrCellRight">
+							1117
+						</td>
+						<td class="EnrCellRight">
+							1655
+						</td>
+						<td class="EnrCellRight">
+							67.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							618
+						</td>
+						<td class="EnrCellRight">
+							1179
+						</td>
+						<td class="EnrCellRight">
+							1519
+						</td>
+						<td class="EnrCellRight">
+							77.62%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							619
+						</td>
+						<td class="EnrCellRight">
+							1544
+						</td>
+						<td class="EnrCellRight">
+							1828
+						</td>
+						<td class="EnrCellRight">
+							84.46%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							620
+						</td>
+						<td class="EnrCellRight">
+							1539
+						</td>
+						<td class="EnrCellRight">
+							1826
+						</td>
+						<td class="EnrCellRight">
+							84.28%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							621
+						</td>
+						<td class="EnrCellRight">
+							801
+						</td>
+						<td class="EnrCellRight">
+							934
+						</td>
+						<td class="EnrCellRight">
+							85.76%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							622
+						</td>
+						<td class="EnrCellRight">
+							843
+						</td>
+						<td class="EnrCellRight">
+							1059
+						</td>
+						<td class="EnrCellRight">
+							79.60%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							623
+						</td>
+						<td class="EnrCellRight">
+							1400
+						</td>
+						<td class="EnrCellRight">
+							1890
+						</td>
+						<td class="EnrCellRight">
+							74.07%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							624
+						</td>
+						<td class="EnrCellRight">
+							1415
+						</td>
+						<td class="EnrCellRight">
+							1690
+						</td>
+						<td class="EnrCellRight">
+							83.73%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							625
+						</td>
+						<td class="EnrCellRight">
+							1000
+						</td>
+						<td class="EnrCellRight">
+							1192
+						</td>
+						<td class="EnrCellRight">
+							83.89%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							626
+						</td>
+						<td class="EnrCellRight">
+							1219
+						</td>
+						<td class="EnrCellRight">
+							1500
+						</td>
+						<td class="EnrCellRight">
+							81.27%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							627
+						</td>
+						<td class="EnrCellRight">
+							878
+						</td>
+						<td class="EnrCellRight">
+							977
+						</td>
+						<td class="EnrCellRight">
+							89.87%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							628
+						</td>
+						<td class="EnrCellRight">
+							883
+						</td>
+						<td class="EnrCellRight">
+							990
+						</td>
+						<td class="EnrCellRight">
+							89.19%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							629
+						</td>
+						<td class="EnrCellRight">
+							1024
+						</td>
+						<td class="EnrCellRight">
+							1185
+						</td>
+						<td class="EnrCellRight">
+							86.41%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							630
+						</td>
+						<td class="EnrCellRight">
+							620
+						</td>
+						<td class="EnrCellRight">
+							880
+						</td>
+						<td class="EnrCellRight">
+							70.45%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							631
+						</td>
+						<td class="EnrCellRight">
+							702
+						</td>
+						<td class="EnrCellRight">
+							859
+						</td>
+						<td class="EnrCellRight">
+							81.72%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							632
+						</td>
+						<td class="EnrCellRight">
+							799
+						</td>
+						<td class="EnrCellRight">
+							1070
+						</td>
+						<td class="EnrCellRight">
+							74.67%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							633
+						</td>
+						<td class="EnrCellRight">
+							733
+						</td>
+						<td class="EnrCellRight">
+							1163
+						</td>
+						<td class="EnrCellRight">
+							63.03%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							634
+						</td>
+						<td class="EnrCellRight">
+							1052
+						</td>
+						<td class="EnrCellRight">
+							1332
+						</td>
+						<td class="EnrCellRight">
+							78.98%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							635
+						</td>
+						<td class="EnrCellRight">
+							1055
+						</td>
+						<td class="EnrCellRight">
+							1241
+						</td>
+						<td class="EnrCellRight">
+							85.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							636
+						</td>
+						<td class="EnrCellRight">
+							1246
+						</td>
+						<td class="EnrCellRight">
+							1439
+						</td>
+						<td class="EnrCellRight">
+							86.59%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							637
+						</td>
+						<td class="EnrCellRight">
+							1296
+						</td>
+						<td class="EnrCellRight">
+							1447
+						</td>
+						<td class="EnrCellRight">
+							89.56%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							638
+						</td>
+						<td class="EnrCellRight">
+							852
+						</td>
+						<td class="EnrCellRight">
+							1002
+						</td>
+						<td class="EnrCellRight">
+							85.03%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							639
+						</td>
+						<td class="EnrCellRight">
+							735
+						</td>
+						<td class="EnrCellRight">
+							956
+						</td>
+						<td class="EnrCellRight">
+							76.88%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							640
+						</td>
+						<td class="EnrCellRight">
+							726
+						</td>
+						<td class="EnrCellRight">
+							1027
+						</td>
+						<td class="EnrCellRight">
+							70.69%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							641
+						</td>
+						<td class="EnrCellRight">
+							678
+						</td>
+						<td class="EnrCellRight">
+							879
+						</td>
+						<td class="EnrCellRight">
+							77.13%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							642
+						</td>
+						<td class="EnrCellRight">
+							1104
+						</td>
+						<td class="EnrCellRight">
+							1334
+						</td>
+						<td class="EnrCellRight">
+							82.76%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							643
+						</td>
+						<td class="EnrCellRight">
+							741
+						</td>
+						<td class="EnrCellRight">
+							876
+						</td>
+						<td class="EnrCellRight">
+							84.59%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							644
+						</td>
+						<td class="EnrCellRight">
+							760
+						</td>
+						<td class="EnrCellRight">
+							871
+						</td>
+						<td class="EnrCellRight">
+							87.26%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							645
+						</td>
+						<td class="EnrCellRight">
+							1123
+						</td>
+						<td class="EnrCellRight">
+							1366
+						</td>
+						<td class="EnrCellRight">
+							82.21%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							646
+						</td>
+						<td class="EnrCellRight">
+							680
+						</td>
+						<td class="EnrCellRight">
+							754
+						</td>
+						<td class="EnrCellRight">
+							90.19%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							647
+						</td>
+						<td class="EnrCellRight">
+							803
+						</td>
+						<td class="EnrCellRight">
+							1048
+						</td>
+						<td class="EnrCellRight">
+							76.62%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							648
+						</td>
+						<td class="EnrCellRight">
+							850
+						</td>
+						<td class="EnrCellRight">
+							1056
+						</td>
+						<td class="EnrCellRight">
+							80.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							649
+						</td>
+						<td class="EnrCellRight">
+							1408
+						</td>
+						<td class="EnrCellRight">
+							1896
+						</td>
+						<td class="EnrCellRight">
+							74.26%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							650
+						</td>
+						<td class="EnrCellRight">
+							1027
+						</td>
+						<td class="EnrCellRight">
+							1438
+						</td>
+						<td class="EnrCellRight">
+							71.42%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							651
+						</td>
+						<td class="EnrCellRight">
+							1833
+						</td>
+						<td class="EnrCellRight">
+							2071
+						</td>
+						<td class="EnrCellRight">
+							88.51%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							700
+						</td>
+						<td class="EnrCellRight">
+							1165
+						</td>
+						<td class="EnrCellRight">
+							1308
+						</td>
+						<td class="EnrCellRight">
+							89.07%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							701
+						</td>
+						<td class="EnrCellRight">
+							1145
+						</td>
+						<td class="EnrCellRight">
+							1301
+						</td>
+						<td class="EnrCellRight">
+							88.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							702
+						</td>
+						<td class="EnrCellRight">
+							584
+						</td>
+						<td class="EnrCellRight">
+							678
+						</td>
+						<td class="EnrCellRight">
+							86.14%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							703
+						</td>
+						<td class="EnrCellRight">
+							169
+						</td>
+						<td class="EnrCellRight">
+							189
+						</td>
+						<td class="EnrCellRight">
+							89.42%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							704
+						</td>
+						<td class="EnrCellRight">
+							575
+						</td>
+						<td class="EnrCellRight">
+							668
+						</td>
+						<td class="EnrCellRight">
+							86.08%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							705
+						</td>
+						<td class="EnrCellRight">
+							574
+						</td>
+						<td class="EnrCellRight">
+							703
+						</td>
+						<td class="EnrCellRight">
+							81.65%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							800
+						</td>
+						<td class="EnrCellRight">
+							928
+						</td>
+						<td class="EnrCellRight">
+							1073
+						</td>
+						<td class="EnrCellRight">
+							86.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							801
+						</td>
+						<td class="EnrCellRight">
+							418
+						</td>
+						<td class="EnrCellRight">
+							482
+						</td>
+						<td class="EnrCellRight">
+							86.72%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							802
+						</td>
+						<td class="EnrCellRight">
+							1036
+						</td>
+						<td class="EnrCellRight">
+							1178
+						</td>
+						<td class="EnrCellRight">
+							87.95%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							803
+						</td>
+						<td class="EnrCellRight">
+							1557
+						</td>
+						<td class="EnrCellRight">
+							2012
+						</td>
+						<td class="EnrCellRight">
+							77.39%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							804
+						</td>
+						<td class="EnrCellRight">
+							1165
+						</td>
+						<td class="EnrCellRight">
+							1486
+						</td>
+						<td class="EnrCellRight">
+							78.40%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							805
+						</td>
+						<td class="EnrCellRight">
+							1030
+						</td>
+						<td class="EnrCellRight">
+							1176
+						</td>
+						<td class="EnrCellRight">
+							87.59%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							806
+						</td>
+						<td class="EnrCellRight">
+							1129
+						</td>
+						<td class="EnrCellRight">
+							1267
+						</td>
+						<td class="EnrCellRight">
+							89.11%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							807
+						</td>
+						<td class="EnrCellRight">
+							979
+						</td>
+						<td class="EnrCellRight">
+							1121
+						</td>
+						<td class="EnrCellRight">
+							87.33%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							808
+						</td>
+						<td class="EnrCellRight">
+							1253
+						</td>
+						<td class="EnrCellRight">
+							1415
+						</td>
+						<td class="EnrCellRight">
+							88.55%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							809
+						</td>
+						<td class="EnrCellRight">
+							1157
+						</td>
+						<td class="EnrCellRight">
+							1390
+						</td>
+						<td class="EnrCellRight">
+							83.24%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							810
+						</td>
+						<td class="EnrCellRight">
+							644
+						</td>
+						<td class="EnrCellRight">
+							766
+						</td>
+						<td class="EnrCellRight">
+							84.07%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							811
+						</td>
+						<td class="EnrCellRight">
+							924
+						</td>
+						<td class="EnrCellRight">
+							1084
+						</td>
+						<td class="EnrCellRight">
+							85.24%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							812
+						</td>
+						<td class="EnrCellRight">
+							730
+						</td>
+						<td class="EnrCellRight">
+							814
+						</td>
+						<td class="EnrCellRight">
+							89.68%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							813
+						</td>
+						<td class="EnrCellRight">
+							917
+						</td>
+						<td class="EnrCellRight">
+							1046
+						</td>
+						<td class="EnrCellRight">
+							87.67%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							814
+						</td>
+						<td class="EnrCellRight">
+							746
+						</td>
+						<td class="EnrCellRight">
+							844
+						</td>
+						<td class="EnrCellRight">
+							88.39%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							815
+						</td>
+						<td class="EnrCellRight">
+							1574
+						</td>
+						<td class="EnrCellRight">
+							1802
+						</td>
+						<td class="EnrCellRight">
+							87.35%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							816
+						</td>
+						<td class="EnrCellRight">
+							1176
+						</td>
+						<td class="EnrCellRight">
+							1353
+						</td>
+						<td class="EnrCellRight">
+							86.92%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							817
+						</td>
+						<td class="EnrCellRight">
+							1537
+						</td>
+						<td class="EnrCellRight">
+							1806
+						</td>
+						<td class="EnrCellRight">
+							85.11%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							818
+						</td>
+						<td class="EnrCellRight">
+							1346
+						</td>
+						<td class="EnrCellRight">
+							1769
+						</td>
+						<td class="EnrCellRight">
+							76.09%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							819
+						</td>
+						<td class="EnrCellRight">
+							1396
+						</td>
+						<td class="EnrCellRight">
+							1673
+						</td>
+						<td class="EnrCellRight">
+							83.44%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							820
+						</td>
+						<td class="EnrCellRight">
+							1440
+						</td>
+						<td class="EnrCellRight">
+							1756
+						</td>
+						<td class="EnrCellRight">
+							82.00%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							821
+						</td>
+						<td class="EnrCellRight">
+							909
+						</td>
+						<td class="EnrCellRight">
+							1121
+						</td>
+						<td class="EnrCellRight">
+							81.09%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							822
+						</td>
+						<td class="EnrCellRight">
+							1263
+						</td>
+						<td class="EnrCellRight">
+							1449
+						</td>
+						<td class="EnrCellRight">
+							87.16%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							823
+						</td>
+						<td class="EnrCellRight">
+							935
+						</td>
+						<td class="EnrCellRight">
+							1184
+						</td>
+						<td class="EnrCellRight">
+							78.97%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							824
+						</td>
+						<td class="EnrCellRight">
+							794
+						</td>
+						<td class="EnrCellRight">
+							1003
+						</td>
+						<td class="EnrCellRight">
+							79.16%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							825
+						</td>
+						<td class="EnrCellRight">
+							1484
+						</td>
+						<td class="EnrCellRight">
+							1682
+						</td>
+						<td class="EnrCellRight">
+							88.23%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							826
+						</td>
+						<td class="EnrCellRight">
+							742
+						</td>
+						<td class="EnrCellRight">
+							902
+						</td>
+						<td class="EnrCellRight">
+							82.26%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							827
+						</td>
+						<td class="EnrCellRight">
+							1475
+						</td>
+						<td class="EnrCellRight">
+							1696
+						</td>
+						<td class="EnrCellRight">
+							86.97%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							828
+						</td>
+						<td class="EnrCellRight">
+							614
+						</td>
+						<td class="EnrCellRight">
+							676
+						</td>
+						<td class="EnrCellRight">
+							90.83%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							829
+						</td>
+						<td class="EnrCellRight">
+							1285
+						</td>
+						<td class="EnrCellRight">
+							1693
+						</td>
+						<td class="EnrCellRight">
+							75.90%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							830
+						</td>
+						<td class="EnrCellRight">
+							1366
+						</td>
+						<td class="EnrCellRight">
+							1594
+						</td>
+						<td class="EnrCellRight">
+							85.70%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							831
+						</td>
+						<td class="EnrCellRight">
+							988
+						</td>
+						<td class="EnrCellRight">
+							1450
+						</td>
+						<td class="EnrCellRight">
+							68.14%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							832
+						</td>
+						<td class="EnrCellRight">
+							1401
+						</td>
+						<td class="EnrCellRight">
+							1648
+						</td>
+						<td class="EnrCellRight">
+							85.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							833
+						</td>
+						<td class="EnrCellRight">
+							1144
+						</td>
+						<td class="EnrCellRight">
+							1477
+						</td>
+						<td class="EnrCellRight">
+							77.45%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							834
+						</td>
+						<td class="EnrCellRight">
+							928
+						</td>
+						<td class="EnrCellRight">
+							1130
+						</td>
+						<td class="EnrCellRight">
+							82.12%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							835
+						</td>
+						<td class="EnrCellRight">
+							532
+						</td>
+						<td class="EnrCellRight">
+							621
+						</td>
+						<td class="EnrCellRight">
+							85.67%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							836
+						</td>
+						<td class="EnrCellRight">
+							548
+						</td>
+						<td class="EnrCellRight">
+							638
+						</td>
+						<td class="EnrCellRight">
+							85.89%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							837
+						</td>
+						<td class="EnrCellRight">
+							641
+						</td>
+						<td class="EnrCellRight">
+							729
+						</td>
+						<td class="EnrCellRight">
+							87.93%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							838
+						</td>
+						<td class="EnrCellRight">
+							1039
+						</td>
+						<td class="EnrCellRight">
+							1192
+						</td>
+						<td class="EnrCellRight">
+							87.16%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							839
+						</td>
+						<td class="EnrCellRight">
+							1137
+						</td>
+						<td class="EnrCellRight">
+							1315
+						</td>
+						<td class="EnrCellRight">
+							86.46%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							840
+						</td>
+						<td class="EnrCellRight">
+							1568
+						</td>
+						<td class="EnrCellRight">
+							1800
+						</td>
+						<td class="EnrCellRight">
+							87.11%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							841
+						</td>
+						<td class="EnrCellRight">
+							848
+						</td>
+						<td class="EnrCellRight">
+							1062
+						</td>
+						<td class="EnrCellRight">
+							79.85%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							842
+						</td>
+						<td class="EnrCellRight">
+							1053
+						</td>
+						<td class="EnrCellRight">
+							1190
+						</td>
+						<td class="EnrCellRight">
+							88.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							843
+						</td>
+						<td class="EnrCellRight">
+							1061
+						</td>
+						<td class="EnrCellRight">
+							1319
+						</td>
+						<td class="EnrCellRight">
+							80.44%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							844
+						</td>
+						<td class="EnrCellRight">
+							885
+						</td>
+						<td class="EnrCellRight">
+							1014
+						</td>
+						<td class="EnrCellRight">
+							87.28%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							845
+						</td>
+						<td class="EnrCellRight">
+							1523
+						</td>
+						<td class="EnrCellRight">
+							1735
+						</td>
+						<td class="EnrCellRight">
+							87.78%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							846
+						</td>
+						<td class="EnrCellRight">
+							695
+						</td>
+						<td class="EnrCellRight">
+							786
+						</td>
+						<td class="EnrCellRight">
+							88.42%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							847
+						</td>
+						<td class="EnrCellRight">
+							681
+						</td>
+						<td class="EnrCellRight">
+							918
+						</td>
+						<td class="EnrCellRight">
+							74.18%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							848
+						</td>
+						<td class="EnrCellRight">
+							603
+						</td>
+						<td class="EnrCellRight">
+							781
+						</td>
+						<td class="EnrCellRight">
+							77.21%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							849
+						</td>
+						<td class="EnrCellRight">
+							922
+						</td>
+						<td class="EnrCellRight">
+							1095
+						</td>
+						<td class="EnrCellRight">
+							84.20%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							850
+						</td>
+						<td class="EnrCellRight">
+							1129
+						</td>
+						<td class="EnrCellRight">
+							1340
+						</td>
+						<td class="EnrCellRight">
+							84.25%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							851
+						</td>
+						<td class="EnrCellRight">
+							507
+						</td>
+						<td class="EnrCellRight">
+							620
+						</td>
+						<td class="EnrCellRight">
+							81.77%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							852
+						</td>
+						<td class="EnrCellRight">
+							595
+						</td>
+						<td class="EnrCellRight">
+							664
+						</td>
+						<td class="EnrCellRight">
+							89.61%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							853
+						</td>
+						<td class="EnrCellRight">
+							718
+						</td>
+						<td class="EnrCellRight">
+							795
+						</td>
+						<td class="EnrCellRight">
+							90.31%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							854
+						</td>
+						<td class="EnrCellRight">
+							790
+						</td>
+						<td class="EnrCellRight">
+							873
+						</td>
+						<td class="EnrCellRight">
+							90.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							855
+						</td>
+						<td class="EnrCellRight">
+							1183
+						</td>
+						<td class="EnrCellRight">
+							1311
+						</td>
+						<td class="EnrCellRight">
+							90.24%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							856
+						</td>
+						<td class="EnrCellRight">
+							1411
+						</td>
+						<td class="EnrCellRight">
+							1583
+						</td>
+						<td class="EnrCellRight">
+							89.13%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							857
+						</td>
+						<td class="EnrCellRight">
+							853
+						</td>
+						<td class="EnrCellRight">
+							940
+						</td>
+						<td class="EnrCellRight">
+							90.74%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							900
+						</td>
+						<td class="EnrCellRight">
+							436
+						</td>
+						<td class="EnrCellRight">
+							506
+						</td>
+						<td class="EnrCellRight">
+							86.17%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							901
+						</td>
+						<td class="EnrCellRight">
+							877
+						</td>
+						<td class="EnrCellRight">
+							1040
+						</td>
+						<td class="EnrCellRight">
+							84.33%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							902
+						</td>
+						<td class="EnrCellRight">
+							271
+						</td>
+						<td class="EnrCellRight">
+							315
+						</td>
+						<td class="EnrCellRight">
+							86.03%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							903
+						</td>
+						<td class="EnrCellRight">
+							628
+						</td>
+						<td class="EnrCellRight">
+							710
+						</td>
+						<td class="EnrCellRight">
+							88.45%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							904
+						</td>
+						<td class="EnrCellRight">
+							1044
+						</td>
+						<td class="EnrCellRight">
+							1244
+						</td>
+						<td class="EnrCellRight">
+							83.92%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							905
+						</td>
+						<td class="EnrCellRight">
+							448
+						</td>
+						<td class="EnrCellRight">
+							540
+						</td>
+						<td class="EnrCellRight">
+							82.96%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							906
+						</td>
+						<td class="EnrCellRight">
+							490
+						</td>
+						<td class="EnrCellRight">
+							564
+						</td>
+						<td class="EnrCellRight">
+							86.88%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							907
+						</td>
+						<td class="EnrCellRight">
+							805
+						</td>
+						<td class="EnrCellRight">
+							946
+						</td>
+						<td class="EnrCellRight">
+							85.10%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							908
+						</td>
+						<td class="EnrCellRight">
+							354
+						</td>
+						<td class="EnrCellRight">
+							411
+						</td>
+						<td class="EnrCellRight">
+							86.13%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							909
+						</td>
+						<td class="EnrCellRight">
+							521
+						</td>
+						<td class="EnrCellRight">
+							592
+						</td>
+						<td class="EnrCellRight">
+							88.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							910
+						</td>
+						<td class="EnrCellRight">
+							589
+						</td>
+						<td class="EnrCellRight">
+							689
+						</td>
+						<td class="EnrCellRight">
+							85.49%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							911
+						</td>
+						<td class="EnrCellRight">
+							847
+						</td>
+						<td class="EnrCellRight">
+							941
+						</td>
+						<td class="EnrCellRight">
+							90.01%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							912
+						</td>
+						<td class="EnrCellRight">
+							1611
+						</td>
+						<td class="EnrCellRight">
+							1836
+						</td>
+						<td class="EnrCellRight">
+							87.75%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							913
+						</td>
+						<td class="EnrCellRight">
+							555
+						</td>
+						<td class="EnrCellRight">
+							646
+						</td>
+						<td class="EnrCellRight">
+							85.91%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							914
+						</td>
+						<td class="EnrCellRight">
+							424
+						</td>
+						<td class="EnrCellRight">
+							513
+						</td>
+						<td class="EnrCellRight">
+							82.65%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRow">
+						<td class="EnrCellLeft">
+							915
+						</td>
+						<td class="EnrCellRight">
+							1250
+						</td>
+						<td class="EnrCellRight">
+							1389
+						</td>
+						<td class="EnrCellRight">
+							89.99%
+						</td>
+					</tr>
+					<tr class="EnrCandidateRowAlt">
+						<td class="EnrCellLeft">
+							916
+						</td>
+						<td class="EnrCellRight">
+							1103
+						</td>
+						<td class="EnrCellRight">
+							1224
+						</td>
+						<td class="EnrCellRight">
+							90.11%
+						</td>
+					</tr>
+
+			</table>
+		</div>
+		<br />
+	</main>
+</center>
+
+
+
+			
+			<br />
+		</div>
+	</div>
+
+
+	<!-- Crazy Egg -->
+	<script type="text/javascript">
+		setTimeout(function () {
+			var a = document.createElement("script");
+			var b = document.getElementsByTagName("script")[0];
+			a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/7076.js?" + Math.floor(new Date().getTime() / 3600000);
+			a.async = true; a.type = "text/javascript"; b.parentNode.insertBefore(a, b)
+		}, 1);
+	</script>
+</body>
+
+<!-- Mirrored from election.boco.solutions/ElectionResults2024G/Home/PrecinctTurnout by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Jun 2025 17:52:15 GMT -->
+</html>

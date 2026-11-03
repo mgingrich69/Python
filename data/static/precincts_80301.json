@@ -1,0 +1,182 @@
+{
+  "zip": "80301",
+  "generated_at": "2026-11-03T02:50:21+00:00",
+  "method": "Boulder County GIS address points with POSTAL_ZIP=80301 assigned to Boulder County GIS precinct polygons by point-in-polygon. A precinct 'overlaps' the ZIP if it contains at least one such address. Counts are addresses, not voters.",
+  "sources": [
+    {
+      "name": "Boulder County GIS \u2013 Precincts",
+      "url": "https://maps.bouldercounty.org/arcgis/rest/services/POLITICAL/PRECINCTS/MapServer/0",
+      "license": "CC BY 4.0"
+    },
+    {
+      "name": "Boulder County GIS \u2013 Address Points",
+      "url": "https://maps.bouldercounty.org/arcgis/rest/services/PARCELS/ADDRESS_POINTS/MapServer/0",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "addresses_in_zip_total": 11421,
+  "addresses_in_zip_unassigned": 0,
+  "precincts": [
+    {
+      "precinct": "2181207504",
+      "short_code": "504",
+      "addresses_total": 1504,
+      "addresses_in_zip": 1488,
+      "share_in_zip": 0.9894
+    },
+    {
+      "precinct": "2181007820",
+      "short_code": "820",
+      "addresses_total": 1712,
+      "addresses_in_zip": 1385,
+      "share_in_zip": 0.809
+    },
+    {
+      "precinct": "2181007818",
+      "short_code": "818",
+      "addresses_total": 1278,
+      "addresses_in_zip": 1276,
+      "share_in_zip": 0.9984
+    },
+    {
+      "precinct": "2181007819",
+      "short_code": "819",
+      "addresses_total": 1194,
+      "addresses_in_zip": 1148,
+      "share_in_zip": 0.9615
+    },
+    {
+      "precinct": "2181207507",
+      "short_code": "507",
+      "addresses_total": 1078,
+      "addresses_in_zip": 1075,
+      "share_in_zip": 0.9972
+    },
+    {
+      "precinct": "2181007808",
+      "short_code": "808",
+      "addresses_total": 722,
+      "addresses_in_zip": 720,
+      "share_in_zip": 0.9972
+    },
+    {
+      "precinct": "2181207506",
+      "short_code": "506",
+      "addresses_total": 716,
+      "addresses_in_zip": 707,
+      "share_in_zip": 0.9874
+    },
+    {
+      "precinct": "2181007802",
+      "short_code": "802",
+      "addresses_total": 602,
+      "addresses_in_zip": 572,
+      "share_in_zip": 0.9502
+    },
+    {
+      "precinct": "2181007810",
+      "short_code": "810",
+      "addresses_total": 489,
+      "addresses_in_zip": 488,
+      "share_in_zip": 0.998
+    },
+    {
+      "precinct": "2181007809",
+      "short_code": "809",
+      "addresses_total": 580,
+      "addresses_in_zip": 476,
+      "share_in_zip": 0.8207
+    },
+    {
+      "precinct": "2181207503",
+      "short_code": "503",
+      "addresses_total": 458,
+      "addresses_in_zip": 442,
+      "share_in_zip": 0.9651
+    },
+    {
+      "precinct": "2181007800",
+      "short_code": "800",
+      "addresses_total": 454,
+      "addresses_in_zip": 435,
+      "share_in_zip": 0.9581
+    },
+    {
+      "precinct": "2181207505",
+      "short_code": "505",
+      "addresses_total": 433,
+      "addresses_in_zip": 433,
+      "share_in_zip": 1.0
+    },
+    {
+      "precinct": "2181007801",
+      "short_code": "801",
+      "addresses_total": 359,
+      "addresses_in_zip": 358,
+      "share_in_zip": 0.9972
+    },
+    {
+      "precinct": "2181207502",
+      "short_code": "502",
+      "addresses_total": 731,
+      "addresses_in_zip": 234,
+      "share_in_zip": 0.3201
+    },
+    {
+      "precinct": "2181207508",
+      "short_code": "508",
+      "addresses_total": 746,
+      "addresses_in_zip": 96,
+      "share_in_zip": 0.1287
+    },
+    {
+      "precinct": "2181007803",
+      "short_code": "803",
+      "addresses_total": 1442,
+      "addresses_in_zip": 35,
+      "share_in_zip": 0.0243
+    },
+    {
+      "precinct": "2181007811",
+      "short_code": "811",
+      "addresses_total": 711,
+      "addresses_in_zip": 29,
+      "share_in_zip": 0.0408
+    },
+    {
+      "precinct": "2171207316",
+      "short_code": "316",
+      "addresses_total": 611,
+      "addresses_in_zip": 15,
+      "share_in_zip": 0.0245
+    },
+    {
+      "precinct": "2151207700",
+      "short_code": "700",
+      "addresses_total": 662,
+      "addresses_in_zip": 5,
+      "share_in_zip": 0.0076
+    },
+    {
+      "precinct": "2181207501",
+      "short_code": "501",
+      "addresses_total": 506,
+      "addresses_in_zip": 2,
+      "share_in_zip": 0.004
+    },
+    {
+      "precinct": "2154907915",
+      "short_code": "915",
+      "addresses_total": 1100,
+      "addresses_in_zip": 1,
+      "share_in_zip": 0.0009
+    },
+    {
+      "precinct": "2181007835",
+      "short_code": "835",
+      "addresses_total": 386,
+      "addresses_in_zip": 1,
+      "share_in_zip": 0.0026
+    }
+  ]
+}
