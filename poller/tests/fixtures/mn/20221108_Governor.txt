@@ -1,0 +1,7 @@
+MN;;;0331;Governor & Lt Governor;;0101;Steve Patterson and Matt Huff;;;GLC;4103;4103;22599;0.90;2510661
+MN;;;0331;Governor & Lt Governor;;0201;James McCaskel and David Sandbeck;;;LMN;4103;4103;29346;1.17;2510661
+MN;;;0331;Governor & Lt Governor;;0301;Scott Jensen and Matt Birk;;;R;4103;4103;1119941;44.61;2510661
+MN;;;0331;Governor & Lt Governor;;0401;Tim Walz and Peggy Flanagan;;;DFL;4103;4103;1312349;52.27;2510661
+MN;;;0331;Governor & Lt Governor;;0501;Hugh McTavish and Mike Winter;;;IA;4103;4103;18156;0.72;2510661
+MN;;;0331;Governor & Lt Governor;;0701;Gabrielle M. Prosser and Kevin A. Dwire;;;SWP;4103;4103;7241;0.29;2510661
+MN;;;0331;Governor & Lt Governor;;9901;WRITE-IN;;;WI;4103;4103;1029;0.04;2510661

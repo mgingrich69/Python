@@ -15,27 +15,23 @@
   <header class="masthead">
     <div class="masthead-row">
       <div class="brand">
-        <span class="live-dot" aria-hidden="true"></span>
-        <span class="brand-kicker">Live</span>
-        <h1 class="brand-title">Election Night <span>2026</span></h1>
+        <span class="brand-badge"><span class="live-dot" aria-hidden="true"></span>Live</span>
+        <h1 class="brand-title">Election Night 2026</h1>
       </div>
-      <button id="theme" class="icon-btn" type="button" aria-label="Color theme: automatic. Change theme">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.4A5.5 5.5 0 0 1 12.4 3.1L12 3z"/></svg>
-      </button>
-    </div>
-    <div class="status-row">
-      <p id="asof" class="asof" aria-live="polite">Loading results…</p>
-      <div class="status-actions">
-        <button id="refresh" class="btn" type="button">
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17.6 6.4A8 8 0 1 0 20 12h-2a6 6 0 1 1-1.8-4.2L13 11h7V4l-2.4 2.4z"/></svg>
-          Refresh
+      <div class="head-actions">
+        <button id="refresh" class="icon-btn" type="button" aria-label="Refresh results">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17.6 6.4A8 8 0 1 0 20 12h-2a6 6 0 1 1-1.8-4.2L13 11h7V4l-2.4 2.4z"/></svg>
+        </button>
+        <button id="theme" class="icon-btn" type="button" aria-label="Color theme: automatic. Change theme">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.4A5.5 5.5 0 0 1 12.4 3.1L12 3z"/></svg>
         </button>
       </div>
     </div>
+    <p id="asof" class="asof" aria-live="polite">Loading results…</p>
     <nav class="tabs" role="tablist" aria-label="Result sections">
       <button role="tab" id="tab-national" aria-controls="panel-national" aria-selected="true" data-tab="national">National</button>
       <button role="tab" id="tab-colorado" aria-controls="panel-colorado" aria-selected="false" tabindex="-1" data-tab="colorado">Colorado</button>
-      <button role="tab" id="tab-boulder" aria-controls="panel-boulder" aria-selected="false" tabindex="-1" data-tab="boulder">Boulder / 80301</button>
+      <button role="tab" id="tab-boulder" aria-controls="panel-boulder" aria-selected="false" tabindex="-1" data-tab="boulder">Boulder · 80301</button>
     </nav>
   </header>
 
@@ -54,12 +50,12 @@
       <li><a href="https://electionresults.bouldercounty.gov/">Boulder County Elections</a>: county and local results, precinct turnout.</li>
       <li><a href="https://www.sos.state.co.us/pubs/elections/main.html">Colorado Secretary of State</a>: statewide results via Clarity ENR.</li>
       <li><a href="https://er.ncsbe.gov/">North Carolina State Board of Elections</a>: NC federal races.</li>
+      <li><a href="https://electionresults.sos.mn.gov/">Minnesota Secretary of State</a>: MN federal races and governor.</li>
       <li><a href="https://opendata-bouldercounty.hub.arcgis.com/">Boulder County GIS</a>: precinct boundaries and address points (CC BY 4.0), used for the ZIP 80301 approximation.</li>
     </ul>
     <p class="fine">Personal, non-commercial dashboard. Not affiliated with any election office or news organization. News links open the publisher's own site.</p>
   </footer>
 
-  <template id="tpl-empty"><p class="empty"></p></template>
   <script src="app.js" type="module"></script>
 </body>
 </html>

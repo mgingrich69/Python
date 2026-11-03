@@ -17,6 +17,7 @@ Browser → data/results.json every 60 s (+ Refresh button)
 | Boulder County Elections (`electionresults.bouldercounty.gov`) | Boulder; Colorado (as "Boulder County votes only") | ✅ Works from GitHub runners. HTML parser tested on real 2024G/2026P pages. Results post after 7:00 PM MT. |
 | Boulder County precinct turnout | Boulder (80301) | ✅ Same site, per-precinct ballots processed. |
 | NC State Board of Elections (`er.ncsbe.gov`) | National (NC Senate + 14 House) | ✅ Official JSON, works from runners. Polls close 7:30 PM ET. |
+| Minnesota Secretary of State (`electionresultsfiles.sos.mn.gov`) | National (MN Senate, Governor, 8 House) | ✅ Official media files. Polls close 8 PM CT. |
 | Colorado Secretary of State (Clarity ENR) | Colorado | ❌ Clarity answers automated clients with a **bot challenge (HTTP 202, empty body)**. Confirmed from GitHub runners. We don't get around it, so the tab says so and links to the official page and news outlets. The adapter is built and tested, and starts working automatically if access is ever allowed. |
 | Georgia SOS (Clarity) | National | ❌ Disabled for the same reason. |
 | AP / Decision Desk HQ (race calls) | — | Paid, contract only. Not used. News sites (CNN, NYT, AP…) are **linked, not scraped**: their terms forbid scraping and their data is licensed from AP/DDHQ. |
@@ -90,7 +91,7 @@ Rebuild the 80301 mapping (only if the county changes precincts): `python script
 ## Limitations
 
 - No statewide Colorado totals: the official feed blocks automated access. The Colorado tab shows Boulder County's votes on statewide races, clearly labeled, plus links.
-- National coverage is limited to North Carolina's federal races. Other states either block automated access, have no free machine-readable feed I could verify in time, or would need per-state adapters. There are no race calls without an AP/DDHQ license.
+- National coverage is limited to North Carolina and Minnesota. Feeds for TX, AZ, PA, OH, MI, FL, ME, NH (and Clarity states such as GA) refused automated requests when tested on Nov 3. Other states either block automated access, have no free machine-readable feed I could verify in time, or would need per-state adapters. There are no race calls without an AP/DDHQ license.
 - 80301 shows turnout only. Its precinct overlap counts addresses, not voters.
 - Updates take about 5 minutes for the poll plus about 1 minute for the Pages deploy. GitHub cron can start late. Use manual `once` runs if needed.
 

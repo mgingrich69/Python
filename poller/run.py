@@ -27,7 +27,7 @@ from pathlib import Path
 from typing import Callable, Optional
 
 from .schema import Published, Race, SourceBlock, SourceStatus
-from .sources import boulder, clarity, ncsbe
+from .sources import boulder, clarity, mnsos, ncsbe
 from .util import Http, utcnow
 
 log = logging.getLogger("poller")
@@ -121,10 +121,31 @@ def fetch_ncsbe(http: Http, cfg: dict, election_date: str):
             upd = None
     races = ncsbe.parse(r.text, election_date=d, fetched_at=utcnow(), source_updated_at=upd,
                         office_groups=tuple(cfg.get("office_groups", ["FED"])))
-    if all(rc.votes == 0 for rc in races) and all((rc.precincts_reporting and rc.precincts_reporting.reporting == 0) for rc in races):
-        # Candidate list is published before polls close; report it honestly as "no results yet".
-        raise NotYetAvailable("No votes reported yet (NC polls close 7:30 PM ET).")
-    return races, {}, upd, None
+    # Candidate lineups are published before polls close; show them with zero votes
+    # (the UI labels them "Awaiting results") instead of hiding the races.
+    msg = "No votes reported yet. NC polls close 7:30 PM ET." if all(rc.votes == 0 for rc in races) else None
+    return races, {}, upd, msg
+
+
+def _last_modified(r) -> Optional[datetime]:
+    try:
+        return parsedate_to_datetime(r.headers["last-modified"]) if r.headers.get("last-modified") else None
+    except (TypeError, ValueError):
+        return None
+
+
+def fetch_mnsos(http: Http, cfg: dict, election_date: str):
+    d = election_date.replace("-", "")
+    races, upds = [], []
+    for name in cfg.get("files", list(mnsos.FILES)):
+        r = http.get(mnsos.file_url(d, name))
+        if "<html" in r.text[:200].lower():
+            raise ValueError(f"{name}: got an HTML page instead of a results file")
+        upd = _last_modified(r)
+        upds.append(upd)
+        races += mnsos.parse(r.text, election_date=d, fetched_at=utcnow(), source_updated_at=upd)
+    msg = "No votes reported yet. MN polls close 8 PM CT." if all(rc.votes == 0 for rc in races) else None
+    return races, {}, max([u for u in upds if u], default=None), msg
 
 
 # ---------------------------------------------------------------- core
@@ -251,6 +272,9 @@ def poll_once(out_dir: Path, http: Optional[Http] = None, config: Optional[dict]
     if srcs["ncsbe"].get("enabled"):
         blocks["ncsbe"] = poll_source("ncsbe", srcs["ncsbe"]["name"], "https://er.ncsbe.gov/",
                                       fetch_ncsbe, http, srcs["ncsbe"], ed, prev.get("ncsbe"))
+    if srcs.get("mnsos", {}).get("enabled"):
+        blocks["mnsos"] = poll_source("mnsos", srcs["mnsos"]["name"], "https://electionresults.sos.mn.gov/",
+                                      fetch_mnsos, http, srcs["mnsos"], ed, prev.get("mnsos"))
     for c in srcs.get("clarity_states", []):
         if c.get("enabled"):
             blocks[c["key"]] = poll_source(c["key"], c["name"], c["url"], make_clarity_fetcher(c["key"], c),

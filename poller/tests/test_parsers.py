@@ -129,3 +129,46 @@ def test_classify_level(name, level):
 
 def test_slugify_strips_vote_for():
     assert slugify("US SENATE (VOTE FOR 1)") == "us-senate"
+
+
+# ------------------------------------------------------------------ Minnesota
+
+from poller.sources import mnsos  # noqa: E402
+
+
+def test_mn_2024_senate_final():
+    races = mnsos.parse(read("mn/20241105_ussenate.txt"), election_date="20241105", fetched_at=NOW)
+    assert len(races) == 1
+    r = races[0]
+    assert r.race_id == "mn:u-s-senator" and r.level == "national"
+    k = next(c for c in r.candidates if c.name == "Amy Klobuchar")
+    assert (k.votes, k.percent, k.party) == (1792441, 56.2, "Democratic-Farmer-Labor")
+    assert r.votes == 3189323
+    assert r.precincts_reporting.reporting == r.precincts_reporting.total == 4103
+    assert r.called_status == "not_called"
+
+
+def test_mn_2024_house_districts_are_separate_races():
+    races = mnsos.parse(read("mn/20241105_ushouse.txt"), election_date="20241105", fetched_at=NOW)
+    assert len(races) == 8
+    assert len({r.race_id for r in races}) == 8
+    d1 = races[0]
+    assert {c.name: c.votes for c in d1.candidates}["Brad Finstad"] == 220929
+
+
+def test_mn_2022_governor_is_state_level():
+    races = mnsos.parse(read("mn/20221108_Governor.txt"), election_date="20221108", fetched_at=NOW)
+    assert races[0].level == "state" and "Governor" in races[0].race_name
+    assert races[0].votes == 2510661
+
+
+def test_mn_2026_pre_results_lineup():
+    races = mnsos.parse(read("mn/20261103_ussenate.txt"), election_date="20261103", fetched_at=NOW)
+    names = [c.name for c in races[0].candidates]
+    assert "Peggy Flanagan" in names and "Michele Tafoya" in names
+    assert races[0].votes == 0 and races[0].precincts_reporting.reporting == 0
+
+
+def test_mn_html_error_page_rejected():
+    with pytest.raises(ValueError):
+        mnsos.parse("<html><body>Not found</body></html>", election_date="20261103", fetched_at=NOW)

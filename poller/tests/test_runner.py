@@ -27,6 +27,7 @@ def config(election_date="2024-11-05"):
     cfg["election_date"] = election_date
     cfg["sources"]["co_sos"]["enabled"] = False
     cfg["sources"]["clarity_states"] = []
+    cfg["sources"]["mnsos"]["enabled"] = False
     return cfg
 
 
@@ -166,3 +167,35 @@ def test_clarity_bot_challenge_reported_honestly(tmp_path, monkeypatch):
     co = pub.sources["co_sos"]
     assert co.status.status == "error"
     assert "bot challenge" in co.status.last_error
+
+
+def test_mn_source_through_runner(tmp_path):
+    cfg = config()
+    cfg["sources"]["mnsos"].update(enabled=True, files=["ussenate.txt", "ushouse.txt"])
+    srv = Server()
+
+    def handler(request):
+        u = str(request.url)
+        if "electionresultsfiles.sos.mn.gov/20241105/" in u:
+            name = u.rsplit("/", 1)[1]
+            return httpx.Response(200, text=(FX / "mn" / f"20241105_{name}").read_text(), request=request)
+        return srv(request)
+
+    pub = run.poll_once(tmp_path, Http(httpx.Client(transport=httpx.MockTransport(handler))), cfg)
+    mn = pub.sources["mnsos"]
+    assert mn.status.status == "ok" and len(mn.races) == 9
+
+
+def test_pre_results_lineup_published_with_message(tmp_path):
+    cfg = config("2026-11-03")
+    srv = Server()
+
+    def handler(request):
+        if "er.ncsbe.gov/enr/20261103" in str(request.url):
+            return httpx.Response(200, text=(FX / "nc/20261103_results_0_pre_results.json").read_text(), request=request)
+        return srv(request)
+
+    pub = run.poll_once(tmp_path, Http(httpx.Client(transport=httpx.MockTransport(handler))), cfg)
+    nc = pub.sources["ncsbe"]
+    assert nc.status.status == "ok" and "No votes reported yet" in nc.status.message
+    assert len(nc.races) == 15 and all(r.votes == 0 for r in nc.races)

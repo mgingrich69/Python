@@ -21,6 +21,11 @@
       "name": "North Carolina State Board of Elections",
       "office_groups": ["FED"]
     },
+    "mnsos": {
+      "enabled": true,
+      "name": "Minnesota Secretary of State",
+      "files": ["ussenate.txt", "ushouse.txt", "Governor.txt"]
+    },
     "clarity_states": [
       {
         "key": "ga_sos",
@@ -42,6 +47,7 @@
     {"tab": "national", "group": "Reputable news", "name": "The New York Times – Politics", "url": "https://www.nytimes.com/section/politics"},
     {"tab": "national", "group": "Reputable news", "name": "Decision Desk HQ", "url": "https://decisiondeskhq.com/"},
     {"tab": "national", "group": "Official", "name": "NC State Board of Elections results", "url": "https://er.ncsbe.gov/"},
+    {"tab": "national", "group": "Official", "name": "Minnesota Secretary of State results", "url": "https://electionresults.sos.mn.gov/"},
     {"tab": "colorado", "group": "Official", "name": "Colorado Secretary of State – Elections", "url": "https://www.sos.state.co.us/pubs/elections/main.html"},
     {"tab": "colorado", "group": "Reputable news", "name": "The Colorado Sun – 2026 results (AP)", "url": "https://coloradosun.com/colorado-election-results-2026/"},
     {"tab": "colorado", "group": "Reputable news", "name": "Colorado Public Radio", "url": "https://www.cpr.org/"},
