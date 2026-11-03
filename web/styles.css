@@ -243,3 +243,48 @@ caption { text-align: left; color: var(--muted); font-size: .78rem; padding-bott
 .attrib li { margin: 4px 0; }
 .fine { font-size: .78rem; }
 .chev { display: inline-block; width: 1em; text-align: center; }
+
+/* ---------- Senate watch board ---------- */
+.stiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+@media (min-width: 720px) { .stiles { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1040px) { .stiles { grid-template-columns: repeat(5, 1fr); } }
+.stile a { display: flex; flex-direction: column; gap: 1px; min-height: 76px; height: 100%; padding: 8px 8px 8px 9px; background: var(--surface); border: 1px solid var(--border); border-left: 6px solid var(--track); border-radius: 10px; color: var(--text); text-decoration: none; box-shadow: var(--shadow); }
+.stile.live a { border-left-color: var(--muted); }
+.stile.dem a { border-left-color: var(--dem); } .stile.rep a { border-left-color: var(--rep); }
+.stile .sst { display: flex; align-items: center; gap: 6px; font-size: .72rem; font-weight: 900; letter-spacing: .08em; color: var(--muted); }
+.stile .spec { font-size: .62rem; padding: 1px 5px; border-radius: 3px; background: var(--oth-soft); color: var(--text); letter-spacing: .04em; text-transform: uppercase; }
+.stile .livetag { font-size: .62rem; padding: 1px 5px; border-radius: 3px; background: var(--accent); color: #fff; letter-spacing: .06em; text-transform: uppercase; margin-left: auto; }
+.stile .sname { font-weight: 900; font-size: .9rem; line-height: 1.15; overflow-wrap: anywhere; }
+.stile b { font-size: .78rem; margin-top: 3px; line-height: 1.2; }
+.stile.dem b { color: var(--dem); } .stile.rep b { color: var(--rep); }
+.stile small { color: var(--muted); font-size: .7rem; line-height: 1.2; }
+.note { color: var(--muted); font-size: .8rem; margin: 8px 2px 0; }
+[id^="kt-"] { scroll-margin-top: 190px; }
+
+/* ---------- House summary ---------- */
+.house { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px; }
+.house-sub { margin: 0 0 10px; color: var(--muted); font-size: .88rem; }
+.hbar { display: flex; height: 34px; border-radius: 8px; overflow: hidden; gap: 2px; background: var(--surface); }
+.hbar .seg { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: .95rem; min-width: 26px; }
+.seg.dem, .sw.dem { background: var(--dem); } .seg.rep, .sw.rep { background: var(--rep); }
+.seg.close, .sw.close { background: #8a5cd1; } .seg.oth, .sw.oth { background: var(--oth); }
+.seg.wait, .sw.wait { background: var(--track); color: var(--muted); }
+.hlegend { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .88rem; }
+.hlegend li { display: flex; align-items: center; gap: 6px; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: middle; }
+.htable { margin-top: 12px; }
+.htable th, .htable td { text-align: center; }
+.htable th:first-child, .htable td:first-child { text-align: left; }
+.alld { margin-top: 12px; }
+.alld .rows { margin-top: 6px; }
+
+/* ---------- Collapsible big sections ---------- */
+.bigsec { margin-top: 14px; }
+.bigsec > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.bigsec > summary::-webkit-details-marker { display: none; }
+.bigsec .bs-title { flex: 1; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; font-size: .95rem; }
+.bigsec .count { color: var(--muted); font-size: .82rem; font-weight: 600; }
+.bigsec .chev { font-size: 1.3rem; color: var(--link); }
+.bigsec[open] > summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.bigsec > .rows { border-top-left-radius: 0; border-top-right-radius: 0; border-top: 0; }
+.rowi .rmatch { grid-column: 1; font-size: .85rem; font-weight: 600; color: var(--text); opacity: .85; }

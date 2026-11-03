@@ -286,9 +286,20 @@ def poll_once(out_dir: Path, http: Optional[Http] = None, config: Optional[dict]
         sources=blocks,
         zip_80301=aggregate_80301(blocks.get("boulder"), mapping),
         links=config.get("links", []),
+        ballot=_load_static("ballot_2026.json"),
+        watch=config.get("watch"),
     )
     write_atomic(out_file, pub.model_dump_json(indent=None))
     return pub
+
+
+def _load_static(name: str) -> Optional[dict]:
+    p = STATIC / name
+    try:
+        return json.loads(p.read_text()) if p.exists() else None
+    except ValueError as e:  # a bad static file must not stop results from publishing
+        log.error("could not load %s: %s", name, e)
+        return None
 
 
 def write_atomic(path: Path, text: str) -> None:

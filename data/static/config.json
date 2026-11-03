@@ -12,19 +12,28 @@
       "name": "Colorado Secretary of State (Clarity ENR)",
       "state": "CO",
       "election_id": null,
-      "known_old_election_ids": ["122598", "126592"],
+      "known_old_election_ids": [
+        "122598",
+        "126592"
+      ],
       "county_subtotal": "Boulder",
       "url": "https://www.sos.state.co.us/pubs/elections/main.html"
     },
     "ncsbe": {
       "enabled": true,
       "name": "North Carolina State Board of Elections",
-      "office_groups": ["FED"]
+      "office_groups": [
+        "FED"
+      ]
     },
     "mnsos": {
       "enabled": true,
       "name": "Minnesota Secretary of State",
-      "files": ["ussenate.txt", "ushouse.txt", "Governor.txt"]
+      "files": [
+        "ussenate.txt",
+        "ushouse.txt",
+        "Governor.txt"
+      ]
     },
     "clarity_states": [
       {
@@ -40,21 +49,214 @@
     ]
   },
   "links": [
-    {"tab": "national", "group": "Reputable news (AP-sourced race calls)", "name": "AP News", "url": "https://apnews.com/"},
-    {"tab": "national", "group": "Reputable news (AP-sourced race calls)", "name": "NPR – Elections", "url": "https://www.npr.org/sections/elections/"},
-    {"tab": "national", "group": "Reputable news (AP-sourced race calls)", "name": "PBS NewsHour – Politics", "url": "https://www.pbs.org/newshour/politics"},
-    {"tab": "national", "group": "Reputable news", "name": "CNN – Election Center", "url": "https://www.cnn.com/election"},
-    {"tab": "national", "group": "Reputable news", "name": "The New York Times – Politics", "url": "https://www.nytimes.com/section/politics"},
-    {"tab": "national", "group": "Reputable news", "name": "Decision Desk HQ", "url": "https://decisiondeskhq.com/"},
-    {"tab": "national", "group": "Official", "name": "NC State Board of Elections results", "url": "https://er.ncsbe.gov/"},
-    {"tab": "national", "group": "Official", "name": "Minnesota Secretary of State results", "url": "https://electionresults.sos.mn.gov/"},
-    {"tab": "colorado", "group": "Official", "name": "Colorado Secretary of State – Elections", "url": "https://www.sos.state.co.us/pubs/elections/main.html"},
-    {"tab": "colorado", "group": "Reputable news", "name": "The Colorado Sun – 2026 results (AP)", "url": "https://coloradosun.com/colorado-election-results-2026/"},
-    {"tab": "colorado", "group": "Reputable news", "name": "Colorado Public Radio", "url": "https://www.cpr.org/"},
-    {"tab": "colorado", "group": "Reputable news", "name": "The Denver Post – Politics", "url": "https://www.denverpost.com/news/politics/"},
-    {"tab": "boulder", "group": "Official", "name": "Boulder County Elections – live results", "url": "https://electionresults.bouldercounty.gov/"},
-    {"tab": "boulder", "group": "Official", "name": "Boulder County Elections", "url": "https://bouldercounty.gov/elections/"},
-    {"tab": "boulder", "group": "Reputable news", "name": "Boulder Reporting Lab", "url": "https://boulderreportinglab.org/"},
-    {"tab": "boulder", "group": "Reputable news", "name": "Boulder Daily Camera", "url": "https://www.dailycamera.com/"}
-  ]
+    {
+      "tab": "national",
+      "group": "Reputable news (AP-sourced race calls)",
+      "name": "AP News",
+      "url": "https://apnews.com/"
+    },
+    {
+      "tab": "national",
+      "group": "Reputable news (AP-sourced race calls)",
+      "name": "NPR – Elections",
+      "url": "https://www.npr.org/sections/elections/"
+    },
+    {
+      "tab": "national",
+      "group": "Reputable news (AP-sourced race calls)",
+      "name": "PBS NewsHour – Politics",
+      "url": "https://www.pbs.org/newshour/politics"
+    },
+    {
+      "tab": "national",
+      "group": "Reputable news",
+      "name": "CNN – Election Center",
+      "url": "https://www.cnn.com/election"
+    },
+    {
+      "tab": "national",
+      "group": "Reputable news",
+      "name": "The New York Times – Politics",
+      "url": "https://www.nytimes.com/section/politics"
+    },
+    {
+      "tab": "national",
+      "group": "Reputable news",
+      "name": "Decision Desk HQ",
+      "url": "https://decisiondeskhq.com/"
+    },
+    {
+      "tab": "national",
+      "group": "Official",
+      "name": "NC State Board of Elections results",
+      "url": "https://er.ncsbe.gov/"
+    },
+    {
+      "tab": "national",
+      "group": "Official",
+      "name": "Minnesota Secretary of State results",
+      "url": "https://electionresults.sos.mn.gov/"
+    },
+    {
+      "tab": "colorado",
+      "group": "Official",
+      "name": "Colorado Secretary of State – Elections",
+      "url": "https://www.sos.state.co.us/pubs/elections/main.html"
+    },
+    {
+      "tab": "colorado",
+      "group": "Reputable news",
+      "name": "The Colorado Sun – 2026 results (AP)",
+      "url": "https://coloradosun.com/colorado-election-results-2026/"
+    },
+    {
+      "tab": "colorado",
+      "group": "Reputable news",
+      "name": "Colorado Public Radio",
+      "url": "https://www.cpr.org/"
+    },
+    {
+      "tab": "colorado",
+      "group": "Reputable news",
+      "name": "The Denver Post – Politics",
+      "url": "https://www.denverpost.com/news/politics/"
+    },
+    {
+      "tab": "boulder",
+      "group": "Official",
+      "name": "Boulder County Elections – live results",
+      "url": "https://electionresults.bouldercounty.gov/"
+    },
+    {
+      "tab": "boulder",
+      "group": "Official",
+      "name": "Boulder County Elections",
+      "url": "https://bouldercounty.gov/elections/"
+    },
+    {
+      "tab": "boulder",
+      "group": "Reputable news",
+      "name": "Boulder Reporting Lab",
+      "url": "https://boulderreportinglab.org/"
+    },
+    {
+      "tab": "boulder",
+      "group": "Reputable news",
+      "name": "Boulder Daily Camera",
+      "url": "https://www.dailycamera.com/"
+    }
+  ],
+  "watch": {
+    "senate": {
+      "title": "Senate races to watch",
+      "note": "Watch list of Senate races rated other than Solid/Safe in pre-election forecaster ratings (Cook Political Report, as compiled on Wikipedia, Nov 2026). Live numbers only where the state publishes a free official feed; otherwise tap through to the state's official results.",
+      "races": [
+        {
+          "st": "AK",
+          "state": "Alaska",
+          "special": false,
+          "official_url": "https://www.elections.alaska.gov/",
+          "race_id": null
+        },
+        {
+          "st": "FL",
+          "state": "Florida",
+          "special": true,
+          "official_url": "https://results.elections.myflorida.com/",
+          "race_id": null
+        },
+        {
+          "st": "GA",
+          "state": "Georgia",
+          "special": false,
+          "official_url": "https://sos.ga.gov/elections",
+          "race_id": null
+        },
+        {
+          "st": "IA",
+          "state": "Iowa",
+          "special": false,
+          "official_url": "https://electionresults.iowa.gov/",
+          "race_id": null
+        },
+        {
+          "st": "KS",
+          "state": "Kansas",
+          "special": false,
+          "official_url": "https://sos.ks.gov/elections/elections.html",
+          "race_id": null
+        },
+        {
+          "st": "ME",
+          "state": "Maine",
+          "special": false,
+          "official_url": "https://www.maine.gov/sos/cec/elec/results/",
+          "race_id": null
+        },
+        {
+          "st": "MI",
+          "state": "Michigan",
+          "special": false,
+          "official_url": "https://www.michigan.gov/sos/elections",
+          "race_id": null
+        },
+        {
+          "st": "MN",
+          "state": "Minnesota",
+          "special": false,
+          "official_url": "https://electionresults.sos.mn.gov/",
+          "race_id": "mn:u-s-senator"
+        },
+        {
+          "st": "MS",
+          "state": "Mississippi",
+          "special": false,
+          "official_url": "https://www.sos.ms.gov/elections-voting",
+          "race_id": null
+        },
+        {
+          "st": "NE",
+          "state": "Nebraska",
+          "special": false,
+          "official_url": "https://sos.nebraska.gov/elections",
+          "race_id": null
+        },
+        {
+          "st": "NH",
+          "state": "New Hampshire",
+          "special": false,
+          "official_url": "https://sos.nh.gov/elections/elections/election-results/",
+          "race_id": null
+        },
+        {
+          "st": "NC",
+          "state": "North Carolina",
+          "special": false,
+          "official_url": "https://er.ncsbe.gov/",
+          "race_id": "nc:us-senate"
+        },
+        {
+          "st": "OH",
+          "state": "Ohio",
+          "special": true,
+          "official_url": "https://liveresults.ohiosos.gov/",
+          "race_id": null
+        },
+        {
+          "st": "SC",
+          "state": "South Carolina",
+          "special": false,
+          "official_url": "https://www.scvotes.gov/",
+          "race_id": null
+        },
+        {
+          "st": "TX",
+          "state": "Texas",
+          "special": false,
+          "official_url": "https://results.texas-election.com/races",
+          "race_id": null
+        }
+      ]
+    }
+  }
 }

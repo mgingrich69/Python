@@ -22,6 +22,12 @@ Browser → data/results.json every 60 s (+ Refresh button)
 | Georgia SOS (Clarity) | National | ❌ Disabled for the same reason. |
 | AP / Decision Desk HQ (race calls) | — | Paid, contract only. Not used. News sites (CNN, NYT, AP…) are **linked, not scraped**: their terms forbid scraping and their data is licensed from AP/DDHQ. |
 
+**Ballot lineups.** Before results post, the Colorado and Boulder tabs show every contest and candidate. The data is in `data/static/ballot_2026.json`, built by `scripts/build_ballot.py` from the Secretary of State's official certified candidate list and Boulder County's compiled sample ballot. Boulder results replace the lineups as soon as the county posts them. Colorado statewide contests keep the official lineup and add Boulder County's votes once available, labeled as one county.
+
+**Senate watch list.** `config.json → watch.senate` lists 15 Senate races rated other than Solid/Safe before the election. Live numbers appear only for NC and MN; the other tiles link to the state's official results.
+
+**U.S. House** is shown as a summary graphic (leaning D / leaning R / close under 5 points / awaiting) for the states with feeds, plus a list of close races. "Leaning" means the current leader, not a projection.
+
 **ZIP 80301** is approximate. The county's address points with postal ZIP 80301 were mapped onto the county's precinct polygons, giving 23 overlapping precincts, 14 of them "core" (≥ 50% of addresses in 80301). See `data/static/precincts_80301.json`. Boulder County publishes **contest results countywide only** on election night. So the 80301 section shows **turnout** for those precincts and never estimates vote shares. Precinct-level vote results appear in the county's Statement of Votes after certification.
 
 ## One-time setup (do this before 7 PM MT)

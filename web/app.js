@@ -13,9 +13,11 @@ const CLOSINGS = [
   { st: "CO", name: "Colorado", at: "2026-11-04T02:00:00Z" },
   { st: "MN", name: "Minnesota", at: "2026-11-04T02:00:00Z" },
 ];
+const CO_CLOSE = "2026-11-04T02:00:00Z";
 const GEO_LABEL = { nc: "North Carolina", mn: "Minnesota", co: "Colorado", ga: "Georgia", "boulder-county": "Boulder County" };
 const SOURCE_TABS = { ncsbe: ["national"], mnsos: ["national"], ga_sos: ["national"], co_sos: ["colorado", "boulder"], boulder: ["boulder", "colorado"] };
-const KEY_RE = /senat|governor|congress - district 2\b/i;
+const KEY_RE = /^(U\.S\. Senate|Governor)\b/;
+const isKey = (g, tab) => !g.r.is_ballot_measure && (KEY_RE.test(shortName(g.r)) || (tab === "boulder" && shortName(g.r) === "U.S. House · District 2"));
 
 let data = null;
 const state = {
@@ -83,7 +85,8 @@ function shortName(r) {
        .replace(/^U\.S\. Representative District (\d+)/i, "U.S. House · District $1")
        .replace(/^Representative to the \d+\w* United States Congress - District (\d+)/i, "U.S. House · District $1")
        .replace(/^(Us Senate|U\.S\. Senator|United States Senator)/i, "U.S. Senate")
-       .replace(/^Governor & Lt Governor/i, "Governor");
+       .replace(/^Governor & Lt Governor/i, "Governor")
+       .replace(/^Governor\s*\/\s*Lieutenant Governor/i, "Governor");
   return n.replace(/\s+-\s+(Democratic|Republican|Libertarian|Unity) Party$/i, " ($1 primary)");
 }
 const awaiting = r => r.votes === 0;
@@ -171,22 +174,22 @@ function renderEmpty(msg) {
 function renderTab(tab) {
   const nodes = [];
   let groups = groupByRace(racesForTab(tab));
-  if (tab === "colorado") groups = groups.concat(boulderStatewide());
+  if (tab === "colorado") groups = coloradoGroups(groups);
+  if (tab === "boulder" && !groups.some(g => g.r.source === "boulder")) groups = groups.concat(ballotGroups("boulder"));
   const q = state.filter[tab].trim().toLowerCase();
   const match = g => !q || g.r.race_name.toLowerCase().includes(q) || shortName(g.r).toLowerCase().includes(q);
   const visible = groups.filter(match);
 
-  if (tab === "national") nodes.push(closingStrip(), strip(h("p", {}, h("strong", {}, "Official counts, no race calls. "),
-    "Numbers come straight from state election offices with free public feeds (North Carolina and Minnesota tonight). For calls and other states, see the news links below.")));
+  if (tab === "national") nodes.push(closingStrip(), ...senateBoard());
   if (tab === "colorado") nodes.push(coloradoStrip());
   if (tab === "boulder") nodes.push(...zipSection(), boulderStrip());
 
   const pinned = visible.filter(g => state.pins.has(g.id));
-  const keys = visible.filter(g => !state.pins.has(g.id) && KEY_RE.test(g.r.race_name) && !g.r.is_ballot_measure);
+  const keys = visible.filter(g => !state.pins.has(g.id) && isKey(g, tab));
   if (pinned.length) nodes.push(sectionHead("Pinned", pinned.length), h("div", { class: "keys" }, pinned.map(keyCard)));
   if (keys.length) nodes.push(sectionHead(tab === "boulder" ? "Top of the ballot" : "Key races", keys.length), h("div", { class: "keys" }, keys.map(keyCard)));
 
-  if (groups.length > 8) {
+  if (groups.length > 8 && tab !== "national") {
     nodes.push(h("div", { class: "filter" },
       h("label", { class: "visually-hidden", for: `filter-${tab}` }, "Filter races"),
       h("input", { id: `filter-${tab}`, type: "search", placeholder: "Find a race (e.g. District 2, 2C, sheriff)", value: state.filter[tab], autocomplete: "off",
@@ -194,7 +197,15 @@ function renderTab(tab) {
   }
 
   const rest = visible.filter(g => !state.pins.has(g.id) && !keys.includes(g));
-  for (const [title, gs] of sectionize(tab, rest)) nodes.push(sectionHead(title, gs.length), h("ul", { class: "rows" }, gs.map(raceRow)));
+  if (tab === "national") nodes.push(...houseSummary(rest).flat(Infinity).filter(Boolean));
+  else for (const [title, gs] of sectionize(tab, rest)) {
+    if (gs.length > 10 && !q) {
+      const key = `sec:${tab}:${title}`;
+      nodes.push(h("details", { class: "bigsec", open: state.open.has(key) || null, ontoggle: e => toggleOpen(key, e) },
+        h("summary", {}, h("span", { class: "bs-title" }, title), h("span", { class: "count" }, `${gs.length} races`), h("span", { class: "chev", "aria-hidden": "true" }, "›")),
+        h("ul", { class: "rows" }, gs.map(raceRow))));
+    } else nodes.push(sectionHead(title, gs.length), h("ul", { class: "rows" }, gs.map(raceRow)));
+  }
 
   if (!groups.length) nodes.push(h("p", { class: "empty" }, tab === "boulder"
     ? "Boulder County posts results after 7:00 PM MT. Races appear here automatically."
@@ -216,6 +227,24 @@ function sectionize(tab, groups) {
   const out = [];
   if (tab === "national") {
     for (const geo of uniq(groups.map(g => g.r.geography))) out.push([`${GEO_LABEL[geo] || geo.toUpperCase()} · House`, groups.filter(g => g.r.geography === geo)]);
+    return out;
+  }
+  if (tab === "colorado") {
+    const n = g => g.r.race_name;
+    const cb = [
+      ["Federal", g => /^U\.S\./.test(n(g))],
+      ["Statewide offices", g => /^(Governor|Secretary of State|State Treasurer|Attorney General)/.test(n(g))],
+      ["Statewide measures", g => /^(Amendment|Proposition) /.test(n(g))],
+      ["Judicial retention (statewide)", g => /^Retain /.test(n(g))],
+      ["CU Regents & State Board of Education", g => /^(CU Regent|State Board of Education)/.test(n(g))],
+      ["State Senate", g => /^State Senate/.test(n(g))],
+      ["State House", g => /^State House/.test(n(g))],
+      ["RTD Board", g => /^RTD/.test(n(g))],
+    ];
+    const used = new Set();
+    for (const [title, f] of cb) { const gs = groups.filter(g => !used.has(g) && f(g)); gs.forEach(g => used.add(g)); if (gs.length) out.push([title, gs]); }
+    const other = groups.filter(g => !used.has(g));
+    if (other.length) out.push(["Other", other]);
     return out;
   }
   const buckets = [
@@ -247,8 +276,8 @@ function coloradoStrip() {
   const co = data?.sources?.co_sos;
   if (co && co.status.status === "ok") return h("div", {});
   return strip(h("p", {}, h("strong", {}, "No statewide totals. "),
-    "The Secretary of State's results site blocks automated readers, and this dashboard doesn't get around that. Below are ",
-    h("strong", {}, "Boulder County's votes"), " on statewide contests (one county, not statewide totals). For statewide numbers, use the links below."), true);
+    "The Secretary of State's results site blocks automated readers, and this dashboard doesn't get around that. Below is the full statewide ballot from the official candidate list. Once Boulder County posts results, contests on Boulder ballots show ",
+    h("strong", {}, "Boulder County's votes"), " (one county, not statewide). For statewide numbers, use the links below."), true);
 }
 function boulderStrip() {
   const b = data?.sources?.boulder;
@@ -259,10 +288,110 @@ function boulderStrip() {
   return h("div", {});
 }
 
-// Boulder County's votes on statewide contests, labeled as one county only.
-function boulderStatewide() {
-  const recs = allRaces().filter(r => r.source === "boulder" && (r.level === "national" || r.level === "state") && !/district|regent/i.test(r.race_name));
-  return groupByRace(recs).map(g => ({ ...g, id: "co-view:" + g.id, boulderOnly: true }));
+// ---------- ballot lineups (official candidate lists; no votes)
+function ballotRace(c, geo, src) {
+  return {
+    race_id: c.race_id || `${geo}:ballot:${c.contest.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+    race_name: c.contest, level: c.level, geography: geo, is_ballot_measure: !!c.is_ballot_measure,
+    candidates: c.candidates.map(x => ({ name: x.name, party: x.party, votes: 0, percent: null, winner: false })),
+    votes: 0, called_status: "not_called", ballot: true,
+    source: "ballot", source_name: src?.name || "Official ballot", source_url: src?.url || "#",
+    fetched_at: data?.ballot?.generated_at, source_updated_at: null,
+  };
+}
+function ballotGroups(which) {
+  const b = data?.ballot;
+  if (!b) return [];
+  const geo = which === "boulder" ? "boulder-county" : "co";
+  const src = (b.sources?.[which] || [])[0];
+  return b[which].map(c => { const r = ballotRace(c, geo, src); return { id: r.race_id, recs: [r], r, ballot: true }; });
+}
+// Colorado: the statewide ballot. Where Boulder County has posted votes for a contest, show those
+// (clearly labeled as one county) instead of the bare lineup. Statewide totals are not available.
+function coloradoGroups(liveCo) {
+  const b = data?.ballot;
+  if (!b) return liveCo;
+  const boulderRaces = new Map(allRaces().filter(r => r.source === "boulder").map(r => [r.race_id, r]));
+  const src = (b.sources?.colorado || [])[0];
+  return b.colorado.map(c => {
+    const live = c.boulder_race_id && boulderRaces.get(c.boulder_race_id);
+    if (live) {
+      const r = { ...live, race_name: c.contest, geography: "co" };
+      return { id: "co:" + live.race_id, recs: [r], r, boulderOnly: true };
+    }
+    const r = ballotRace(c, "co", src);
+    return { id: r.race_id, recs: [r], r, ballot: true };
+  });
+}
+
+// ---------- Senate watch board
+const lastName = n => n.split(" / ")[0].replace(/,? (Jr\.|Sr\.|III|II)$/, "").split(" ").pop();
+function senateBoard() {
+  const w = data?.watch?.senate;
+  if (!w) return [];
+  const live = new Map(allRaces().map(r => [r.race_id, r]));
+  const tiles = w.races.map(x => {
+    const r = x.race_id && live.get(x.race_id);
+    let cls = "", line1, line2;
+    if (r && !awaiting(r)) {
+      const [a, b] = sortCands(r);
+      const tied = b && a.votes === b.votes;
+      cls = tied ? "" : partyKey(a, false);
+      line1 = tied ? "Tied" : `${lastName(a.name)} leads ${(a.percent ?? 0).toFixed(1)}%`;
+      line2 = reportingText(r) || "Live official count";
+    } else if (r) { line1 = "Awaiting results"; line2 = "Live official feed"; }
+    else { line1 = "No public feed"; line2 = "Official results ↗"; }
+    const link = r ? { href: `#kt-${cssId(x.race_id)}` } : { href: x.official_url, target: "_blank", rel: "noopener" };
+    return h("li", { class: `stile ${cls}${r ? " live" : ""}` },
+      h("a", link,
+        h("span", { class: "sst" }, x.st, x.special ? h("span", { class: "spec" }, "Special") : null, r ? h("span", { class: "livetag" }, "Live") : null),
+        h("span", { class: "sname" }, x.state),
+        h("b", {}, line1), h("small", {}, line2)));
+  });
+  return [sectionHead(w.title, w.races.length), h("ul", { class: "stiles" }, tiles), h("p", { class: "note" }, w.note)];
+}
+
+// ---------- House summary graphic (instead of every district)
+const CLOSE_PTS = 5;
+function houseSummary(groups) {
+  const hs = groups.filter(g => /^U\.S\. House/.test(shortName(g.r)));
+  const other = groups.filter(g => !hs.includes(g));
+  const otherNodes = other.length ? [sectionHead("Other races", other.length), h("ul", { class: "rows" }, other.map(raceRow))] : [];
+  if (!hs.length) return otherNodes;
+  const cat = g => {
+    const r = g.r;
+    if (awaiting(r)) return "wait";
+    const [a, b] = sortCands(r);
+    if ((a.percent ?? 0) - (b?.percent ?? 0) < CLOSE_PTS) return "close";
+    const k = partyKey(a, false);
+    return k === "dem" || k === "rep" ? k : "oth";
+  };
+  const cats = [["dem", "Leaning Democratic"], ["rep", "Leaning Republican"], ["close", `Close (under ${CLOSE_PTS} pts)`], ["oth", "Leaning other"], ["wait", "Awaiting results"]];
+  const count = list => Object.fromEntries(cats.map(([k]) => [k, list.filter(g => cat(g) === k)]));
+  const by = count(hs);
+  const geos = uniq(hs.map(g => g.r.geography));
+  const shown = cats.filter(([k]) => by[k].length);
+  const seg = k => by[k].length ? h("span", { class: `seg ${k}`, style: `flex:${by[k].length}` }, String(by[k].length)) : null;
+  return [
+    sectionHead("U.S. House", hs.length),
+    h("div", { class: "house" },
+      h("p", { class: "house-sub" }, `${hs.length} districts in ${geos.map(g => GEO_LABEL[g] || g).join(" and ")}: the states with free official feeds. Not a national tally of all 435 seats.`),
+      h("div", { class: "hbar", role: "img", "aria-label": shown.map(([k, l]) => `${l}: ${by[k].length}`).join(", ") }, cats.map(([k]) => seg(k))),
+      h("ul", { class: "hlegend" }, shown.map(([k, l]) => h("li", {}, h("span", { class: `sw ${k}`, "aria-hidden": "true" }), h("b", {}, String(by[k].length)), ` ${l}`))),
+      h("table", { class: "htable" },
+        h("caption", { class: "visually-hidden" }, "House districts by state and current lean"),
+        h("thead", {}, h("tr", {}, h("th", { scope: "col" }, "State"), ...cats.map(([k, l]) => h("th", { scope: "col", title: l }, h("span", { class: `sw ${k}`, "aria-hidden": "true" }), h("span", { class: "visually-hidden" }, l))))),
+        h("tbody", {}, geos.map(geo => {
+          const c = count(hs.filter(g => g.r.geography === geo));
+          return h("tr", {}, h("td", {}, GEO_LABEL[geo] || geo), ...cats.map(([k]) => h("td", {}, String(c[k].length))));
+        }))),
+      h("p", { class: "note" }, `"Leaning" means that party's candidate leads by at least ${CLOSE_PTS} points in the official count so far. It is not a projection or a race call.`)),
+    by.close.length ? [sectionHead("Close House races", by.close.length), h("ul", { class: "rows" }, by.close.map(raceRow))] : null,
+    h("details", { class: "alld", open: state.open.has("all-house") || null, ontoggle: e => toggleOpen("all-house", e) },
+      h("summary", { class: "plain" }, h("span", { class: "chev", "aria-hidden": "true" }, "›"), `See all ${hs.length} districts`),
+      h("ul", { class: "rows" }, hs.map(raceRow))),
+    ...otherNodes,
+  ];
 }
 
 // ---------- shared bits
@@ -272,7 +401,8 @@ function badges(g) {
   if (r.called_status === "certified") out.push(h("span", { class: "badge certified" }, "Certified"));
   else if (r.called_status === "called") out.push(h("span", { class: "badge called" }, `Called${r.called_by ? " · " + r.called_by : ""}`));
   else out.push(h("span", { class: "badge not-called" }, "Not called"));
-  if (awaiting(r)) out.push(h("span", { class: "badge wait" }, "Awaiting results"));
+  if (r.ballot && r.geography === "co" && Date.now() >= Date.parse(CO_CLOSE)) out.push(h("span", { class: "badge wait" }, "No statewide feed"));
+  else if (awaiting(r)) out.push(h("span", { class: "badge wait" }, r.ballot ? "Ballot · awaiting results" : "Awaiting results"));
   if (g.recs.some(x => x.stale)) out.push(h("span", { class: "badge stale" }, "Stale"));
   if (g.recs.length > 1 && disagree(g.recs)) out.push(h("span", { class: "badge differ" }, "Sources differ"));
   if (g.boulderOnly) out.push(h("span", { class: "badge approx" }, "Boulder Co. only"));
@@ -348,11 +478,18 @@ function raceRow(g) {
         h("span", { class: "rname" }, shortName(r)),
         h("span", { class: "rlead" },
           awaiting(r) ? h("span", { class: "awaiting" }, "—") : [h("b", {}, `${(lead.percent ?? 0).toFixed(1)}%`), h("small", {}, lead.name)]),
+        awaiting(r) && !r.is_ballot_measure ? h("span", { class: "rmatch" }, matchup(r)) : null,
         h("span", { class: "rsub" }, badges(g), reportingText(r) ? h("span", {}, reportingText(r)) : null)),
       h("div", { class: "detail" }, detailBody(g))),
     pinButton(g));
 }
 
+function matchup(r) {
+  const c = sortCands(r).filter(x => x.name !== "Write-in");
+  const fmt = x => `${x.name}${x.party ? ` (${partyAbbr(x.party).slice(0, 1) === "D" ? "D" : partyAbbr(x.party).slice(0, 1) === "R" ? "R" : partyAbbr(x.party)})` : ""}`;
+  if (c.length === 1) return `${fmt(c[0])}, unopposed`;
+  return c.slice(0, 2).map(fmt).join(" vs. ") + (c.length > 2 ? ` +${c.length - 2}` : "");
+}
 function toggleOpen(key, e) { e.target.open ? state.open.add(key) : state.open.delete(key); }
 
 function detailBody(g) {
@@ -382,6 +519,10 @@ function candList(r, expandKey, showReporting) {
 }
 
 function metaFor(r) {
+  if (r.ballot) return h("div", { class: "meta" },
+    h("span", {}, "Candidates from the official ballot: ", h("a", { href: r.source_url }, r.source_name)),
+    r.geography === "co" ? h("span", {}, "Statewide results: ", h("a", { href: "https://www.sos.state.co.us/pubs/elections/main.html" }, "Colorado Secretary of State"), " (no automated feed available).")
+      : h("span", {}, "Results appear here when Boulder County posts them (after 7:00 PM MT)."));
   return h("div", { class: "meta" },
     h("span", {}, `Last updated ${fmtTime(r.source_updated_at || r.fetched_at)}${r.source_updated_at ? " (source)" : ""} · checked ${fmtTime(r.fetched_at)}`),
     h("span", {}, "Source: ", h("a", { href: r.source_url }, r.source_name)),

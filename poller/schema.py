@@ -116,4 +116,6 @@ class Published(BaseModel):
     poll_interval_seconds: int
     sources: dict[str, SourceBlock]
     zip_80301: Optional[dict] = None
+    ballot: Optional[dict] = None
+    watch: Optional[dict] = None
     links: list[dict] = []

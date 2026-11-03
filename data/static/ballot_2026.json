@@ -1,0 +1,3920 @@
+{
+ "election_date": "2026-11-03",
+ "generated_at": "2026-11-03T03:55:40+00:00",
+ "note": "Ballot lineups only (no votes). Shown until results for a contest are published.",
+ "sources": {
+  "colorado": [
+   {
+    "name": "Colorado Secretary of State – 2026 General Election Official Candidate List",
+    "url": "https://www.sos.state.co.us/pubs/elections/vote/generalCandidates.html"
+   },
+   {
+    "name": "Boulder County compiled sample ballot (statewide measures and retention questions)",
+    "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf"
+   }
+  ],
+  "boulder": [
+   {
+    "name": "Boulder County Elections – 2026 General Compiled Sample Ballot",
+    "url": "https://assets.bouldercounty.gov/wp-content/uploads/2026/09/Boulder-County-2026-General-Sample-Ballot.pdf"
+   }
+  ]
+ },
+ "colorado": [
+  {
+   "contest": "U.S. Senate",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:united-states-senator",
+   "candidates": [
+    {
+     "name": "Mark Baisley",
+     "party": "Republican"
+    },
+    {
+     "name": "John Hickenlooper",
+     "party": "Democratic"
+    },
+    {
+     "name": "Bob Chew",
+     "party": "Forward"
+    },
+    {
+     "name": "Christopher Baum",
+     "party": "Approval Voting"
+    },
+    {
+     "name": "Blake Huber",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Adam Withrow",
+     "party": "Unity"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 1",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-1",
+   "candidates": [
+    {
+     "name": "Melat Kiros",
+     "party": "Democratic"
+    },
+    {
+     "name": "Christy Peterson",
+     "party": "Republican"
+    },
+    {
+     "name": "Critter Milton",
+     "party": "Unity"
+    },
+    {
+     "name": "Chad Humphrey",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Shimon Blau",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 2",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-2",
+   "candidates": [
+    {
+     "name": "Joe Neguse",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kelley Anne Dennison",
+     "party": "Republican"
+    },
+    {
+     "name": "Gaylon Kent",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 3",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-3",
+   "candidates": [
+    {
+     "name": "Dwayne L. Romero",
+     "party": "Democratic"
+    },
+    {
+     "name": "Jeff Hurd",
+     "party": "Republican"
+    },
+    {
+     "name": "Cory Robertson",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Clifton Brown",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 4",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-4",
+   "candidates": [
+    {
+     "name": "Lauren Boebert",
+     "party": "Republican"
+    },
+    {
+     "name": "Eileen Laubacher",
+     "party": "Democratic"
+    },
+    {
+     "name": "Douglas Mangeris",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 5",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-5",
+   "candidates": [
+    {
+     "name": "Jeff Crank",
+     "party": "Republican"
+    },
+    {
+     "name": "Jessica Killin",
+     "party": "Democratic"
+    },
+    {
+     "name": "Christopher Mitchell",
+     "party": "American Constitution"
+    },
+    {
+     "name": "Mark \"Marky Jr\" Elworth",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 6",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-6",
+   "candidates": [
+    {
+     "name": "Jason Crow",
+     "party": "Democratic"
+    },
+    {
+     "name": "Jason Clark",
+     "party": "Republican"
+    },
+    {
+     "name": "Patty McMahon",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Meredith Ryan",
+     "party": "Unity"
+    },
+    {
+     "name": "Samir Ezzeldin Witta",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 7",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-7",
+   "candidates": [
+    {
+     "name": "Tim Bennett",
+     "party": "Republican"
+    },
+    {
+     "name": "Brittany Pettersen",
+     "party": "Democratic"
+    },
+    {
+     "name": "Susan Hall",
+     "party": "Unity"
+    },
+    {
+     "name": "Lawrence Kyle Clark",
+     "party": "American Constitution"
+    },
+    {
+     "name": "Dan \"Kilo\" Sallis",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Joe Krzeczkowski",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "U.S. House – District 8",
+   "level": "national",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-8",
+   "candidates": [
+    {
+     "name": "Gabe Evans",
+     "party": "Republican"
+    },
+    {
+     "name": "Manny Rutinel",
+     "party": "Democratic"
+    },
+    {
+     "name": "Dave Wood",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "Governor / Lieutenant Governor",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:governor-lieutenant-governor",
+   "candidates": [
+    {
+     "name": "Victor Marx / George Washington Markert",
+     "party": "Republican"
+    },
+    {
+     "name": "Phil Weiser / Lesley Dahlkemper",
+     "party": "Democratic"
+    },
+    {
+     "name": "Stephen T. Hamilton / James K Treibert",
+     "party": "American Constitution"
+    },
+    {
+     "name": "Eric Mulder / Wayne Harlos",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Jeff Peckman / T.J. Cole",
+     "party": "Unity"
+    },
+    {
+     "name": "Erik Underwood / Frank Atwood",
+     "party": "Approval Voting"
+    },
+    {
+     "name": "Greg Lopez / Taralyn Romero",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "Secretary of State",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:secretary-of-state",
+   "candidates": [
+    {
+     "name": "Amanda Gonzalez",
+     "party": "Democratic"
+    },
+    {
+     "name": "James Wiley",
+     "party": "Republican"
+    },
+    {
+     "name": "Sean Vadney",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Amanda Campbell",
+     "party": "American Constitution"
+    },
+    {
+     "name": "Celeste Landry",
+     "party": "Forward"
+    }
+   ]
+  },
+  {
+   "contest": "State Treasurer",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-treasurer",
+   "candidates": [
+    {
+     "name": "Jeff Bridges",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kevin Grantham",
+     "party": "Republican"
+    },
+    {
+     "name": "Jodie Barr",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Marilee Langner Sturgis",
+     "party": "Approval Voting"
+    }
+   ]
+  },
+  {
+   "contest": "Attorney General",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:attorney-general",
+   "candidates": [
+    {
+     "name": "Michael J. Allen",
+     "party": "Republican"
+    },
+    {
+     "name": "Jena Griswold",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Board of Education – District 1",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": null,
+   "candidates": [
+    {
+     "name": "Lisa Escárcega",
+     "party": "Democratic"
+    },
+    {
+     "name": "Frederick Espinoza",
+     "party": "Republican"
+    },
+    {
+     "name": "Clayton Casciato",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State Board of Education – District 3",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": null,
+   "candidates": [
+    {
+     "name": "Sherri M Wright",
+     "party": "Republican"
+    },
+    {
+     "name": "Barb Clementi",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Board of Education – District 7",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": null,
+   "candidates": [
+    {
+     "name": "Karla Esser",
+     "party": "Democratic"
+    },
+    {
+     "name": "Steve Barton",
+     "party": "Republican"
+    },
+    {
+     "name": "Ross Klopf",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "CU Regent – Congressional District 2",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regent-of-the-university-of-colorado-congressional-district-2",
+   "candidates": [
+    {
+     "name": "Marty Neilson",
+     "party": "Republican"
+    },
+    {
+     "name": "Edie Hooton",
+     "party": "Democratic"
+    },
+    {
+     "name": "Richard Friend",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "CU Regent – Congressional District 6",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regent-of-the-university-of-colorado-congressional-district-6",
+   "candidates": [
+    {
+     "name": "Veanessa Burbage",
+     "party": "Republican"
+    },
+    {
+     "name": "Ilana Spiegel",
+     "party": "Democratic"
+    },
+    {
+     "name": "Joe Johnson",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "CU Regent – Congressional District 7",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regent-of-the-university-of-colorado-congressional-district-7",
+   "candidates": [
+    {
+     "name": "Paul Mueller",
+     "party": "Republican"
+    },
+    {
+     "name": "Nolbert Chavez",
+     "party": "Democratic"
+    },
+    {
+     "name": "BetteRose Ryan",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 1",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-1",
+   "candidates": [
+    {
+     "name": "Jamie Jeffery",
+     "party": "Democratic"
+    },
+    {
+     "name": "Byron Pelton",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 3",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-3",
+   "candidates": [
+    {
+     "name": "Aaron Gutierrez",
+     "party": "Democratic"
+    },
+    {
+     "name": "Dana Charles",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 4",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-4",
+   "candidates": [
+    {
+     "name": "Justin Kurth",
+     "party": "Democratic"
+    },
+    {
+     "name": "Teddy Collins",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 7",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-7",
+   "candidates": [
+    {
+     "name": "Janice Rich",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 8",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-8",
+   "candidates": [
+    {
+     "name": "Dylan Roberts",
+     "party": "Democratic"
+    },
+    {
+     "name": "Corey Marshall",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 9",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-9",
+   "candidates": [
+    {
+     "name": "Terri Carver",
+     "party": "Republican"
+    },
+    {
+     "name": "William Delano Moses III",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 11",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-11",
+   "candidates": [
+    {
+     "name": "Tony Exum Sr",
+     "party": "Democratic"
+    },
+    {
+     "name": "Levon Stilson",
+     "party": "Republican"
+    },
+    {
+     "name": "Janet Turner",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 15",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-15",
+   "candidates": [
+    {
+     "name": "Rob Woodward",
+     "party": "Republican"
+    },
+    {
+     "name": "Janice Marchman",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 17",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-17",
+   "candidates": [
+    {
+     "name": "Katie Wallace",
+     "party": "Democratic"
+    },
+    {
+     "name": "Pat Miller",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 20",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-20",
+   "candidates": [
+    {
+     "name": "Richard (Rich) Mancuso",
+     "party": "Republican"
+    },
+    {
+     "name": "Sheila Lieder",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 21",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-21",
+   "candidates": [
+    {
+     "name": "Frederick Alfred Jr",
+     "party": "Republican"
+    },
+    {
+     "name": "Adrienne Benavidez",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 22",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-22",
+   "candidates": [
+    {
+     "name": "Steve Harkess",
+     "party": "Republican"
+    },
+    {
+     "name": "Monica Irasema Duran",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 24",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-24",
+   "candidates": [
+    {
+     "name": "Kevin Allen",
+     "party": "Republican"
+    },
+    {
+     "name": "Kyle Mullica",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 25",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-25",
+   "candidates": [
+    {
+     "name": "Paul Kohlhoff",
+     "party": "Republican"
+    },
+    {
+     "name": "William Lindstedt",
+     "party": "Democratic"
+    },
+    {
+     "name": "Mark Philip Bromley",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 27",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-27",
+   "candidates": [
+    {
+     "name": "Danielle Lammon",
+     "party": "Republican"
+    },
+    {
+     "name": "Tom Sullivan",
+     "party": "Democratic"
+    },
+    {
+     "name": "Michele Poague",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 29",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-29",
+   "candidates": [
+    {
+     "name": "Iman M. Jodeh",
+     "party": "Democratic"
+    },
+    {
+     "name": "Robert McKenna",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 30",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-30",
+   "candidates": [
+    {
+     "name": "John Carson",
+     "party": "Republican"
+    },
+    {
+     "name": "Kevin Leung",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 31",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-31",
+   "candidates": [
+    {
+     "name": "Matt Ball",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 32",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-32",
+   "candidates": [
+    {
+     "name": "Emily Sirota",
+     "party": "Democratic"
+    },
+    {
+     "name": "Sydnnia Wulff",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 34",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-34",
+   "candidates": [
+    {
+     "name": "Chela Garcia Irlando",
+     "party": "Democratic"
+    },
+    {
+     "name": "Jennifer Qualteri",
+     "party": "Republican"
+    },
+    {
+     "name": "Jacob Luria",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State Senate – District 35",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-senator-district-35",
+   "candidates": [
+    {
+     "name": "Rod Pelton",
+     "party": "Republican"
+    },
+    {
+     "name": "Richard Graf",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Travis Star Nelson",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 1",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-1",
+   "candidates": [
+    {
+     "name": "Javier Mabrey",
+     "party": "Democratic"
+    },
+    {
+     "name": "Joseph Montoya",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 2",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-2",
+   "candidates": [
+    {
+     "name": "Scott Baldermann",
+     "party": "Democratic"
+    },
+    {
+     "name": "Carey Marin",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 3",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-3",
+   "candidates": [
+    {
+     "name": "Gena Ozols",
+     "party": "Democratic"
+    },
+    {
+     "name": "Rebecca Winegar",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 4",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-4",
+   "candidates": [
+    {
+     "name": "Ellwood Ervin",
+     "party": "Republican"
+    },
+    {
+     "name": "Cecelia Espenoza",
+     "party": "Democratic"
+    },
+    {
+     "name": "Bill Hare",
+     "party": "Forward"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 5",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-5",
+   "candidates": [
+    {
+     "name": "Justine Sandoval",
+     "party": "Democratic"
+    },
+    {
+     "name": "Johnnie W. Johnson",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 6",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-6",
+   "candidates": [
+    {
+     "name": "Iris Halpern",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kathleen Angel",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 7",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-7",
+   "candidates": [
+    {
+     "name": "Jennifer Bacon",
+     "party": "Democratic"
+    },
+    {
+     "name": "Jeff Wilson",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 8",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-8",
+   "candidates": [
+    {
+     "name": "Carolyn Barnes",
+     "party": "Republican"
+    },
+    {
+     "name": "Lindsay Gilchrist",
+     "party": "Democratic"
+    },
+    {
+     "name": "Jesse Lashawn Parris",
+     "party": "Unity"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 9",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-9",
+   "candidates": [
+    {
+     "name": "Tom Cowhick",
+     "party": "Republican"
+    },
+    {
+     "name": "Monica VanBuskirk",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 10",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-10",
+   "candidates": [
+    {
+     "name": "Junie Joseph",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 11",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-11",
+   "candidates": [
+    {
+     "name": "Karen McCormick",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 12",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-12",
+   "candidates": [
+    {
+     "name": "Ryan Rhatigan",
+     "party": "Republican"
+    },
+    {
+     "name": "Kyle Brown",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 13",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-13",
+   "candidates": [
+    {
+     "name": "Consuelo Redhorse",
+     "party": "Democratic"
+    },
+    {
+     "name": "Miguel Martinez",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 14",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-14",
+   "candidates": [
+    {
+     "name": "Ava Flanell",
+     "party": "Republican"
+    },
+    {
+     "name": "Sarah Emery",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 15",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-15",
+   "candidates": [
+    {
+     "name": "Jeff K. Livingston",
+     "party": "Democratic"
+    },
+    {
+     "name": "Pricella Tiegen",
+     "party": "Republican"
+    },
+    {
+     "name": "Doug Jones",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 16",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-16",
+   "candidates": [
+    {
+     "name": "Jill Haffley",
+     "party": "Republican"
+    },
+    {
+     "name": "Steph Vigil",
+     "party": "Democratic"
+    },
+    {
+     "name": "John C Hjersman",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 17",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-17",
+   "candidates": [
+    {
+     "name": "Regina English",
+     "party": "Democratic"
+    },
+    {
+     "name": "Laura Martin",
+     "party": "Republican"
+    },
+    {
+     "name": "John Michael Angle",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 18",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-18",
+   "candidates": [
+    {
+     "name": "Amy T Paschal",
+     "party": "Democratic"
+    },
+    {
+     "name": "Adriana Cuva",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 19",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-19",
+   "candidates": [
+    {
+     "name": "Dan Woog",
+     "party": "Republican"
+    },
+    {
+     "name": "Jillaire McMillan",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 20",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-20",
+   "candidates": [
+    {
+     "name": "Jarvis Caldwell",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 21",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-21",
+   "candidates": [
+    {
+     "name": "Brenda Miller",
+     "party": "Republican"
+    },
+    {
+     "name": "Michelle Tweed",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 22",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-22",
+   "candidates": [
+    {
+     "name": "Michael Pierson",
+     "party": "Democratic"
+    },
+    {
+     "name": "Ken deGraaf",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 23",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-23",
+   "candidates": [
+    {
+     "name": "Alexis Hoffkling",
+     "party": "Democratic"
+    },
+    {
+     "name": "Ross Metler",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 24",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-24",
+   "candidates": [
+    {
+     "name": "Lisa Feret",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kristopher Johnson",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 25",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-25",
+   "candidates": [
+    {
+     "name": "Mark Herzfeld",
+     "party": "Republican"
+    },
+    {
+     "name": "Tammy Story",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 26",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-26",
+   "candidates": [
+    {
+     "name": "Meghan Lukens",
+     "party": "Democratic"
+    },
+    {
+     "name": "James Kellogg",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 27",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-27",
+   "candidates": [
+    {
+     "name": "Danielle Varda",
+     "party": "Democratic"
+    },
+    {
+     "name": "Eric Bodenstab",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 28",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-28",
+   "candidates": [
+    {
+     "name": "David Rein",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 29",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-29",
+   "candidates": [
+    {
+     "name": "Kristine Ireland",
+     "party": "Republican"
+    },
+    {
+     "name": "Lori Goldstein",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 30",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-30",
+   "candidates": [
+    {
+     "name": "Rebekah Stewart",
+     "party": "Democratic"
+    },
+    {
+     "name": "William Tyler Switzer",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 31",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-31",
+   "candidates": [
+    {
+     "name": "Gabriel Cervantes",
+     "party": "Democratic"
+    },
+    {
+     "name": "Ray Roll",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 32",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-32",
+   "candidates": [
+    {
+     "name": "Michelle D. Lee",
+     "party": "Republican"
+    },
+    {
+     "name": "Chris VanDijk",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 33",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-33",
+   "candidates": [
+    {
+     "name": "Kenny Van Nguyen",
+     "party": "Democratic"
+    },
+    {
+     "name": "Nate Jorgensen",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 34",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-34",
+   "candidates": [
+    {
+     "name": "Craig Sullivan",
+     "party": "Republican"
+    },
+    {
+     "name": "Jenny Willford",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 35",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-35",
+   "candidates": [
+    {
+     "name": "Lorena Garcia",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 36",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-36",
+   "candidates": [
+    {
+     "name": "Michael Carter",
+     "party": "Democratic"
+    },
+    {
+     "name": "Paul E. Nelson",
+     "party": "Republican"
+    },
+    {
+     "name": "Andrew Gibson",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 37",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-37",
+   "candidates": [
+    {
+     "name": "Jill Thompson",
+     "party": "Republican"
+    },
+    {
+     "name": "Chad Clifford",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 38",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-38",
+   "candidates": [
+    {
+     "name": "Gretchen Rydin",
+     "party": "Democratic"
+    },
+    {
+     "name": "Tim Martin",
+     "party": "Center"
+    },
+    {
+     "name": "Norm Olsen",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Allison Madrigal",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 39",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-39",
+   "candidates": [
+    {
+     "name": "Brandi Bradley",
+     "party": "Republican"
+    },
+    {
+     "name": "Christian Schilder",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 40",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-40",
+   "candidates": [
+    {
+     "name": "Clinton Porter",
+     "party": "Republican"
+    },
+    {
+     "name": "Naquetta Ricks",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 41",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-41",
+   "candidates": [
+    {
+     "name": "Jamie Jackson",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 42",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-42",
+   "candidates": [
+    {
+     "name": "Sarah Amelia Woodson",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 43",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-43",
+   "candidates": [
+    {
+     "name": "Robert \"Bob\" Marshall",
+     "party": "Democratic"
+    },
+    {
+     "name": "Nate Marsh",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 44",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-44",
+   "candidates": [
+    {
+     "name": "Anthony Hartsook",
+     "party": "Republican"
+    },
+    {
+     "name": "Richard Bowness",
+     "party": "Democratic"
+    },
+    {
+     "name": "John H Sutton",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 45",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-45",
+   "candidates": [
+    {
+     "name": "Michael Clarkson",
+     "party": "Democratic"
+    },
+    {
+     "name": "Max Brooks",
+     "party": "Republican"
+    },
+    {
+     "name": "Caryn Ann Harlos",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 46",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-46",
+   "candidates": [
+    {
+     "name": "Jonathan Post",
+     "party": "Republican"
+    },
+    {
+     "name": "Tisha Mauro",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 47",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-47",
+   "candidates": [
+    {
+     "name": "Vic Meyers",
+     "party": "Democratic"
+    },
+    {
+     "name": "Ty Winter",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 48",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-48",
+   "candidates": [
+    {
+     "name": "Carlos Barron",
+     "party": "Republican"
+    },
+    {
+     "name": "Dez Packard",
+     "party": "Democratic"
+    },
+    {
+     "name": "Eric E. Joss",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 49",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-49",
+   "candidates": [
+    {
+     "name": "Michael Sheperek",
+     "party": "Republican"
+    },
+    {
+     "name": "Lesley Smith",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 50",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-50",
+   "candidates": [
+    {
+     "name": "Ryan Gonzalez",
+     "party": "Republican"
+    },
+    {
+     "name": "Tommy Butler",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 51",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-51",
+   "candidates": [
+    {
+     "name": "Amy Parks",
+     "party": "Republican"
+    },
+    {
+     "name": "Jacki Marsh",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 52",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-52",
+   "candidates": [
+    {
+     "name": "Yara Zokaie",
+     "party": "Democratic"
+    },
+    {
+     "name": "Steve Yurash",
+     "party": "Center"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 53",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-53",
+   "candidates": [
+    {
+     "name": "Daniel Frick",
+     "party": "Republican"
+    },
+    {
+     "name": "Andy Boesenecker",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 54",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-54",
+   "candidates": [
+    {
+     "name": "Jason Bias",
+     "party": "Republican"
+    },
+    {
+     "name": "Mallory Martin",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 55",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-55",
+   "candidates": [
+    {
+     "name": "Rick Taggart",
+     "party": "Republican"
+    },
+    {
+     "name": "Brittni Packard",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 56",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-56",
+   "candidates": [
+    {
+     "name": "Chris Richardson",
+     "party": "Republican"
+    },
+    {
+     "name": "Amy L. Lunde",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 57",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-57",
+   "candidates": [
+    {
+     "name": "Elizabeth Velasco",
+     "party": "Democratic"
+    },
+    {
+     "name": "Russ Andrews",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 58",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-58",
+   "candidates": [
+    {
+     "name": "Larry Don Suckla",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 59",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-59",
+   "candidates": [
+    {
+     "name": "Katie Stewart",
+     "party": "Democratic"
+    },
+    {
+     "name": "Naomi Riess",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 60",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-60",
+   "candidates": [
+    {
+     "name": "Kathryn Kester Green",
+     "party": "Democratic"
+    },
+    {
+     "name": "Matt Alexander",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 61",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-61",
+   "candidates": [
+    {
+     "name": "Scott Shamblin",
+     "party": "Republican"
+    },
+    {
+     "name": "Eliza Hamrick",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kevin Gulbranson",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 62",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-62",
+   "candidates": [
+    {
+     "name": "Matthew Martinez",
+     "party": "Democratic"
+    },
+    {
+     "name": "Steven Rodriguez",
+     "party": "Republican"
+    },
+    {
+     "name": "Donald Luke Vermillion",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 63",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-63",
+   "candidates": [
+    {
+     "name": "Dusty Johnson",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 64",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-64",
+   "candidates": [
+    {
+     "name": "Maureen (Mo) Dower",
+     "party": "Democratic"
+    },
+    {
+     "name": "Scott L. Slaugh",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State House – District 65",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:state-representative-district-65",
+   "candidates": [
+    {
+     "name": "Lori Garcia Sander",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District B",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-b",
+   "candidates": [
+    {
+     "name": "John Glenn",
+     "party": null
+    },
+    {
+     "name": "Bianka Emerson",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District C",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-c",
+   "candidates": [
+    {
+     "name": "Joe Meyer",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District J",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-j",
+   "candidates": [
+    {
+     "name": "Coleman Erickson",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District K",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-k",
+   "candidates": [
+    {
+     "name": "Michael Farrington",
+     "party": null
+    },
+    {
+     "name": "Jessica Sandgren",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District L",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-l",
+   "candidates": [
+    {
+     "name": "Ian Harwick",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District N",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-n",
+   "candidates": [
+    {
+     "name": "Cindy Arcuri",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "RTD Director – District O",
+   "level": "state",
+   "is_ballot_measure": false,
+   "boulder_race_id": "boulder-county:regional-transportation-district-director-district-o",
+   "candidates": [
+    {
+     "name": "Jack Rosenthal",
+     "party": null
+    },
+    {
+     "name": "Audrey DeBarros",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Justice William W. Hood, III (Colorado Supreme Court)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-justice-william-w-hood-iii-colorado-supreme-court",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Rebecca Rankin Freyre (Colorado Court of Appeals)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-judge-rebecca-rankin-freyre-colorado-court-of-appeals",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Elizabeth L. Harris (Colorado Court of Appeals)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-judge-elizabeth-l-harris-colorado-court-of-appeals",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Katharine E. Lum (Colorado Court of Appeals)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-judge-katharine-e-lum-colorado-court-of-appeals",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Pax Moultrie (Colorado Court of Appeals)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-judge-pax-moultrie-colorado-court-of-appeals",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Karl L. Schock (Colorado Court of Appeals)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-judge-karl-l-schock-colorado-court-of-appeals",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Grant Sullivan (Colorado Court of Appeals)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:retain-judge-grant-sullivan-colorado-court-of-appeals",
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 81 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-81-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 82 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-82-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 83 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-83-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 84 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-84-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 85 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-85-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 86 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-86-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 87 (Constitutional)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:amendment-87-constitutional",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition NN (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-nn-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 132 (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-132-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 133 (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-133-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 134 (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-134-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 135 (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-135-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 136 (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-136-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 137 (Statutory)",
+   "level": "state",
+   "is_ballot_measure": true,
+   "boulder_race_id": "boulder-county:proposition-137-statutory",
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  }
+ ],
+ "boulder": [
+  {
+   "contest": "United States Senator",
+   "race_id": "boulder-county:united-states-senator",
+   "level": "national",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Mark Baisley",
+     "party": "Republican"
+    },
+    {
+     "name": "John Hickenlooper",
+     "party": "Democratic"
+    },
+    {
+     "name": "Bob Chew",
+     "party": "Forward"
+    },
+    {
+     "name": "Christopher Baum",
+     "party": "Approval Voting"
+    },
+    {
+     "name": "Blake Huber",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Adam Withrow",
+     "party": "Unity"
+    }
+   ]
+  },
+  {
+   "contest": "Representative to the 120th United States Congress - District 2",
+   "race_id": "boulder-county:representative-to-the-120th-united-states-congress-district-2",
+   "level": "national",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Joe Neguse",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kelley Anne Dennison",
+     "party": "Republican"
+    },
+    {
+     "name": "Gaylon Kent",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "Governor/Lieutenant Governor",
+   "race_id": "boulder-county:governor-lieutenant-governor",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One Pair",
+   "candidates": [
+    {
+     "name": "Victor Marx / George Washington Markert",
+     "party": "Republican"
+    },
+    {
+     "name": "Phil Weiser / Lesley Dahlkemper",
+     "party": "Democratic"
+    },
+    {
+     "name": "Stephen T. Hamilton / James K Treibert",
+     "party": "American Constitution"
+    },
+    {
+     "name": "Eric Mulder / Wayne Harlos",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Jeff Peckman / T.J. Cole",
+     "party": "Unity"
+    },
+    {
+     "name": "Erik Underwood / Frank Atwood",
+     "party": "Approval Voting"
+    },
+    {
+     "name": "Greg Lopez / Taralyn Romero",
+     "party": "Unaffiliated"
+    }
+   ]
+  },
+  {
+   "contest": "Secretary of State",
+   "race_id": "boulder-county:secretary-of-state",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Amanda Gonzalez",
+     "party": "Democratic"
+    },
+    {
+     "name": "James Wiley",
+     "party": "Republican"
+    },
+    {
+     "name": "Sean Vadney",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Amanda Campbell",
+     "party": "American Constitution"
+    },
+    {
+     "name": "Celeste Landry",
+     "party": "Forward"
+    }
+   ]
+  },
+  {
+   "contest": "State Treasurer",
+   "race_id": "boulder-county:state-treasurer",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Jeff Bridges",
+     "party": "Democratic"
+    },
+    {
+     "name": "Kevin Grantham",
+     "party": "Republican"
+    },
+    {
+     "name": "Jodie Barr",
+     "party": "Libertarian"
+    },
+    {
+     "name": "Marilee Langner Sturgis",
+     "party": "Approval Voting"
+    }
+   ]
+  },
+  {
+   "contest": "Attorney General",
+   "race_id": "boulder-county:attorney-general",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Michael J. Allen",
+     "party": "Republican"
+    },
+    {
+     "name": "Jena Griswold",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Regent of the University of Colorado - Congressional District 2",
+   "race_id": "boulder-county:regent-of-the-university-of-colorado-congressional-district-2",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Marty Neilson",
+     "party": "Republican"
+    },
+    {
+     "name": "Edie Hooton",
+     "party": "Democratic"
+    },
+    {
+     "name": "Richard Friend",
+     "party": "Libertarian"
+    }
+   ]
+  },
+  {
+   "contest": "State Senator - District 15",
+   "race_id": "boulder-county:state-senator-district-15",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Rob Woodward",
+     "party": "Republican"
+    },
+    {
+     "name": "Janice Marchman",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Senator - District 17",
+   "race_id": "boulder-county:state-senator-district-17",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Katie Wallace",
+     "party": "Democratic"
+    },
+    {
+     "name": "Pat Miller",
+     "party": "Republican"
+    }
+   ]
+  },
+  {
+   "contest": "State Representative - District 10",
+   "race_id": "boulder-county:state-representative-district-10",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Junie Joseph",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Representative - District 11",
+   "race_id": "boulder-county:state-representative-district-11",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Karen McCormick",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Representative - District 12",
+   "race_id": "boulder-county:state-representative-district-12",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Ryan Rhatigan",
+     "party": "Republican"
+    },
+    {
+     "name": "Kyle Brown",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Representative - District 19",
+   "race_id": "boulder-county:state-representative-district-19",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Dan Woog",
+     "party": "Republican"
+    },
+    {
+     "name": "Jillaire McMillan",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "State Representative - District 49",
+   "race_id": "boulder-county:state-representative-district-49",
+   "level": "state",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Michael Sheperek",
+     "party": "Republican"
+    },
+    {
+     "name": "Lesley Smith",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Regional Transportation District Director - District O",
+   "race_id": "boulder-county:regional-transportation-district-director-district-o",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Jack Rosenthal",
+     "party": null
+    },
+    {
+     "name": "Audrey DeBarros",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Commissioner - District 3",
+   "race_id": "boulder-county:boulder-county-commissioner-district-3",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Ashley Stolzmann",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Clerk and Recorder",
+   "race_id": "boulder-county:boulder-county-clerk-and-recorder",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Molly Fitzpatrick",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Treasurer",
+   "race_id": "boulder-county:boulder-county-treasurer",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Rachel Friend",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Assessor",
+   "race_id": "boulder-county:boulder-county-assessor",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Cynthia Braddock",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Sheriff",
+   "race_id": "boulder-county:boulder-county-sheriff",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Curtis Johnson",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Surveyor",
+   "race_id": "boulder-county:boulder-county-surveyor",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Kayce D. W. Keane",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Coroner",
+   "race_id": "boulder-county:boulder-county-coroner",
+   "level": "county",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Jeff Martin",
+     "party": "Democratic"
+    }
+   ]
+  },
+  {
+   "contest": "City of Boulder Mayor (ranked choice)",
+   "race_id": "boulder-county:city-of-boulder-mayor-ranked-choice",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Rank up to six",
+   "candidates": [
+    {
+     "name": "Lisa Ann Jacobs",
+     "party": null
+    },
+    {
+     "name": "Taishya Adams",
+     "party": null
+    },
+    {
+     "name": "Aaron Brockett",
+     "party": null
+    },
+    {
+     "name": "Jameson (Jamo) Goldstein",
+     "party": null
+    },
+    {
+     "name": "Grateful Fred Instead",
+     "party": null
+    },
+    {
+     "name": "Aquiles La Grave",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Boulder City Council",
+   "race_id": "boulder-county:city-of-boulder-city-council",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for up to five",
+   "candidates": [
+    {
+     "name": "Lee Gilbert",
+     "party": null
+    },
+    {
+     "name": "Sam Fuqua",
+     "party": null
+    },
+    {
+     "name": "Ryan Schuchard",
+     "party": null
+    },
+    {
+     "name": "Jamillah Richmond",
+     "party": null
+    },
+    {
+     "name": "Benita Duran",
+     "party": null
+    },
+    {
+     "name": "Tara Winer",
+     "party": null
+    },
+    {
+     "name": "Rachel Rose Isaacson",
+     "party": null
+    },
+    {
+     "name": "Dave Martus",
+     "party": null
+    },
+    {
+     "name": "Scott Rendleman",
+     "party": null
+    },
+    {
+     "name": "Jill Adler Grano",
+     "party": null
+    },
+    {
+     "name": "Ryan Jamieson",
+     "party": null
+    },
+    {
+     "name": "Lynn Segal",
+     "party": null
+    },
+    {
+     "name": "Tina Marquis",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Town of Erie Town Council District 1",
+   "race_id": "boulder-county:town-of-erie-town-council-district-1",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Andrew Sawusch",
+     "party": null
+    },
+    {
+     "name": "Bob Braudes",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Town of Erie Town Council District 2",
+   "race_id": "boulder-county:town-of-erie-town-council-district-2",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Delaney Dreckman",
+     "party": null
+    },
+    {
+     "name": "Ben Hemphill",
+     "party": null
+    },
+    {
+     "name": "Dipak Basnet",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Town of Superior Mayor",
+   "race_id": "boulder-county:town-of-superior-mayor",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for One",
+   "candidates": [
+    {
+     "name": "Neal S. Shah",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Town of Superior Council Member",
+   "race_id": "boulder-county:town-of-superior-council-member",
+   "level": "local",
+   "is_ballot_measure": false,
+   "vote_for": "Vote for no more than Five",
+   "candidates": [
+    {
+     "name": "Kelly Watt",
+     "party": null
+    },
+    {
+     "name": "Debra K. Bowes",
+     "party": null
+    },
+    {
+     "name": "Adam Vonnahme",
+     "party": null
+    },
+    {
+     "name": "Stephanie Miller",
+     "party": null
+    },
+    {
+     "name": "John Heckman",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Justice William W. Hood, III (Colorado Supreme Court)",
+   "race_id": "boulder-county:retain-justice-william-w-hood-iii-colorado-supreme-court",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Rebecca Rankin Freyre (Colorado Court of Appeals)",
+   "race_id": "boulder-county:retain-judge-rebecca-rankin-freyre-colorado-court-of-appeals",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Elizabeth L. Harris (Colorado Court of Appeals)",
+   "race_id": "boulder-county:retain-judge-elizabeth-l-harris-colorado-court-of-appeals",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Katharine E. Lum (Colorado Court of Appeals)",
+   "race_id": "boulder-county:retain-judge-katharine-e-lum-colorado-court-of-appeals",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Pax Moultrie (Colorado Court of Appeals)",
+   "race_id": "boulder-county:retain-judge-pax-moultrie-colorado-court-of-appeals",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Karl L. Schock (Colorado Court of Appeals)",
+   "race_id": "boulder-county:retain-judge-karl-l-schock-colorado-court-of-appeals",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Grant Sullivan (Colorado Court of Appeals)",
+   "race_id": "boulder-county:retain-judge-grant-sullivan-colorado-court-of-appeals",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Michael Kotlarczyk (20th Judicial District)",
+   "race_id": "boulder-county:retain-judge-michael-kotlarczyk-20th-judicial-district",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge J. Chris Larson (20th Judicial District)",
+   "race_id": "boulder-county:retain-judge-j-chris-larson-20th-judicial-district",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Nancy Woodruff Salomone (20th Judicial District)",
+   "race_id": "boulder-county:retain-judge-nancy-woodruff-salomone-20th-judicial-district",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Elizabeth House Moulton Brodsky (Boulder County Court)",
+   "race_id": "boulder-county:retain-judge-elizabeth-house-moulton-brodsky-boulder-county-court",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Monica Haenselman (Boulder County Court)",
+   "race_id": "boulder-county:retain-judge-monica-haenselman-boulder-county-court",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Retain Judge Zachary Ilya Malkinson (Boulder County Court)",
+   "race_id": "boulder-county:retain-judge-zachary-ilya-malkinson-boulder-county-court",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes",
+     "party": null
+    },
+    {
+     "name": "No",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 81 (Constitutional)",
+   "race_id": "boulder-county:amendment-81-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 82 (Constitutional)",
+   "race_id": "boulder-county:amendment-82-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 83 (Constitutional)",
+   "race_id": "boulder-county:amendment-83-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 84 (Constitutional)",
+   "race_id": "boulder-county:amendment-84-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 85 (Constitutional)",
+   "race_id": "boulder-county:amendment-85-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 86 (Constitutional)",
+   "race_id": "boulder-county:amendment-86-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Amendment 87 (Constitutional)",
+   "race_id": "boulder-county:amendment-87-constitutional",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition NN (Statutory)",
+   "race_id": "boulder-county:proposition-nn-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 132 (Statutory)",
+   "race_id": "boulder-county:proposition-132-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 133 (Statutory)",
+   "race_id": "boulder-county:proposition-133-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 134 (Statutory)",
+   "race_id": "boulder-county:proposition-134-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 135 (Statutory)",
+   "race_id": "boulder-county:proposition-135-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 136 (Statutory)",
+   "race_id": "boulder-county:proposition-136-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposition 137 (Statutory)",
+   "race_id": "boulder-county:proposition-137-statutory",
+   "level": "state",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Ballot Issue 1A",
+   "race_id": "boulder-county:boulder-county-ballot-issue-1a",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Ballot Question 200",
+   "race_id": "boulder-county:boulder-county-ballot-question-200",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Ballot Question 201",
+   "race_id": "boulder-county:boulder-county-ballot-question-201",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Five commissioners resident in districts to be elected only by voters resident in the district; or",
+     "party": null
+    },
+    {
+     "name": "Three commissioners resident in districts to be elected only by voters resident in the district; plus two commissioners resident in any district to be elected by voters of the whole county.",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Boulder Ballot Issue 2J",
+   "race_id": "boulder-county:city-of-boulder-ballot-issue-2j",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Boulder Ballot Issue 2K",
+   "race_id": "boulder-county:city-of-boulder-ballot-issue-2k",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Boulder Ballot Question 2L",
+   "race_id": "boulder-county:city-of-boulder-ballot-question-2l",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Boulder Ballot Question 2M",
+   "race_id": "boulder-county:city-of-boulder-ballot-question-2m",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Lafayette Ballot Issue 2A",
+   "race_id": "boulder-county:city-of-lafayette-ballot-issue-2a",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Longmont Ballot Issue 3A",
+   "race_id": "boulder-county:city-of-longmont-ballot-issue-3a",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Longmont Ballot Question 3B",
+   "race_id": "boulder-county:city-of-longmont-ballot-question-3b",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Longmont Ballot Question 3C",
+   "race_id": "boulder-county:city-of-longmont-ballot-question-3c",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Longmont Ballot Question 3D",
+   "race_id": "boulder-county:city-of-longmont-ballot-question-3d",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Issue 2B",
+   "race_id": "boulder-county:city-of-louisville-ballot-issue-2b",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Question 2C",
+   "race_id": "boulder-county:city-of-louisville-ballot-question-2c",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Question 2D",
+   "race_id": "boulder-county:city-of-louisville-ballot-question-2d",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Question 2E",
+   "race_id": "boulder-county:city-of-louisville-ballot-question-2e",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Question 2F",
+   "race_id": "boulder-county:city-of-louisville-ballot-question-2f",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Question 2G",
+   "race_id": "boulder-county:city-of-louisville-ballot-question-2g",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "City of Louisville Ballot Question 2H",
+   "race_id": "boulder-county:city-of-louisville-ballot-question-2h",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Town of Erie Ballot Issue 3E",
+   "race_id": "boulder-county:town-of-erie-ballot-issue-3e",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Town of Erie Ballot Issue 3F",
+   "race_id": "boulder-county:town-of-erie-ballot-issue-3f",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Question 300",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-question-300",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Question 301",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-question-301",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Issue 302",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-issue-302",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Issue 303",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-issue-303",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Issue 304",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-issue-304",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Issue 305",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-issue-305",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Proposed Municipality of Niwot Ballot Issue 306",
+   "race_id": "boulder-county:proposed-municipality-of-niwot-ballot-issue-306",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Ballot Issue 6A",
+   "race_id": "boulder-county:boulder-county-ballot-issue-6a",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Ballot Issue 6B",
+   "race_id": "boulder-county:boulder-county-ballot-issue-6b",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Boulder County Ballot Issue 6C",
+   "race_id": "boulder-county:boulder-county-ballot-issue-6c",
+   "level": "county",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Ballot Issue 7C",
+   "race_id": "boulder-county:ballot-issue-7c",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Ballot Issue 7A",
+   "race_id": "boulder-county:ballot-issue-7a",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  },
+  {
+   "contest": "Timberline Fire Protection District Ballot Issue 7B",
+   "race_id": "boulder-county:timberline-fire-protection-district-ballot-issue-7b",
+   "level": "local",
+   "is_ballot_measure": true,
+   "vote_for": null,
+   "candidates": [
+    {
+     "name": "Yes/For",
+     "party": null
+    },
+    {
+     "name": "No/Against",
+     "party": null
+    }
+   ]
+  }
+ ]
+}
