@@ -1,4 +1,4 @@
 httpx==0.28.1
 tenacity>=9.0,<10
 pydantic>=2.8,<3
-selectolax>=0.3.21
+selectolax>=1.0,<2

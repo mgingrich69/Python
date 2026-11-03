@@ -1,0 +1,52 @@
+# Election-night poller.
+#  - "loop" mode: one long job polls every 5 min for ~5h40m; cron restarts it
+#    (a queued run starts as soon as the previous one ends).
+#  - "once" mode: a single poll. Use "Run workflow" for a manual update request.
+# Results state lives on the `data` branch (one force-pushed commit); each poll
+# triggers deploy.yml to publish the site to GitHub Pages.
+name: poll
+on:
+  schedule:
+    - cron: "*/20 * 3-6 11 *"   # Nov 3–6 (UTC): keep a loop job running
+    - cron: "17 * 7-30 11 *"    # Nov 7–30: one poll per hour while counting continues
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "once = single poll now (manual update); loop = poll every 5 min for ~5h40m"
+        type: choice
+        options: [once, loop]
+        default: once
+permissions:
+  contents: write   # push the data branch
+  actions: write    # trigger deploy.yml
+concurrency:
+  group: poll-${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '*/20 * 3-6 11 *' && 'loop' || 'once') }}
+  cancel-in-progress: false
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '*/20 * 3-6 11 *' && 'loop' || 'once') }}
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      # Optional overrides (Settings → Secrets and variables → Actions → Variables)
+      CO_SOS_ELECTION_ID: ${{ vars.CO_SOS_ELECTION_ID }}
+      GA_SOS_ELECTION_ID: ${{ vars.GA_SOS_ELECTION_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - run: pip install -r requirements.txt
+      - name: Check out previous results (data branch)
+        run: bash scripts/state_checkout.sh
+      - name: Poll
+        run: |
+          if [ "$MODE" = "loop" ]; then
+            python -m poller.run --out state/data --loop --interval 300 --duration 20400 --publish-cmd "bash scripts/publish.sh"
+          else
+            python -m poller.run --out state/data --publish-cmd "bash scripts/publish.sh"
+          fi

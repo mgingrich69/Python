@@ -1,0 +1,29 @@
+# Checks whether each upstream source is reachable from GitHub's runners
+# (Clarity's CDN blocks some non-browser clients). Saves recorded responses as
+# an artifact so they can be added to test fixtures.
+name: probe-sources
+on:
+  workflow_dispatch:
+    inputs:
+      co_election_id:
+        description: "CO Clarity election id to probe (blank = 2024 General, 122598)"
+        required: false
+        default: ""
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe
+        env:
+          EID: ${{ inputs.co_election_id }}
+        run: bash scripts/probe.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: probe-responses
+          path: probe/
+          retention-days: 7
