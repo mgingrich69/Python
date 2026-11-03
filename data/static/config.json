@@ -1,0 +1,53 @@
+{
+  "election_date": "2026-11-03",
+  "poll_interval_seconds": 300,
+  "sources": {
+    "boulder": {
+      "enabled": true,
+      "name": "Boulder County Elections",
+      "url": "https://electionresults.bouldercounty.gov/"
+    },
+    "co_sos": {
+      "enabled": true,
+      "name": "Colorado Secretary of State (Clarity ENR)",
+      "state": "CO",
+      "election_id": null,
+      "known_old_election_ids": ["122598", "126592"],
+      "county_subtotal": "Boulder",
+      "url": "https://www.sos.state.co.us/pubs/elections/main.html"
+    },
+    "ncsbe": {
+      "enabled": true,
+      "name": "North Carolina State Board of Elections",
+      "office_groups": ["FED"]
+    },
+    "clarity_states": [
+      {
+        "key": "ga_sos",
+        "enabled": true,
+        "name": "Georgia Secretary of State (Clarity ENR)",
+        "state": "GA",
+        "election_id": null,
+        "include": "(?i)^(US Senate|United States Senat|Governor|US House|U\\.S\\. House|U\\.S\\. Senate)",
+        "url": "https://sos.ga.gov/elections"
+      }
+    ]
+  },
+  "links": [
+    {"tab": "national", "group": "Reputable news (AP-sourced race calls)", "name": "AP News", "url": "https://apnews.com/"},
+    {"tab": "national", "group": "Reputable news (AP-sourced race calls)", "name": "NPR – Elections", "url": "https://www.npr.org/sections/elections/"},
+    {"tab": "national", "group": "Reputable news (AP-sourced race calls)", "name": "PBS NewsHour – Politics", "url": "https://www.pbs.org/newshour/politics"},
+    {"tab": "national", "group": "Reputable news", "name": "CNN – Election Center", "url": "https://www.cnn.com/election"},
+    {"tab": "national", "group": "Reputable news", "name": "The New York Times – Politics", "url": "https://www.nytimes.com/section/politics"},
+    {"tab": "national", "group": "Reputable news", "name": "Decision Desk HQ", "url": "https://decisiondeskhq.com/"},
+    {"tab": "national", "group": "Official", "name": "NC State Board of Elections results", "url": "https://er.ncsbe.gov/"},
+    {"tab": "colorado", "group": "Official", "name": "Colorado Secretary of State – Elections", "url": "https://www.sos.state.co.us/pubs/elections/main.html"},
+    {"tab": "colorado", "group": "Reputable news", "name": "The Colorado Sun – 2026 results (AP)", "url": "https://coloradosun.com/colorado-election-results-2026/"},
+    {"tab": "colorado", "group": "Reputable news", "name": "Colorado Public Radio", "url": "https://www.cpr.org/"},
+    {"tab": "colorado", "group": "Reputable news", "name": "The Denver Post – Politics", "url": "https://www.denverpost.com/news/politics/"},
+    {"tab": "boulder", "group": "Official", "name": "Boulder County Elections – live results", "url": "https://electionresults.bouldercounty.gov/"},
+    {"tab": "boulder", "group": "Official", "name": "Boulder County Elections", "url": "https://bouldercounty.gov/elections/"},
+    {"tab": "boulder", "group": "Reputable news", "name": "Boulder Reporting Lab", "url": "https://boulderreportinglab.org/"},
+    {"tab": "boulder", "group": "Reputable news", "name": "Boulder Daily Camera", "url": "https://www.dailycamera.com/"}
+  ]
+}
