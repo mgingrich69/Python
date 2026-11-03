@@ -176,6 +176,7 @@ def parse_boulder_ballot(raw: str) -> list[dict]:
     for idx, l in enumerate(merged):
         m = _VOTEFOR.match(l)
         if m and mode == "measure" and cur is not None and not cur.get("retention"):
+            cur.setdefault("text", []).append(m.group(1))
             cur["candidates"] = []
             mode = "measure_choices"
             continue
@@ -221,8 +222,15 @@ def parse_boulder_ballot(raw: str) -> list[dict]:
                 contests.append(cur)
                 mode = "measure"
                 continue
-        if mode == "measure" or cur is None:
-            continue  # measure text, retention text, boilerplate
+        if mode == "measure" and cur is not None and cur["is_ballot_measure"] and not cur.get("retention"):
+            if l.startswith(("YES/FOR", "YES NO")) or _SKIP.match(l):
+                if l.startswith("YES"):
+                    mode = "measure_done"
+                continue
+            cur.setdefault("text", []).append(l)
+            continue
+        if mode in ("measure", "measure_done") or cur is None:
+            continue  # retention text, boilerplate
         if mode == "mayor":
             prev = merged[idx - 1] if idx else ""
             if prev == "1" and l != "2 3 4 5 6" and not _SKIP.match(l):
@@ -243,6 +251,12 @@ def parse_boulder_ballot(raw: str) -> list[dict]:
 
     out = []
     for c in contests:
+        if c["is_ballot_measure"] and not c.get("retention"):
+            c["summary"] = measure_summary(c.get("text", []))
+            if re.fullmatch(r"Ballot (Issue|Question) \w+", c["contest"]):
+                d = re.search(r"^SHALL (?:THE )?(.+? DISTRICT)\b", " ".join(c.get("text", [])), re.I)
+                if d:
+                    c["contest"] = f"{d.group(1).title()} {c['contest']}"
         if not c["candidates"]:
             raise ValueError(f"Boulder ballot contest without candidates: {c['contest']}")
         name = c["contest"]
@@ -253,11 +267,44 @@ def parse_boulder_ballot(raw: str) -> list[dict]:
                      else classify_level(name, county_source=True),
             "is_ballot_measure": c["is_ballot_measure"],
             "vote_for": c.get("vote_for"),
+            "summary": c.get("summary"),
             "candidates": c["candidates"],
         })
     if len(out) < 40:
         raise ValueError(f"only {len(out)} contests parsed from Boulder sample ballot; layout change?")
     return out
+
+
+def _sentence(t: str) -> str:
+    t = t.strip()
+    if t.isupper():
+        t = t.lower()
+    return t[:1].upper() + t[1:]
+
+
+def measure_summary(lines: list[str]) -> str | None:
+    """A one-line description from the official ballot text (title line, or the 'concerning' clause)."""
+    if not lines:
+        return None
+    title = []
+    for l in lines:  # local measures start with an ALL-CAPS title (may wrap), before "SHALL ..."
+        if l.upper() == l and not l.upper().startswith("SHALL"):
+            title.append(l)
+        else:
+            break
+    def cap(t: str) -> str:
+        return t if len(t) <= 160 else t[:157].rsplit(" ", 1)[0] + "…"
+    if title:
+        t = " ".join(title).title().replace("(Tabor)", "(TABOR)")
+        return cap(re.split(r",\s*Shall\b", t)[0])
+    first = lines[0]
+    if not re.match(r"^(shall|if)\b", first, re.I):
+        return cap(first)  # e.g. "Bargaining Rights Union Firefighters in City Charter"
+    text = " ".join(lines)
+    text = re.sub(r"^Shall there be (an amendment to the Colorado Constitution|a change to the Colorado Revised Statutes)\s*", "", text, flags=re.I)
+    text = re.split(r",\s*and,? in connection therewith|\?", text, maxsplit=1)[0]
+    text = _sentence(text)
+    return text if len(text) <= 160 else text[:157].rsplit(" ", 1)[0] + "…"
 
 
 def statewide_from_boulder(boulder: list[dict]) -> list[dict]:
@@ -267,7 +314,7 @@ def statewide_from_boulder(boulder: list[dict]) -> list[dict]:
         n = c["contest"]
         if re.match(r"^(Amendment|Proposition) ", n) or (n.startswith("Retain") and ("Supreme Court" in n or "Court of Appeals" in n)):
             keep.append({"contest": n, "level": "state", "is_ballot_measure": True, "boulder_race_id": c["race_id"],
-                         "candidates": c["candidates"]})
+                         "summary": c.get("summary"), "candidates": c["candidates"]})
     return keep
 
 

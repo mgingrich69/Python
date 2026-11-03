@@ -54,3 +54,12 @@ def test_sos_list_federal_and_governor_pairs():
     assert s["U.S. Senate"]["boulder_race_id"] == "boulder-county:united-states-senator"
     # Certified write-ins are excluded (not printed on the ballot).
     assert all(c["name"] != "Donald Willoughby" for c in s["U.S. Senate"]["candidates"])
+
+
+def test_measure_summaries_from_official_text():
+    by = {c["contest"]: c for c in boulder()}
+    assert by["City of Boulder Ballot Issue 2J"]["summary"] == "Residential Vacancy Excise Tax (TABOR)"
+    assert by["Proposition 132 (Statutory)"]["summary"] == "Concerning criminal penalties for fentanyl and certain synthetic opioids"
+    assert by["Boulder County Ballot Question 201"]["summary"].startswith("If the membership of the Boulder County Board of Commissioners")
+    assert "Front Range Passenger Rail District Ballot Issue 7A" in by  # district name recovered from ballot text
+    assert all(len(c["summary"] or "") <= 160 for c in by.values() if c["is_ballot_measure"])

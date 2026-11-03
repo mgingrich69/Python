@@ -1,6 +1,6 @@
 {
  "election_date": "2026-11-03",
- "generated_at": "2026-11-03T03:55:40+00:00",
+ "generated_at": "2026-11-03T04:31:38+00:00",
  "note": "Ballot lineups only (no votes). Shown until results for a contest are published.",
  "sources": {
   "colorado": [
@@ -1970,6 +1970,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-justice-william-w-hood-iii-colorado-supreme-court",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -1986,6 +1987,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-judge-rebecca-rankin-freyre-colorado-court-of-appeals",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2002,6 +2004,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-judge-elizabeth-l-harris-colorado-court-of-appeals",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2018,6 +2021,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-judge-katharine-e-lum-colorado-court-of-appeals",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2034,6 +2038,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-judge-pax-moultrie-colorado-court-of-appeals",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2050,6 +2055,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-judge-karl-l-schock-colorado-court-of-appeals",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2066,6 +2072,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:retain-judge-grant-sullivan-colorado-court-of-appeals",
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2082,6 +2089,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-81-constitutional",
+   "summary": "Requiring law enforcement to notify the department of homeland security when a person is charged with either a violent crime or any crime if the person has…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2098,6 +2106,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-82-constitutional",
+   "summary": "Creating new law granting the right for consumers to purchase natural gas for cooking or heating in homes or businesses and for distributors and utilities…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2114,6 +2123,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-83-constitutional",
+   "summary": "Creating a constitutional right to hunt, fish, and harvest fish and wildlife by traditional methods, including all species of fish and wildlife managed by…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2130,6 +2140,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-84-constitutional",
+   "summary": "Requiring a voter to sign and include the last four digits of their social security number or their Colorado driver's license or identification card number…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2146,6 +2157,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-85-constitutional",
+   "summary": "Concerning ballot question language",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2162,6 +2174,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-86-constitutional",
+   "summary": "Concerning congressional redistricting",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2178,6 +2191,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:amendment-87-constitutional",
+   "summary": "Shall statetaxes be increased $2.7 billion annually, in order to increase or improve levels of public services, including k-12 public school education,…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2194,6 +2208,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-nn-statutory",
+   "summary": "Shall state investment in K-12 public education increase two percent each year for the next ten years, with investments used to increase teacher pay,…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2210,6 +2225,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-132-statutory",
+   "summary": "Concerning criminal penalties for fentanyl and certain synthetic opioids",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2226,6 +2242,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-133-statutory",
+   "summary": "Modifying existing law concerning human trafficking of a minor for sexual servitude",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2242,6 +2259,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-134-statutory",
+   "summary": "Creating new law restricting participation in all K-12 and collegiate school sports based on the participant's sex as determined by certain aspects of their…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2258,6 +2276,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-135-statutory",
+   "summary": "Modifying existing law by prohibiting surgery on a minor for the purpose of altering the minor's biological sex characteristics",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2274,6 +2293,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-136-statutory",
+   "summary": "Capping the state income tax rate at 4.4% of federal taxable income for individuals and corporations",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2290,6 +2310,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "boulder_race_id": "boulder-county:proposition-137-statutory",
+   "summary": "Creating new law to increase water and land conservation funding without raising taxes",
    "candidates": [
     {
      "name": "Yes/For",
@@ -2309,6 +2330,7 @@
    "level": "national",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Mark Baisley",
@@ -2342,6 +2364,7 @@
    "level": "national",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Joe Neguse",
@@ -2363,6 +2386,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One Pair",
+   "summary": null,
    "candidates": [
     {
      "name": "Victor Marx / George Washington Markert",
@@ -2400,6 +2424,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Amanda Gonzalez",
@@ -2429,6 +2454,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Jeff Bridges",
@@ -2454,6 +2480,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Michael J. Allen",
@@ -2471,6 +2498,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Marty Neilson",
@@ -2492,6 +2520,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Rob Woodward",
@@ -2509,6 +2538,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Katie Wallace",
@@ -2526,6 +2556,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Junie Joseph",
@@ -2539,6 +2570,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Karen McCormick",
@@ -2552,6 +2584,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Ryan Rhatigan",
@@ -2569,6 +2602,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Dan Woog",
@@ -2586,6 +2620,7 @@
    "level": "state",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Michael Sheperek",
@@ -2603,6 +2638,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Jack Rosenthal",
@@ -2620,6 +2656,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Ashley Stolzmann",
@@ -2633,6 +2670,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Molly Fitzpatrick",
@@ -2646,6 +2684,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Rachel Friend",
@@ -2659,6 +2698,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Cynthia Braddock",
@@ -2672,6 +2712,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Curtis Johnson",
@@ -2685,6 +2726,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Kayce D. W. Keane",
@@ -2698,6 +2740,7 @@
    "level": "county",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Jeff Martin",
@@ -2711,6 +2754,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Rank up to six",
+   "summary": null,
    "candidates": [
     {
      "name": "Lisa Ann Jacobs",
@@ -2744,6 +2788,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Vote for up to five",
+   "summary": null,
    "candidates": [
     {
      "name": "Lee Gilbert",
@@ -2805,6 +2850,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Andrew Sawusch",
@@ -2822,6 +2868,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Delaney Dreckman",
@@ -2843,6 +2890,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Vote for One",
+   "summary": null,
    "candidates": [
     {
      "name": "Neal S. Shah",
@@ -2856,6 +2904,7 @@
    "level": "local",
    "is_ballot_measure": false,
    "vote_for": "Vote for no more than Five",
+   "summary": null,
    "candidates": [
     {
      "name": "Kelly Watt",
@@ -2885,6 +2934,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2902,6 +2952,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2919,6 +2970,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2936,6 +2988,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2953,6 +3006,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2970,6 +3024,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -2987,6 +3042,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3004,6 +3060,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3021,6 +3078,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3038,6 +3096,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3055,6 +3114,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3072,6 +3132,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3089,6 +3150,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": null,
    "candidates": [
     {
      "name": "Yes",
@@ -3106,6 +3168,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Requiring law enforcement to notify the department of homeland security when a person is charged with either a violent crime or any crime if the person has…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3123,6 +3186,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Creating new law granting the right for consumers to purchase natural gas for cooking or heating in homes or businesses and for distributors and utilities…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3140,6 +3204,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Creating a constitutional right to hunt, fish, and harvest fish and wildlife by traditional methods, including all species of fish and wildlife managed by…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3157,6 +3222,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Requiring a voter to sign and include the last four digits of their social security number or their Colorado driver's license or identification card number…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3174,6 +3240,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Concerning ballot question language",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3191,6 +3258,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Concerning congressional redistricting",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3208,6 +3276,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall statetaxes be increased $2.7 billion annually, in order to increase or improve levels of public services, including k-12 public school education,…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3225,6 +3294,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall state investment in K-12 public education increase two percent each year for the next ten years, with investments used to increase teacher pay,…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3242,6 +3312,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Concerning criminal penalties for fentanyl and certain synthetic opioids",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3259,6 +3330,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Modifying existing law concerning human trafficking of a minor for sexual servitude",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3276,6 +3348,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Creating new law restricting participation in all K-12 and collegiate school sports based on the participant's sex as determined by certain aspects of their…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3293,6 +3366,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Modifying existing law by prohibiting surgery on a minor for the purpose of altering the minor's biological sex characteristics",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3310,6 +3384,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Capping the state income tax rate at 4.4% of federal taxable income for individuals and corporations",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3327,6 +3402,7 @@
    "level": "state",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Creating new law to increase water and land conservation funding without raising taxes",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3344,6 +3420,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Early Childhood Care And Education Mill Levy Increase And Voter-Approved Revenue Change",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3361,6 +3438,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall the membership of the Boulder County Board of Commissioners be increased from a three member board to a five member board",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3378,6 +3456,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "If the membership of the Boulder County Board of Commissioners is increased from a three member board to a five member board, by what method shall the…",
    "candidates": [
     {
      "name": "Five commissioners resident in districts to be elected only by voters resident in the district; or",
@@ -3395,6 +3474,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Residential Vacancy Excise Tax (TABOR)",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3412,6 +3492,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Recreation And Safety Bond (TABOR)",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3429,6 +3510,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Bargaining Rights Union Firefighters in City Charter",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3446,6 +3528,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Debt Limit City Charter Language Change",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3463,6 +3546,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Extension Of An Expiring Tax For Lamont Does Park Without Imposing A New Tax",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3480,6 +3564,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Maintain And Increase Fire And Police Services Via Tax Increases",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3497,6 +3582,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment to Protect Open Space Lands",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3514,6 +3600,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment to Allow Ranked Choice Voting",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3531,6 +3618,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment to Adjust City Council Electoral Cycles",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3548,6 +3636,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Historic Preservationtax",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3565,6 +3654,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment Expanding Executive Session Topics",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3582,6 +3672,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment to Change Timing for Taking Office",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3599,6 +3690,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment for Initiative and Referendum",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3616,6 +3708,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment Regarding Meeting Locations",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3633,6 +3726,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment to Allow for Review and Comment",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3650,6 +3744,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Charter Amendment to Update Language",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3667,6 +3762,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization For A New Town Lodging Tax For The Purposes Of Paying For Park And Recreational Facilities, Capital Infrastructure, Law Enforcement/Safety And…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3684,6 +3780,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization For The Issuance Of Debt And An Additional Sales And Use Tax For The Purpose Of Paying For The Expansion Of The Erie Community Center",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3701,6 +3798,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall Niwot be incorporated as a municipality",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3718,6 +3816,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall a Home Rule Charter Commission be formed pursuant to C.R.S. Title 31, Article 2, Part 2 for the Proposed Municipality of Niwot",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3735,6 +3834,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization To Levy A Sales And Use Tax",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3752,6 +3852,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization To Levy A Property Tax",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3769,6 +3870,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization To Levy A Marijuana Special Sales Tax",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3786,6 +3888,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization To Retain And Spend All Revenues",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3803,6 +3906,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Authorization To Increase Debt",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3820,6 +3924,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Debt Authorization",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3837,6 +3942,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Mill Levy Increase, Multiple-Fiscal Year Obligation Authorization, Revenue Change And Formation",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3854,6 +3960,7 @@
    "level": "county",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Mill Levy Increase, Multiple-Fiscal Year Obligation Authorization, Revenue Change And Formation",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3866,11 +3973,12 @@
    ]
   },
   {
-   "contest": "Ballot Issue 7C",
-   "race_id": "boulder-county:ballot-issue-7c",
+   "contest": "Allenspark Fire Protection District Ballot Issue 7C",
+   "race_id": "boulder-county:allenspark-fire-protection-district-ballot-issue-7c",
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall allenspark fire protection district taxes be increased by up to $331,000 in the first fiscal year (2027) and by such amount as may be raised annually…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3883,11 +3991,12 @@
    ]
   },
   {
-   "contest": "Ballot Issue 7A",
-   "race_id": "boulder-county:ballot-issue-7a",
+   "contest": "Front Range Passenger Rail District Ballot Issue 7A",
+   "race_id": "boulder-county:front-range-passenger-rail-district-ballot-issue-7a",
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall front range passenger rail district taxes be increased $295,000,000 annually and by whatever amounts are raised annually thereafter, and shall front…",
    "candidates": [
     {
      "name": "Yes/For",
@@ -3905,6 +4014,7 @@
    "level": "local",
    "is_ballot_measure": true,
    "vote_for": null,
+   "summary": "Shall timberline fire protection district taxes be increased in the first full fiscal year by $1,200,000 and by such amounts annually thereafter as may be…",
    "candidates": [
     {
      "name": "Yes/For",

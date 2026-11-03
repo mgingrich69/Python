@@ -26,7 +26,7 @@ Browser → data/results.json every 60 s (+ Refresh button)
 
 **Balance of power (Wikipedia).** National seat totals (seats before/after and seat change per party, Senate and House) come from the infoboxes of the Wikipedia articles on the 2026 Senate and House elections, read through the official MediaWiki API: one request per poll, identifying User-Agent, `maxlag`, no retry on HTTP 429. Editors update these as AP and other outlets call races. The content is community-edited (CC BY-SA 4.0), so the UI labels it and links the exact revision shown. Every change is kept in `extras.history` to draw the trend chart.
 
-**Not shown by design:** judicial retention questions, state legislature, and RTD director contests. Statewide and federal contests appear only on the Colorado tab; the Boulder tab shows county and local contests.
+**Not shown by design:** judicial retention questions, state legislature, RTD director, CU Regents, and uncontested (single-candidate) races. Statewide and federal contests appear only on the Colorado tab. The Boulder tab shows only City of Boulder and Boulder County contests (not other towns or districts). Ballot measures carry a one-line description taken from the official ballot text.
 
 **Senate watch list.** `config.json → watch.senate` lists 15 Senate races rated other than Solid/Safe before the election. Live numbers appear only for NC and MN; the other tiles link to the state's official results.
 

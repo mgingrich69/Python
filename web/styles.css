@@ -320,3 +320,4 @@ caption { text-align: left; color: var(--muted); font-size: .78rem; padding-bott
 .trend-empty { margin: 12px 0 0; color: var(--muted); font-size: .82rem; }
 .chip-p span small { font-size: .75rem; font-weight: 700; color: var(--muted); }
 .chip-p.up em { color: var(--ok); } .chip-p.down em { color: var(--accent); }
+.rowi .rsum { font-weight: 500; opacity: 1; color: var(--muted); line-height: 1.35; }

@@ -17,9 +17,11 @@ const CO_CLOSE = "2026-11-04T02:00:00Z";
 const GEO_LABEL = { nc: "North Carolina", mn: "Minnesota", co: "Colorado", ga: "Georgia", "boulder-county": "Boulder County" };
 const SOURCE_TABS = { wikipedia: ["national"], ncsbe: ["national"], mnsos: ["national"], ga_sos: ["national"], co_sos: ["colorado"], boulder: ["boulder", "colorado"] };
 // Not shown anywhere (per user preference): judicial retention, state legislature, RTD director.
-const EXCLUDE_RE = /\b(retain|justice|judge|court)\b|^state (senate|house)\b|\bstate senator\b|\bstate representative\b|^rtd\b|regional transportation district director/i;
+const EXCLUDE_RE = /\b(retain|justice|judge|court|regents?)\b|^state (senate|house)\b|\bstate senator\b|\bstate representative\b|^rtd\b|regional transportation district director/i;
+// Single-candidate (uncontested) races are hidden; write-in lines don't count as opponents.
+const uncontested = r => !r.is_ballot_measure && r.candidates.filter(c => !/^write-?in/i.test(c.name)).length <= 1;
 const KEY_RE = /^(U\.S\. Senate|Governor)\b/;
-const isKey = (g, tab) => !g.r.is_ballot_measure && (KEY_RE.test(shortName(g.r)) || (tab === "boulder" && /mayor|county commissioner/i.test(g.r.race_name)));
+const isKey = (g, tab) => !g.r.is_ballot_measure && (KEY_RE.test(shortName(g.r)) || (tab === "boulder" && /city of boulder mayor/i.test(g.r.race_name)));
 
 let data = null;
 const state = {
@@ -139,6 +141,16 @@ function showBanner(text, withLink = false) {
 }
 function hideBanner() { document.getElementById("banner").hidden = true; }
 
+function summaryFor(r) {
+  if (r.summary) return r.summary;
+  const b = data?.ballot;
+  if (!b) return null;
+  if (!summaryFor.map || summaryFor.src !== b) {
+    summaryFor.src = b;
+    summaryFor.map = new Map([...(b.boulder || []).map(c => [c.race_id, c.summary]), ...(b.colorado || []).filter(c => c.boulder_race_id).map(c => [c.boulder_race_id, c.summary])]);
+  }
+  return summaryFor.map.get(r.race_id) || null;
+}
 function allRaces() {
   const out = [];
   for (const [key, block] of Object.entries(data.sources)) for (const r of block.races || []) out.push({ ...r, _src: key });
@@ -178,9 +190,10 @@ function renderTab(tab) {
   let groups = groupByRace(racesForTab(tab));
   if (tab === "colorado") groups = coloradoGroups(groups);
   if (tab === "boulder" && !groups.some(g => g.r.source === "boulder")) groups = groups.concat(ballotGroups("boulder"));
-  groups = groups.filter(g => !EXCLUDE_RE.test(g.r.race_name));
-  // Statewide and federal contests live on the Colorado tab only; Boulder shows county & local.
-  if (tab === "boulder") groups = groups.filter(g => g.r.level === "county" || g.r.level === "local");
+  groups = groups.filter(g => !EXCLUDE_RE.test(g.r.race_name) && !uncontested(g.r));
+  // Statewide and federal contests live on the Colorado tab only; Boulder shows City of Boulder
+  // and Boulder County contests (not other towns or districts).
+  if (tab === "boulder") groups = groups.filter(g => (g.r.level === "county" || g.r.level === "local") && /\bBoulder\b/.test(g.r.race_name));
   const q = state.filter[tab].trim().toLowerCase();
   const match = g => !q || g.r.race_name.toLowerCase().includes(q) || shortName(g.r).toLowerCase().includes(q);
   const visible = groups.filter(match);
@@ -203,7 +216,7 @@ function renderTab(tab) {
 
   const rest = visible.filter(g => !state.pins.has(g.id) && !keys.includes(g));
   for (const [title, gs] of sectionize(tab, rest)) {
-    if (gs.length > 10 && !q) {
+    if (gs.length > 10 && !q && !/measure/i.test(title)) {
       const key = `sec:${tab}:${title}`;
       nodes.push(h("details", { class: "bigsec", open: state.open.has(key) || null, ontoggle: e => toggleOpen(key, e) },
         h("summary", {}, h("span", { class: "bs-title" }, title), h("span", { class: "count" }, `${gs.length} races`), h("span", { class: "chev", "aria-hidden": "true" }, "›")),
@@ -238,9 +251,9 @@ function sectionize(tab, groups) {
     const cb = [
       ["Federal", g => /^U\.S\./.test(n(g))],
       ["Statewide offices", g => /^(Governor|Secretary of State|State Treasurer|Attorney General)/.test(n(g))],
-      ["Statewide measures", g => /^(Amendment|Proposition) /.test(n(g))],
+      ["Statewide ballot measures", g => /^(Amendment|Proposition) /.test(n(g))],
       ["Judicial retention (statewide)", g => /^Retain /.test(n(g))],
-      ["CU Regents & State Board of Education", g => /^(CU Regent|State Board of Education)/.test(n(g))],
+      ["State Board of Education", g => /^State Board of Education/.test(n(g))],
       ["State Senate", g => /^State Senate/.test(n(g))],
       ["State House", g => /^State House/.test(n(g))],
       ["RTD Board", g => /^RTD/.test(n(g))],
@@ -249,6 +262,20 @@ function sectionize(tab, groups) {
     for (const [title, f] of cb) { const gs = groups.filter(g => !used.has(g) && f(g)); gs.forEach(g => used.add(g)); if (gs.length) out.push([title, gs]); }
     const other = groups.filter(g => !used.has(g));
     if (other.length) out.push(["Other", other]);
+    return out;
+  }
+  if (tab === "boulder") {
+    const isM = g => g.r.is_ballot_measure, n = g => g.r.race_name;
+    const bb = [
+      ["City of Boulder races", g => !isM(g) && /^City of Boulder/.test(n(g))],
+      ["City of Boulder ballot measures", g => isM(g) && /^City of Boulder/.test(n(g))],
+      ["Boulder County ballot measures", g => isM(g) && /Boulder County/.test(n(g))],
+      ["Boulder County races", g => !isM(g) && /Boulder County/.test(n(g))],
+    ];
+    const used = new Set();
+    for (const [title, f] of bb) { const gs = groups.filter(g => !used.has(g) && f(g)); gs.forEach(g => used.add(g)); if (gs.length) out.push([title, gs]); }
+    const other = groups.filter(g => !used.has(g));
+    if (other.length) out.push(["Other Boulder contests", other]);
     return out;
   }
   const buckets = [
@@ -298,7 +325,7 @@ function ballotRace(c, geo, src) {
     race_id: c.race_id || `${geo}:ballot:${c.contest.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
     race_name: c.contest, level: c.level, geography: geo, is_ballot_measure: !!c.is_ballot_measure,
     candidates: c.candidates.map(x => ({ name: x.name, party: x.party, votes: 0, percent: null, winner: false })),
-    votes: 0, called_status: "not_called", ballot: true,
+    votes: 0, called_status: "not_called", ballot: true, summary: c.summary || null,
     source: "ballot", source_name: src?.name || "Official ballot", source_url: src?.url || "#",
     fetched_at: data?.ballot?.generated_at, source_updated_at: null,
   };
@@ -320,7 +347,7 @@ function coloradoGroups(liveCo) {
   return b.colorado.map(c => {
     const live = c.boulder_race_id && boulderRaces.get(c.boulder_race_id);
     if (live) {
-      const r = { ...live, race_name: c.contest, geography: "co" };
+      const r = { ...live, race_name: c.contest, geography: "co", summary: c.summary || null };
       return { id: "co:" + live.race_id, recs: [r], r, boulderOnly: true };
     }
     const r = ballotRace(c, "co", src);
@@ -557,7 +584,8 @@ function raceRow(g) {
         h("span", { class: "rname" }, shortName(r)),
         h("span", { class: "rlead" },
           awaiting(r) ? h("span", { class: "awaiting" }, "—") : [h("b", {}, `${(lead.percent ?? 0).toFixed(1)}%`), h("small", {}, lead.name)]),
-        awaiting(r) && !r.is_ballot_measure ? h("span", { class: "rmatch" }, matchup(r)) : null,
+        r.is_ballot_measure && summaryFor(r) ? h("span", { class: "rmatch rsum" }, summaryFor(r))
+          : awaiting(r) && !r.is_ballot_measure ? h("span", { class: "rmatch" }, matchup(r)) : null,
         h("span", { class: "rsub" }, badges(g), reportingText(r) ? h("span", {}, reportingText(r)) : null)),
       h("div", { class: "detail" }, detailBody(g))),
     pinButton(g));
